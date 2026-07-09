@@ -34,7 +34,7 @@ export const servicesData: Record<string, ServiceData> = {
     headline: 'Custom Odoo Modules & Integrations',
     description: 'Custom Odoo module development, advanced customizations, and seamless third-party integrations tailored to your unique business logic.',
     overview: 'When off-the-shelf Odoo modules don\'t fit your exact workflow, I build custom solutions. From specialized business logic and automated workflows to complex third-party integrations and custom reports, I develop modules that extend Odoo to match your precise requirements.',
-    benefits: ['Perfectly tailored to your business workflows', 'Seamless integration with existing Odoo modules', 'Clean, maintainable, upgrade-safe code', 'Comprehensive testing and documentation', 'Ongoing maintenance and version upgrades', 'Published 20+ modules — proven track record'],
+    benefits: ['Perfectly tailored to your business workflows', 'Seamless integration with existing Odoo modules', 'Clean, maintainable, upgrade-safe code', 'Comprehensive testing and documentation', 'Ongoing maintenance and version upgrades', 'Published 30+ modules — proven track record'],
     process: ['Requirements Analysis', 'Technical Specification', 'Module Architecture Design', 'Development & Unit Testing', 'Code Review & QA', 'Staging Deployment & UAT', 'Production Deployment', 'Documentation & Handover'],
     technologies: ['Python', 'OWL (Odoo Web Library)', 'PostgreSQL', 'XML/QWeb', 'REST/JSON-RPC APIs', 'JavaScript'],
     industries: ['All industries using Odoo ERP'],
