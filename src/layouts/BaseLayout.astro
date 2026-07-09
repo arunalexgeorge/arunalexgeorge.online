@@ -61,21 +61,13 @@ const fullTitle = title === 'Home'
       rel="stylesheet"
     />
 
-    <!-- Google Analytics 4 -->
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LKG8YLNEEK"></script>
     <script is:inline>
-      (function() {
-        // Only load GA4 if user accepted cookies
-        if (localStorage.getItem('cookie-consent') !== 'accepted') return;
-        var id = 'G-LKG8YLNEEK';
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ window.dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', id, { anonymize_ip: true });
-      })();
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LKG8YLNEEK');
     </script>
 
     <!-- Theme Script (prevent flash) -->
