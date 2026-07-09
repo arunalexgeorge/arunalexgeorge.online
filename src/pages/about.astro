@@ -1,0 +1,441 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const experience = [
+  {
+    period: 'Jun 2022 — Present',
+    title: 'Senior Odoo Developer & Team Lead',
+    company: 'Ideenkreise Tech Pvt Ltd',
+    location: 'Kochi, India',
+    description: 'Leading a team of 5-6 developers in delivering enterprise ERP implementations. Architecting complex Odoo solutions, managing client relationships, and driving technical excellence across 20+ successful projects.',
+    tags: ['Odoo', 'Python', 'Team Leadership', 'ERP', 'Client Management'],
+  },
+  {
+    period: 'Jun 2021 — May 2022',
+    title: 'Odoo Developer',
+    company: 'Ideenkreise Tech Pvt Ltd',
+    location: 'Kochi, India',
+    description: 'Transitioned into Odoo ERP development. Built custom modules, implemented business workflows, and contributed to full ERP implementations across manufacturing and retail verticals.',
+    tags: ['Odoo', 'Python', 'PostgreSQL', 'ERP Customization'],
+  },
+  {
+    period: 'Jun 2020 — May 2021',
+    title: 'PHP Developer',
+    company: 'Ideenkreise Tech Pvt Ltd',
+    location: 'Kochi, India',
+    description: 'Developed web applications and CRM systems using PHP and CodeIgniter. Built hotel booking platforms and property management systems.',
+    tags: ['PHP', 'CodeIgniter', 'MySQL', 'WordPress'],
+  },
+  {
+    period: 'Mar 2020 — May 2020',
+    title: 'Senior PHP Developer',
+    company: 'Wahylab Solutions',
+    location: 'Kochi, India',
+    description: 'Promoted to Senior Developer. Led development of e-commerce platforms and mentored junior developers.',
+    tags: ['PHP', 'WordPress', 'WooCommerce', 'Mentoring'],
+  },
+  {
+    period: 'Feb 2019 — Feb 2020',
+    title: 'PHP Developer',
+    company: 'Wahylab Solutions',
+    location: 'Kochi, India',
+    description: 'Built custom web applications, REST APIs, and WordPress sites for diverse clients.',
+    tags: ['PHP', 'REST API', 'WordPress', 'JavaScript'],
+  },
+  {
+    period: 'Oct 2018 — Jan 2019',
+    title: 'PHP Developer Trainee',
+    company: 'Wahylab Solutions',
+    location: 'Kochi, India',
+    description: 'Started professional career as a trainee developer, learning PHP development, database management, and version control.',
+    tags: ['PHP', 'MySQL', 'HTML/CSS', 'Git'],
+  },
+];
+
+const skills = [
+  { name: 'Odoo ERP', level: 95, category: 'Frameworks' },
+  { name: 'Python', level: 90, category: 'Languages' },
+  { name: 'PHP', level: 88, category: 'Languages' },
+  { name: 'JavaScript', level: 82, category: 'Languages' },
+  { name: 'PostgreSQL', level: 88, category: 'Databases' },
+  { name: 'Docker', level: 78, category: 'DevOps' },
+  { name: 'AWS', level: 75, category: 'Cloud' },
+  { name: 'Linux', level: 85, category: 'Systems' },
+  { name: 'WordPress', level: 80, category: 'Web' },
+  { name: 'REST API Design', level: 88, category: 'Architecture' },
+];
+
+const competencies = [
+  'ERP Implementation & Customization',
+  'Solution Architecture',
+  'Team Leadership & Mentoring',
+  'Requirements Gathering',
+  'Client Relationship Management',
+  'Data Migration & Integration',
+  'Database Design & Optimization',
+  'Cloud Infrastructure',
+  'Project Planning & Execution',
+  'User Training & Change Management',
+  'API Development',
+  'Server Administration',
+];
+
+const education = [
+  {
+    degree: 'B.E. Computer Science & Engineering',
+    institution: 'Hindusthan College of Engineering & Technology',
+    university: 'Anna University, Coimbatore',
+    year: '2018',
+  },
+  {
+    degree: 'Diploma in Computer Science & Engineering',
+    institution: 'Karpagam Polytechnic College',
+    location: 'Coimbatore',
+    year: '2014',
+  },
+];
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about Arun Alex George — ERP Consultant, Solution Architect & Technical Lead with 8+ years of experience delivering enterprise solutions."
+>
+  <!-- Hero -->
+  <section class="about-hero section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">About Me</p>
+        <h1 class="section-header__title">Engineering Enterprise Intelligence</h1>
+        <p class="section-header__desc">
+          With 8+ years in enterprise technology and 20+ successful ERP implementations,
+          I transform businesses through intelligent automation and strategic technology consulting.
+        </p>
+      </div>
+
+      <div class="about-hero__story reveal">
+        <p>
+          I'm Arun Alex George — an ERP Consultant, Solution Architect, and Technical Lead
+          based in Kochi, India. I specialize in Odoo ERP implementation and customization,
+          helping businesses across manufacturing, healthcare, retail, and finance verticals
+          streamline their operations and unlock growth.
+        </p>
+        <p>
+          My journey began with PHP web development in 2018, and over the years I've evolved
+          into a full-spectrum technology consultant — building everything from custom web
+          applications to enterprise-grade ERP systems. Today, I lead a team of developers,
+          architect complex solutions, and have published 20+ Odoo apps and themes on the
+          official Odoo App Store.
+        </p>
+        <p>
+          What sets me apart is my end-to-end approach: I don't just write code — I understand
+          your business, design the right solution, build it with precision, train your team,
+          and provide ongoing support to ensure lasting success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Timeline -->
+  <section class="timeline-section section" id="career">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Career</p>
+        <h2 class="section-header__title">Professional Journey</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line" aria-hidden="true"></div>
+        {experience.map((job, i) => (
+          <div class="timeline__item reveal" data-delay={String(Math.min(i + 1, 4))}>
+            <div class="timeline__node"></div>
+            <div class="timeline__card card">
+              <span class="timeline__period">{job.period}</span>
+              <h3 class="timeline__title">{job.title}</h3>
+              <p class="timeline__company">{job.company} · {job.location}</p>
+              <p class="timeline__desc">{job.description}</p>
+              <div class="timeline__tags">
+                {job.tags.map((tag) => (
+                  <span class="chip">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Technical Skills</p>
+        <h2 class="section-header__title">Tools & Technologies</h2>
+      </div>
+
+      <div class="skills-grid reveal">
+        {skills.map((skill) => (
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span class="skill-bar__name">{skill.name}</span>
+              <span class="skill-bar__level">{skill.level}%</span>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-bar__fill" style={`--level: ${skill.level}%`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Competencies -->
+  <section class="competencies-section section--sm" id="competencies">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Core Competencies</p>
+        <h2 class="section-header__title">What I Bring to the Table</h2>
+      </div>
+
+      <div class="competencies-grid reveal">
+        {competencies.map((comp) => (
+          <div class="competency-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>{comp}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education-section section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Education</p>
+        <h2 class="section-header__title">Academic Background</h2>
+      </div>
+
+      <div class="education-grid reveal">
+        {education.map((edu) => (
+          <div class="education-card card">
+            <span class="education-card__year">{edu.year}</span>
+            <h3 class="education-card__degree">{edu.degree}</h3>
+            <p class="education-card__institution">{edu.institution}</p>
+            {edu.university && <p class="education-card__detail">{edu.university}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-hero { padding-top: calc(72px + var(--space-16)); }
+
+  .about-hero__story {
+    max-width: 720px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .about-hero__story p {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  .timeline__line {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--color-accent-border), var(--color-border), transparent);
+  }
+
+  .timeline__item {
+    display: flex;
+    gap: var(--space-6);
+    padding-bottom: var(--space-8);
+    position: relative;
+  }
+
+  .timeline__node {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    z-index: 1;
+    margin-top: var(--space-6);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .timeline__item:hover .timeline__node {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+    box-shadow: 0 0 12px var(--color-accent-soft);
+  }
+
+  .timeline__card {
+    flex: 1;
+  }
+
+  .timeline__period {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .timeline__title {
+    font-size: var(--text-lg);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .timeline__company {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-3);
+  }
+
+  .timeline__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-4);
+  }
+
+  .timeline__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  /* Skills */
+  .skills-grid {
+    max-width: 680px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .skill-bar__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+  }
+
+  .skill-bar__name {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .skill-bar__level {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-tertiary);
+    font-family: var(--font-display);
+  }
+
+  .skill-bar__track {
+    height: 6px;
+    border-radius: var(--radius-full);
+    background: var(--color-bg-tertiary);
+    overflow: hidden;
+  }
+
+  .skill-bar__fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+    width: var(--level);
+    transition: width 1s var(--ease-out);
+  }
+
+  /* Competencies */
+  .competencies-grid {
+    max-width: 800px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .competency-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-subtle);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .competency-item:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-bg-secondary);
+  }
+
+  .competency-item svg {
+    color: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  /* Education */
+  .education-grid {
+    max-width: 680px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .education-card__year {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .education-card__degree {
+    font-size: var(--text-lg);
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
+  .education-card__institution {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .education-card__detail {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-top: var(--space-1);
+  }
+
+  @media (max-width: 640px) {
+    .timeline__line { left: 11px; }
+    .timeline__node { width: 22px; height: 22px; }
+    .timeline__item { gap: var(--space-4); }
+  }
+</style>

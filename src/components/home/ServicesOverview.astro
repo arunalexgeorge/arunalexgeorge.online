@@ -1,0 +1,151 @@
+---
+const services = [
+  {
+    icon: 'erp',
+    title: 'ERP Consulting',
+    description: 'End-to-end Odoo ERP implementation, customization, and strategic business process optimization for enterprises.',
+    tags: ['Odoo', 'ERP', 'Business Process'],
+    href: '/services/erp-consulting',
+  },
+  {
+    icon: 'code',
+    title: 'Custom Software',
+    description: 'Bespoke web applications and backend systems built with Python, PHP, and modern frameworks tailored to your workflow.',
+    tags: ['Python', 'PHP', 'Full Stack'],
+    href: '/services/custom-software',
+  },
+  {
+    icon: 'globe',
+    title: 'Website Development',
+    description: 'Professional websites and e-commerce platforms built with WordPress, custom CMS, and modern web technologies.',
+    tags: ['WordPress', 'eCommerce', 'Web'],
+    href: '/services/website-development',
+  },
+  {
+    icon: 'cloud',
+    title: 'Cloud & DevOps',
+    description: 'Cloud infrastructure setup, server administration, CI/CD pipelines, and scalable deployment solutions.',
+    tags: ['AWS', 'Docker', 'Linux'],
+    href: '/services/cloud-devops',
+  },
+];
+---
+
+<section class="services section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-header__label">What I Do</p>
+      <h2 class="section-header__title">Services That Drive Results</h2>
+      <p class="section-header__desc">
+        From ERP strategy to cloud deployment — comprehensive solutions for modern businesses.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      {services.map((service, i) => (
+        <a class="services__card card card--accent reveal" href={service.href} data-delay={String(i + 1)}>
+          <div class="services__icon-wrapper">
+            {service.icon === 'erp' && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            )}
+            {service.icon === 'code' && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            )}
+            {service.icon === 'globe' && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            )}
+            {service.icon === 'cloud' && (
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            )}
+          </div>
+          <h3 class="services__title">{service.title}</h3>
+          <p class="services__desc">{service.description}</p>
+          <div class="services__tags">
+            {service.tags.map((tag) => (
+              <span class="chip">{tag}</span>
+            ))}
+          </div>
+          <span class="services__arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="services__cta reveal">
+      <a class="btn btn--outline" href="/services">
+        View All Services
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-6);
+  }
+
+  .services__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services__icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent-border);
+  }
+
+  .services__title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .services__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .services__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .services__arrow {
+    position: absolute;
+    top: var(--space-8);
+    right: var(--space-8);
+    color: var(--color-text-muted);
+    transition: all var(--duration-normal) var(--ease-out);
+    opacity: 0;
+    transform: translate(-4px, 4px);
+  }
+
+  .services__card:hover .services__arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+    color: var(--color-accent);
+  }
+
+  .services__cta {
+    text-align: center;
+    margin-top: var(--space-12);
+  }
+</style>

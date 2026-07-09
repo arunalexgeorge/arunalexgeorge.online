@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const products = [
+  // Themes
+  { name: 'Web Responsive Enterprise', desc: 'Odoo 19 Enterprise look & feel and responsive UX for Community Edition (light mode).', price: 'FREE', downloads: 38, category: 'Theme', version: '19.0', href: 'https://apps.odoo.com/apps/themes/19.0/web_responsive_enterprise' },
+  { name: 'Auralis — Premium Backend Theme', desc: 'A premium, glassmorphic SaaS-grade backend theme for Odoo 19 Community — modern design system, first-class dark mode.', price: '$79', downloads: 0, category: 'Theme', version: '19.0', href: 'https://apps.odoo.com/apps/themes/19.0/auralis_theme' },
+  { name: 'Linelight - Minimal Backend Theme', desc: 'A clean, light, line-based backend theme for Odoo: a bright navbar, airy cards, refined buttons and subtle borders.', price: '$49', downloads: 0, category: 'Theme', version: '19.0', href: 'https://apps.odoo.com/apps/themes/19.0/linelight_theme' },
+  // AI Apps
+  { name: 'AI Email & Reply Writer', desc: 'Draft and improve emails with AI, right inside Odoo\'s composer.', price: 'FREE', downloads: 6, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/ai_mail_assistant' },
+  { name: 'AI Product Descriptions', desc: 'Generate compelling product sales descriptions with AI, in one click.', price: 'FREE', downloads: 5, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/ai_product_copywriter' },
+  { name: 'AI Gateway', desc: 'Reusable BYO-key LLM gateway (Claude / OpenAI / Ollama) with provider routing and usage logging.', price: 'FREE', downloads: 2, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/ai_gateway' },
+  { name: 'AI Chat over your ERP', desc: 'Ask questions about your Odoo data in plain language and get grounded answers.', price: '$229', downloads: 0, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/ai_erp_chat' },
+  { name: 'AI-OCR Invoice & Bill Capture', desc: 'Drop a PDF or photo of a vendor bill; AI extracts vendor, dates, amounts and line items.', price: '$349', downloads: 0, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/ai_ocr_invoice' },
+  { name: 'KPI Dashboard Builder (+AI Narrative)', desc: 'Build no-code KPI dashboards over any Odoo model with AI executive summaries.', price: '$249', downloads: 0, category: 'AI', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/kpi_dashboard_builder' },
+  // Enterprise Apps
+  { name: 'Database Backup (Local + Cloud)', desc: 'Scheduled database + filestore backups to local folder, Google Drive, OneDrive and AWS S3.', price: 'FREE', downloads: 5, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/db_backup_cloud' },
+  { name: 'Multi Company Quick Selector', desc: 'Select all, deselect all or toggle all allowed companies in the company switcher with one click.', price: 'FREE', downloads: 1, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/multi_company_quick_selector' },
+  { name: 'Helpdesk & Ticketing', desc: 'A full help desk for Odoo Community: teams, SLA policies, email-to-ticket, kanban pipeline.', price: '$329', downloads: 0, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/helpdesk_ticketing_sla' },
+  { name: 'Subscriptions & Recurring Billing', desc: 'Recurring revenue: subscription plans, contracts, automatic invoicing, MRR/ARR analytics.', price: '$399', downloads: 0, category: 'Sales', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/subscription_recurring' },
+  { name: 'Customer Follow-ups & Dunning', desc: 'Multi-level automated payment reminders with follow-up levels, email reminders, and promise-to-pay.', price: '$189', downloads: 0, category: 'Accounting', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/followup_dunning' },
+  { name: 'Documents Hub - DMS & File Sharing', desc: 'Document management: organise files in folders with per-group access, tags, preview and portal sharing.', price: '$189', downloads: 0, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/dms_document_hub' },
+  { name: 'Appointments & Online Booking', desc: 'Let customers book appointments online: services, staff, weekly availability and booking page.', price: '$268.99', downloads: 0, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/appointment_online_booking' },
+  { name: 'Field Service Management', desc: 'Schedule on-site jobs and let field workers run them from a mobile app.', price: '$258.99', downloads: 0, category: 'Operations', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/fsm_field_jobs' },
+  { name: 'Barcode Warehouse Operations (Mobile)', desc: 'Fast, mobile-first barcode scanner for Odoo Community warehouses.', price: '$199', downloads: 0, category: 'Warehouse', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/barcode_warehouse_ops' },
+  { name: 'Employee Geo Attendance & Field Visit', desc: 'GPS-verified employee check-in/out with radius validation and dashboards.', price: '$150', downloads: 0, category: 'HR', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/employee_geo_attendance' },
+  { name: 'Backup Vault - Scheduled DB Backups', desc: 'Automatic backups to Local, SFTP, Amazon S3, Dropbox or Google Drive with retention and alerts.', price: '$79', downloads: 0, category: 'Productivity', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/db_backup_vault' },
+  { name: 'Advanced Product Category Sequences', desc: 'Auto-generate structured Lot & Serial numbers from per-Category sequence rules.', price: '$40', downloads: 0, category: 'Warehouse', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/advanced_product_category_sequences' },
+  { name: 'Dental Lab Management System', desc: 'Complete dental laboratory management: cases, production, billing, portal & reports.', price: '$500', downloads: 0, category: 'Industry', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/dental_lab_management' },
+  { name: 'Payroll India - Statutory', desc: 'Indian payroll: salary structures, payslips, PF, ESI, Professional Tax, TDS and gratuity.', price: '$299', downloads: 0, category: 'HR', version: '19.0', href: 'https://apps.odoo.com/apps/modules/19.0/payroll_india_statutory' },
+];
+
+const categories = ['All', ...new Set(products.map(p => p.category))];
+---
+
+<BaseLayout
+  title="Products"
+  description="Browse 20+ Odoo apps and 3 premium themes by Arun Alex George — AI tools, ERP modules, and backend themes for Odoo Community."
+>
+  <section class="products-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Odoo App Store</p>
+        <h1 class="section-header__title">Apps & Themes</h1>
+        <p class="section-header__desc">
+          {products.length} products published on the Odoo App Store — from AI-powered tools to enterprise-grade modules and premium themes.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="products-filters reveal" id="product-filters">
+        {categories.map((cat) => (
+          <button
+            class={`chip products-filter ${cat === 'All' ? 'products-filter--active' : ''}`}
+            data-filter={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid" id="product-grid">
+        {products.map((product, i) => (
+          <a
+            class="products-card card card--accent reveal"
+            href={product.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-category={product.category}
+            data-delay={String(Math.min(i + 1, 4))}
+          >
+            <div class="products-card__top">
+              <span class="badge">{product.category}</span>
+              <span class="products-card__price">{product.price}</span>
+            </div>
+            <h3 class="products-card__name">{product.name}</h3>
+            <p class="products-card__desc">{product.desc}</p>
+            <div class="products-card__footer">
+              <span class="products-card__version">v{product.version}</span>
+              {product.downloads > 0 && (
+                <span class="products-card__downloads">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  {product.downloads}
+                </span>
+              )}
+              <span class="products-card__link">
+                View on Store →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .products-page { padding-top: calc(72px + var(--space-16)); }
+
+  .products-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .products-filter--active {
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent-border);
+    color: var(--color-accent);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: var(--space-6);
+  }
+
+  .products-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .products-card--hidden {
+    display: none;
+  }
+
+  .products-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .products-card__price {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .products-card__name {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+  }
+
+  .products-card__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .products-card__footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border-subtle);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .products-card__downloads {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .products-card__link {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: gap var(--duration-fast) var(--ease-out);
+  }
+
+  .products-card__version {
+    font-family: var(--font-mono, var(--font-body));
+  }
+</style>
+
+<script>
+  const filters = document.querySelectorAll('.products-filter');
+  const cards = document.querySelectorAll('.products-card') as NodeListOf<HTMLElement>;
+
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = (btn as HTMLElement).dataset.filter;
+
+      filters.forEach((f) => f.classList.remove('products-filter--active'));
+      btn.classList.add('products-filter--active');
+
+      cards.forEach((card) => {
+        if (filter === 'All' || card.dataset.category === filter) {
+          card.classList.remove('products-card--hidden');
+        } else {
+          card.classList.add('products-card--hidden');
+        }
+      });
+    });
+  });
+</script>

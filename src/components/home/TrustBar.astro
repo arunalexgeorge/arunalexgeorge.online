@@ -1,0 +1,88 @@
+---
+const stats = [
+  { value: '50+', label: 'Clients Served' },
+  { value: '20+', label: 'ERP Implementations' },
+  { value: '8+', label: 'Years Experience' },
+  { value: '23+', label: 'Odoo Apps & Themes' },
+];
+---
+
+<section class="trust-bar" aria-label="Key statistics">
+  <div class="trust-bar__inner container">
+    {stats.map((stat, i) => (
+      <div class="trust-bar__stat reveal" data-delay={String(i + 1)}>
+        <span class="trust-bar__value">{stat.value}</span>
+        <span class="trust-bar__label">{stat.label}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .trust-bar {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding-block: var(--space-12);
+    background: var(--color-surface);
+  }
+
+  .trust-bar__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-8);
+  }
+
+  .trust-bar__stat {
+    text-align: center;
+    position: relative;
+  }
+
+  .trust-bar__stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background: var(--color-border);
+  }
+
+  .trust-bar__value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: var(--tracking-tight);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+  }
+
+  .trust-bar__label {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .trust-bar__inner {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8) var(--space-4);
+    }
+
+    .trust-bar__stat:not(:last-child)::after {
+      display: none;
+    }
+
+    .trust-bar__value {
+      font-size: var(--text-3xl);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trust-bar__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

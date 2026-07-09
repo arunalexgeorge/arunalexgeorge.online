@@ -1,0 +1,81 @@
+---
+const industries = [
+  { name: 'Automobile', icon: '🚗' },
+  { name: 'Manufacturing', icon: '🏭' },
+  { name: 'Real Estate', icon: '🏢' },
+  { name: 'Hospitality', icon: '🏨' },
+  { name: 'Retail', icon: '🛒' },
+  { name: 'Healthcare', icon: '🏥' },
+  { name: 'Dental', icon: '🦷' },
+  { name: 'Finance', icon: '💰' },
+  { name: 'Procurement', icon: '📦' },
+];
+---
+
+<section class="industries section--sm" id="industries">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-header__label">Industries</p>
+      <h2 class="section-header__title">Trusted Across Verticals</h2>
+      <p class="section-header__desc">
+        Delivering tailored ERP and technology solutions across diverse industry verticals.
+      </p>
+    </div>
+
+    <div class="industries__grid reveal">
+      {industries.map((industry) => (
+        <div class="industries__item">
+          <span class="industries__icon">{industry.icon}</span>
+          <span class="industries__name">{industry.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .industries__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-4);
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .industries__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-subtle);
+    background: var(--color-bg-secondary);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .industries__item:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-2px);
+    background: var(--color-bg-tertiary);
+  }
+
+  .industries__icon {
+    font-size: var(--text-2xl);
+    line-height: 1;
+  }
+
+  .industries__name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .industries__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+    }
+  }
+</style>

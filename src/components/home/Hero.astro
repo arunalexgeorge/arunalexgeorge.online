@@ -1,0 +1,302 @@
+---
+import heroAvatar from '../../assets/images/hero-avatar.webp';
+
+const roles = [
+  'ERP Consultant',
+  'Solution Architect',
+  'Technical Lead',
+  'Full Stack Engineer',
+];
+---
+
+<section class="hero" id="hero">
+  <div class="hero__inner container">
+    <div class="hero__content">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        Available for Projects
+      </div>
+
+      <h1 class="hero__title reveal" data-delay="1">
+        I'm <span class="hero__name">Arun Alex George</span>
+      </h1>
+
+      <div class="hero__roles reveal" data-delay="2">
+        {roles.map((role, i) => (
+          <span class="hero__role">
+            {role}
+            {i < roles.length - 1 && <span class="hero__role-sep">·</span>}
+          </span>
+        ))}
+      </div>
+
+      <p class="hero__desc reveal" data-delay="3">
+        I help businesses eliminate operational chaos by designing and delivering
+        intelligent ERP systems that automate workflows, unify data, and drive
+        measurable growth — with the precision of an engineer and the empathy
+        of a partner.
+      </p>
+
+      <div class="hero__actions reveal" data-delay="4">
+        <a class="btn btn--primary btn--lg" href="/contact">
+          Book a Discovery Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn btn--outline btn--lg" href="/services">
+          View Services
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal" data-delay="2">
+      <div class="hero__image-wrapper">
+        <img
+          src={heroAvatar.src}
+          alt="Arun Alex George — ERP Consultant & Solution Architect"
+          width="420"
+          height="420"
+          loading="eager"
+          fetchpriority="high"
+          class="hero__image"
+        />
+        <div class="hero__image-ring"></div>
+        <div class="hero__image-glow"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtle organic background shape -->
+  <div class="hero__bg-shape" aria-hidden="true"></div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding-top: calc(72px + var(--space-16));
+    padding-bottom: var(--space-20);
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  /* Badge */
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+    background: var(--color-accent-soft);
+    border: 1px solid var(--color-accent-border);
+    margin-bottom: var(--space-6);
+    width: fit-content;
+  }
+
+  .hero__badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+  }
+
+  /* Title */
+  .hero__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--space-5);
+  }
+
+  .hero__name {
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Roles */
+  .hero__roles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  .hero__role {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  .hero__role-sep {
+    color: var(--color-accent);
+    margin-left: var(--space-2);
+    font-weight: 700;
+  }
+
+  /* Description */
+  .hero__desc {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-tertiary);
+    max-width: 540px;
+    margin-bottom: var(--space-8);
+  }
+
+  /* Actions */
+  .hero__actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  /* Visual */
+  .hero__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__image-wrapper {
+    position: relative;
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 3px solid var(--color-border);
+  }
+
+  .hero__image-ring {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-radius: 50%;
+    border: 1px solid var(--color-accent-border);
+    z-index: 1;
+    animation: ring-rotate 20s linear infinite;
+  }
+
+  .hero__image-ring::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+
+  @keyframes ring-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero__image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-accent-soft) 0%, transparent 70%);
+    z-index: 0;
+    filter: blur(40px);
+  }
+
+  /* Background Shape */
+  .hero__bg-shape {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero__badge { margin-inline: auto; }
+
+    .hero__roles {
+      justify-content: center;
+    }
+
+    .hero__desc {
+      margin-inline: auto;
+    }
+
+    .hero__actions {
+      justify-content: center;
+    }
+
+    .hero__visual {
+      order: -1;
+    }
+
+    .hero__image-wrapper {
+      width: 280px;
+      height: 280px;
+    }
+
+    .hero {
+      min-height: auto;
+      padding-top: calc(72px + var(--space-10));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero__image-wrapper {
+      width: 220px;
+      height: 220px;
+    }
+
+    .hero__actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .hero__actions .btn {
+      width: 100%;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Terms of Service" noIndex={true}>
+  <section class="legal-page section">
+    <div class="container container--sm">
+      <h1>Terms of Service</h1>
+      <p class="legal-page__updated">Last updated: July 2026</p>
+
+      <div class="legal-page__content">
+        <h2>1. Services</h2>
+        <p>Arun Alex George provides ERP consulting, Odoo development, website development, cloud infrastructure, and related technology services. All projects are custom-quoted based on specific requirements discussed during discovery.</p>
+
+        <h2>2. Engagement Process</h2>
+        <p>All engagements begin with a discovery call. After understanding your requirements, I provide a detailed proposal and quote. Work commences only after mutual agreement on scope, timeline, and terms.</p>
+
+        <h2>3. Intellectual Property</h2>
+        <p>Upon full payment, you receive complete ownership of all custom-developed code and deliverables. Pre-existing frameworks, libraries, and Odoo modules published on the App Store remain under their respective licenses.</p>
+
+        <h2>4. Odoo App Store Products</h2>
+        <p>Apps and themes purchased from the Odoo App Store are governed by Odoo's standard licensing terms. Support and updates are provided as described in each product's listing.</p>
+
+        <h2>5. Confidentiality</h2>
+        <p>I treat all client information, business data, and project details as strictly confidential. I will not disclose your information to third parties without your explicit consent.</p>
+
+        <h2>6. Payment Terms</h2>
+        <p>Payment terms are specified in individual project proposals. Standard terms include milestone-based billing with payment due within 15 days of invoice.</p>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>While I strive for excellence in all deliverables, liability is limited to the total fees paid for the specific service in question.</p>
+
+        <h2>8. Contact</h2>
+        <p>For questions about these terms, contact me at <a href="mailto:hello@arunalexgeorge.online">hello@arunalexgeorge.online</a>.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page { padding-top: calc(72px + var(--space-16)); }
+
+  .legal-page h1 { margin-bottom: var(--space-2); }
+
+  .legal-page__updated {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-10);
+  }
+
+  .legal-page__content h2 {
+    font-size: var(--text-lg);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+  }
+
+  .legal-page__content p {
+    margin-bottom: var(--space-4);
+    line-height: var(--leading-relaxed);
+  }
+
+  .legal-page__content a {
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+</style>

@@ -1,0 +1,16 @@
+{
+  "name": "Arun Alex George",
+  "short_name": "AAG",
+  "description": "ERP Consultant, Solution Architect & Technical Lead",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0b",
+  "theme_color": "#10B981",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

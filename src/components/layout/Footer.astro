@@ -1,0 +1,254 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/arunageorge', icon: 'linkedin' },
+  { label: 'GitHub', href: 'https://github.com/arunalexgeorge', icon: 'github' },
+  { label: 'Medium', href: 'https://medium.com/@arunalexgeorge', icon: 'medium' },
+  { label: 'Odoo Apps', href: 'https://apps.odoo.com/apps/modules?repo_maintainer_id=350638', icon: 'odoo' },
+];
+
+const quickLinks = [
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Products', href: '/products' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const services = [
+  { label: 'ERP Consulting', href: '/services/erp-consulting' },
+  { label: 'Odoo Development', href: '/services/odoo-development' },
+  { label: 'Website Development', href: '/services/website-development' },
+  { label: 'Custom Software', href: '/services/custom-software' },
+  { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+];
+---
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <!-- Top Section -->
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__brand-link" href="/">
+          <span class="footer__brand-name">arunalexgeorge</span>
+          <span class="footer__brand-dot">.</span>
+          <span class="footer__brand-tld">online</span>
+        </a>
+        <p class="footer__tagline">Engineering Enterprise Intelligence</p>
+      </div>
+
+      <div class="footer__columns">
+        <div class="footer__column">
+          <h4 class="footer__column-title">Quick Links</h4>
+          <ul class="footer__list">
+            {quickLinks.map((link) => (
+              <li><a class="footer__link" href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Services</h4>
+          <ul class="footer__list">
+            {services.map((link) => (
+              <li><a class="footer__link" href={link.href}>{link.label}</a></li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__column-title">Get in Touch</h4>
+          <ul class="footer__list">
+            <li>
+              <a class="footer__link" href="mailto:hello@arunalexgeorge.online">
+                hello@arunalexgeorge.online
+              </a>
+            </li>
+            <li class="footer__detail">Kochi, India</li>
+            <li class="footer__detail">Mon — Fri, 9AM — 6PM IST</li>
+          </ul>
+          <div class="footer__social">
+            {socialLinks.map((link) => (
+              <a
+                class="footer__social-link"
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                title={link.label}
+              >
+                {link.icon === 'linkedin' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                )}
+                {link.icon === 'github' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                )}
+                {link.icon === 'medium' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                )}
+                {link.icon === 'odoo' && (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3.5"/><circle cx="4.5" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="19.5" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                )}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        © {currentYear} Arun Alex George. All rights reserved.
+      </p>
+      <div class="footer__bottom-links">
+        <a class="footer__link" href="/privacy">Privacy Policy</a>
+        <a class="footer__link" href="/terms">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-8);
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-16);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Brand */
+  .footer__brand-link {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    display: inline-flex;
+    align-items: baseline;
+  }
+
+  .footer__brand-link:hover { color: var(--color-text); }
+  .footer__brand-dot { color: var(--color-accent); }
+  .footer__brand-tld { color: var(--color-text-tertiary); font-weight: 400; }
+
+  .footer__tagline {
+    margin-top: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  /* Columns */
+  .footer__columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+
+  .footer__column-title {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer__link {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .footer__link:hover {
+    color: var(--color-accent);
+  }
+
+  .footer__detail {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  /* Social */
+  .footer__social {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    color: var(--color-text-tertiary);
+    border: 1px solid var(--color-border);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .footer__social-link:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent-border);
+    background: var(--color-accent-soft);
+  }
+
+  /* Bottom */
+  .footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-8);
+  }
+
+  .footer__copyright {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .footer__bottom-links {
+    display: flex;
+    gap: var(--space-6);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .footer__top {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+
+    .footer__columns {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      gap: var(--space-4);
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer__columns {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,244 @@
+---
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const {
+  title,
+  description = 'Arun Alex George — ERP Consultant, Solution Architect & Technical Lead. Specializing in Odoo ERP development, enterprise business automation, and full-stack software engineering.',
+  ogImage = '/og-image.png',
+  noIndex = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === 'Home'
+  ? 'Arun Alex George — ERP Consultant & Solution Architect'
+  : `${title} — Arun Alex George`;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+    <meta property="og:site_name" content="Arun Alex George" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Font Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Analytics 4 -->
+    <script is:inline>
+      (function() {
+        // Only load GA4 if user accepted cookies
+        if (localStorage.getItem('cookie-consent') !== 'accepted') return;
+        var id = 'G-LKG8YLNEEK';
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', id, { anonymize_ip: true });
+      })();
+    </script>
+
+    <!-- Theme Script (prevent flash) -->
+    <script is:inline>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="reading-progress" aria-hidden="true"></div>
+
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Cookie Consent -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" style="display:none">
+      <p>This site uses cookies for analytics to improve your experience.</p>
+      <div class="cookie-banner__actions">
+        <button class="btn btn--primary btn--sm" id="cookie-accept">Accept</button>
+        <button class="btn btn--ghost btn--sm" id="cookie-decline">Decline</button>
+      </div>
+    </div>
+
+    <!-- JSON-LD Structured Data -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Arun Alex George",
+      "url": "https://arunalexgeorge.online",
+      "email": "hello@arunalexgeorge.online",
+      "jobTitle": "ERP Consultant & Solution Architect",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Ideenkreise Tech Pvt Ltd"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kochi",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/arunageorge",
+        "https://github.com/arunalexgeorge",
+        "https://medium.com/@arunalexgeorge"
+      ],
+      "knowsAbout": ["Odoo ERP", "ERP Consulting", "Solution Architecture", "Python", "Full Stack Development"]
+    }
+    </script>
+
+    <!-- Scroll Reveal Observer -->
+    <script>
+      // Scroll Reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal--visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      // Reading Progress Bar
+      const progressBar = document.getElementById('reading-progress');
+      if (progressBar) {
+        window.addEventListener('scroll', () => {
+          const scrollTop = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          progressBar.style.width = `${progress}%`;
+        }, { passive: true });
+      }
+
+      // Cookie Consent
+      const banner = document.getElementById('cookie-banner');
+      const acceptBtn = document.getElementById('cookie-accept');
+      const declineBtn = document.getElementById('cookie-decline');
+
+      if (banner && !localStorage.getItem('cookie-consent')) {
+        banner.style.display = 'flex';
+      }
+
+      acceptBtn?.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'accepted');
+        if (banner) banner.style.display = 'none';
+      });
+
+      declineBtn?.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'declined');
+        if (banner) banner.style.display = 'none';
+      });
+    </script>
+
+    <style>
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0%;
+        background: var(--color-accent);
+        z-index: 999;
+        transition: width 50ms linear;
+      }
+
+      .cookie-banner {
+        position: fixed;
+        bottom: var(--space-6);
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--color-bg-secondary);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        padding: var(--space-4) var(--space-6);
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+        z-index: var(--z-toast);
+        max-width: 600px;
+        width: calc(100% - var(--space-8));
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        animation: slideUp 0.4s var(--ease-out);
+      }
+
+      .cookie-banner p {
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+        flex: 1;
+      }
+
+      .cookie-banner__actions {
+        display: flex;
+        gap: var(--space-2);
+        flex-shrink: 0;
+      }
+
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+      }
+
+      @media (max-width: 560px) {
+        .cookie-banner {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </body>
+</html>
+

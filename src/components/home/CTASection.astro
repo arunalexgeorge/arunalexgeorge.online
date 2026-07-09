@@ -1,0 +1,99 @@
+---
+---
+
+<section class="cta-section" id="cta">
+  <div class="cta-section__inner container">
+    <div class="cta-section__content reveal">
+      <p class="section-header__label">Ready to Start?</p>
+      <h2 class="cta-section__title">Let's Build Something<br />Extraordinary Together</h2>
+      <p class="cta-section__desc">
+        Book a free 30-minute discovery call and let's discuss how to transform
+        your business operations with intelligent ERP solutions.
+      </p>
+      <div class="cta-section__actions">
+        <a class="btn btn--primary btn--lg" href="/contact">
+          Schedule a Discovery Call
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn btn--outline btn--lg" href="mailto:hello@arunalexgeorge.online">
+          hello@arunalexgeorge.online
+        </a>
+      </div>
+    </div>
+
+    <!-- Decorative elements -->
+    <div class="cta-section__glow" aria-hidden="true"></div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    padding-block: var(--space-32);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section__inner {
+    position: relative;
+  }
+
+  .cta-section__content {
+    text-align: center;
+    max-width: 680px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-section__title {
+    font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+    font-weight: 700;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: var(--space-6);
+  }
+
+  .cta-section__desc {
+    font-size: var(--text-lg);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-10);
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+  .cta-section__actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-section__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-accent-glow) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @media (max-width: 480px) {
+    .cta-section {
+      padding-block: var(--space-20);
+    }
+
+    .cta-section__actions {
+      flex-direction: column;
+    }
+
+    .cta-section__actions .btn {
+      width: 100%;
+    }
+  }
+</style>

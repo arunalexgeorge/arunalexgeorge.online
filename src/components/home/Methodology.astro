@@ -1,0 +1,160 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Discovery',
+    description: 'Understanding your business, goals, pain points, and current systems through in-depth consultation.',
+  },
+  {
+    number: '02',
+    title: 'Requirements',
+    description: 'Detailed requirements gathering, gap analysis, and solution architecture planning.',
+  },
+  {
+    number: '03',
+    title: 'Development',
+    description: 'Agile development with regular demos, iterative feedback cycles, and quality assurance.',
+  },
+  {
+    number: '04',
+    title: 'Testing',
+    description: 'Comprehensive UAT, integration testing, data validation, and performance optimization.',
+  },
+  {
+    number: '05',
+    title: 'Training',
+    description: 'Hands-on user training, documentation, and change management support for smooth adoption.',
+  },
+  {
+    number: '06',
+    title: 'Go-Live',
+    description: 'Carefully planned go-live with data migration, cutover support, and production monitoring.',
+  },
+  {
+    number: '07',
+    title: 'Support',
+    description: 'Ongoing AMC, performance monitoring, upgrades, and continuous improvement.',
+  },
+];
+---
+
+<section class="methodology section" id="methodology">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-header__label">Process</p>
+      <h2 class="section-header__title">How I Work</h2>
+      <p class="section-header__desc">
+        A proven 7-step methodology refined across 20+ ERP implementations.
+      </p>
+    </div>
+
+    <div class="methodology__timeline">
+      <div class="methodology__line" aria-hidden="true"></div>
+      {steps.map((step, i) => (
+        <div class="methodology__step reveal" data-delay={String(Math.min(i + 1, 4))}>
+          <div class="methodology__node">
+            <span class="methodology__number">{step.number}</span>
+          </div>
+          <div class="methodology__content">
+            <h3 class="methodology__title">{step.title}</h3>
+            <p class="methodology__desc">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .methodology__timeline {
+    position: relative;
+    max-width: 680px;
+    margin-inline: auto;
+  }
+
+  .methodology__line {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      var(--color-accent-border),
+      var(--color-border),
+      var(--color-accent-border)
+    );
+  }
+
+  .methodology__step {
+    display: flex;
+    gap: var(--space-6);
+    padding-bottom: var(--space-10);
+    position: relative;
+  }
+
+  .methodology__step:last-child {
+    padding-bottom: 0;
+  }
+
+  .methodology__node {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    z-index: 1;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .methodology__step:hover .methodology__node {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+  }
+
+  .methodology__number {
+    font-family: var(--font-mono, var(--font-display));
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--color-text-muted);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .methodology__step:hover .methodology__number {
+    color: var(--color-accent);
+  }
+
+  .methodology__content {
+    padding-top: var(--space-2);
+  }
+
+  .methodology__title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--space-2);
+  }
+
+  .methodology__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  @media (max-width: 480px) {
+    .methodology__line { left: 20px; }
+
+    .methodology__node {
+      width: 40px;
+      height: 40px;
+    }
+
+    .methodology__step {
+      gap: var(--space-4);
+    }
+  }
+</style>

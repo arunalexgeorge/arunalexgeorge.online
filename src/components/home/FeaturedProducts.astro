@@ -1,0 +1,129 @@
+---
+const products = [
+  {
+    name: 'Auralis — Premium Backend Theme',
+    description: 'A premium, glassmorphic SaaS-grade backend theme for Odoo 19 Community — modern design system, first-class dark mode, redesigned app drawer.',
+    price: '$79',
+    category: 'Theme',
+    href: 'https://apps.odoo.com/apps/themes/19.0/auralis_theme',
+  },
+  {
+    name: 'AI Chat over your ERP',
+    description: 'Ask questions about your Odoo data in plain language and get grounded answers. A chat assistant with retrieval over the models you choose.',
+    price: '$229',
+    category: 'AI',
+    href: 'https://apps.odoo.com/apps/modules/19.0/ai_erp_chat',
+  },
+  {
+    name: 'Helpdesk & Ticketing',
+    description: 'A full help desk for Odoo Community: teams, SLA policies, email-to-ticket, a kanban pipeline, analytics and a customer self-service portal.',
+    price: '$329',
+    category: 'Productivity',
+    href: 'https://apps.odoo.com/apps/modules/19.0/helpdesk_ticketing_sla',
+  },
+  {
+    name: 'Subscriptions & Recurring Billing',
+    description: 'Recurring revenue for Odoo Community: subscription plans, contracts, automatic recurring invoicing, MRR/ARR analytics.',
+    price: '$399',
+    category: 'Sales',
+    href: 'https://apps.odoo.com/apps/modules/19.0/subscription_recurring',
+  },
+];
+---
+
+<section class="featured section" id="products">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-header__label">Products</p>
+      <h2 class="section-header__title">Odoo Apps & Themes</h2>
+      <p class="section-header__desc">
+        20+ apps and themes published on the Odoo App Store — from AI-powered tools to enterprise modules.
+      </p>
+    </div>
+
+    <div class="featured__grid">
+      {products.map((product, i) => (
+        <a class="featured__card card card--accent reveal" href={product.href} target="_blank" rel="noopener noreferrer" data-delay={String(i + 1)}>
+          <div class="featured__card-top">
+            <span class="badge">{product.category}</span>
+            <span class="featured__price">{product.price}</span>
+          </div>
+          <h3 class="featured__name">{product.name}</h3>
+          <p class="featured__desc">{product.description}</p>
+          <span class="featured__link-text">
+            View on Odoo Store
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="featured__cta reveal">
+      <a class="btn btn--outline" href="/products">
+        View All 23 Products
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-6);
+  }
+
+  .featured__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-decoration: none;
+  }
+
+  .featured__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .featured__price {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .featured__name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: var(--leading-snug);
+  }
+
+  .featured__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .featured__link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: gap var(--duration-fast) var(--ease-out);
+  }
+
+  .featured__card:hover .featured__link-text {
+    gap: var(--space-2);
+  }
+
+  .featured__cta {
+    text-align: center;
+    margin-top: var(--space-12);
+  }
+</style>

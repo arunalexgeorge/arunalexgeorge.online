@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const services = [
+  {
+    title: 'ERP Consulting',
+    desc: 'Strategic ERP advisory, business process analysis, and roadmap planning for enterprises looking to optimize operations.',
+    icon: '📊',
+    href: '/services/erp-consulting',
+    tags: ['Strategy', 'Process Optimization', 'ROI Analysis'],
+  },
+  {
+    title: 'Odoo Development',
+    desc: 'Custom Odoo module development, advanced customizations, and third-party integrations tailored to your business logic.',
+    icon: '⚙️',
+    href: '/services/odoo-development',
+    tags: ['Python', 'OWL', 'Custom Modules'],
+  },
+  {
+    title: 'Odoo Implementation',
+    desc: 'Full-cycle Odoo ERP deployment — from requirements gathering through go-live and post-launch support.',
+    icon: '🚀',
+    href: '/services/odoo-implementation',
+    tags: ['Go-Live', 'Data Migration', 'Training'],
+  },
+  {
+    title: 'Odoo Customization',
+    desc: 'Adapting Odoo to fit your exact workflows — custom reports, views, business rules, and user experience enhancements.',
+    icon: '🎨',
+    href: '/services/odoo-customization',
+    tags: ['Workflows', 'Reports', 'UX'],
+  },
+  {
+    title: 'Odoo Migration',
+    desc: 'Seamless version upgrades and data migration between Odoo versions with zero data loss and minimal downtime.',
+    icon: '🔄',
+    href: '/services/odoo-migration',
+    tags: ['Version Upgrade', 'Data Migration', 'Testing'],
+  },
+  {
+    title: 'Website Development',
+    desc: 'Professional websites and e-commerce platforms using WordPress, WooCommerce, and custom solutions.',
+    icon: '🌐',
+    href: '/services/website-development',
+    tags: ['WordPress', 'eCommerce', 'Responsive'],
+  },
+  {
+    title: 'Custom Software',
+    desc: 'Bespoke web applications and backend systems built with Python, PHP, and modern frameworks.',
+    icon: '💻',
+    href: '/services/custom-software',
+    tags: ['Python', 'PHP', 'REST API'],
+  },
+  {
+    title: 'Cloud & DevOps',
+    desc: 'Cloud infrastructure setup, server administration, Docker deployments, and CI/CD pipeline automation.',
+    icon: '☁️',
+    href: '/services/cloud-devops',
+    tags: ['AWS', 'Docker', 'Nginx', 'Linux'],
+  },
+  {
+    title: 'AI Solutions',
+    desc: 'AI-powered Odoo integrations — email automation, OCR invoice capture, natural language ERP queries, and more.',
+    icon: '🤖',
+    href: '/services/ai-solutions',
+    tags: ['LLM', 'OCR', 'Automation'],
+  },
+];
+---
+
+<BaseLayout
+  title="Services"
+  description="Comprehensive ERP consulting, Odoo development, website development, cloud infrastructure, and AI solutions by Arun Alex George."
+>
+  <section class="services-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Services</p>
+        <h1 class="section-header__title">How I Can Help You</h1>
+        <p class="section-header__desc">
+          Comprehensive technology services — from ERP strategy to cloud deployment.
+          Everything custom-quoted based on your specific needs.
+        </p>
+      </div>
+
+      <div class="services-page__grid">
+        {services.map((service, i) => (
+          <a class="services-page__card card card--accent reveal" href={service.href} data-delay={String(Math.min(i + 1, 4))}>
+            <span class="services-page__icon">{service.icon}</span>
+            <h3 class="services-page__title">{service.title}</h3>
+            <p class="services-page__desc">{service.desc}</p>
+            <div class="services-page__tags">
+              {service.tags.map((tag) => (
+                <span class="chip">{tag}</span>
+              ))}
+            </div>
+            <span class="services-page__arrow">
+              Learn More →
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="services-page__cta reveal">
+        <div class="card" style="text-align:center; padding: var(--space-12); background: var(--color-accent-soft); border-color: var(--color-accent-border);">
+          <h2 style="margin-bottom: var(--space-4);">Not Sure What You Need?</h2>
+          <p style="max-width: 480px; margin-inline: auto; margin-bottom: var(--space-6);">
+            Book a free 30-minute discovery call and I'll help you identify the right solution for your business.
+          </p>
+          <a class="btn btn--primary btn--lg" href="/contact">Schedule a Discovery Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .services-page { padding-top: calc(72px + var(--space-16)); }
+
+  .services-page__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: var(--space-6);
+  }
+
+  .services-page__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-decoration: none;
+  }
+
+  .services-page__icon {
+    font-size: var(--text-3xl);
+    line-height: 1;
+  }
+
+  .services-page__title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+  }
+
+  .services-page__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .services-page__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .services-page__arrow {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .services-page__cta {
+    margin-top: var(--space-16);
+  }
+</style>
