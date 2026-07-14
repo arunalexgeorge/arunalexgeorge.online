@@ -238,7 +238,9 @@ const currentPath = Astro.url.pathname;
     top: 72px;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - 72px);
+    height: calc(100dvh - 72px);
+    z-index: var(--z-header);
     background: var(--color-bg);
     padding: var(--space-8) var(--gutter);
     opacity: 0;
@@ -247,6 +249,7 @@ const currentPath = Astro.url.pathname;
                 transform var(--duration-normal) var(--ease-out);
     pointer-events: none;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .header__mobile-menu--open {
