@@ -1,0 +1,200 @@
+---
+const projects = [
+  {
+    name: 'PrideAV',
+    tagline: 'Audio Video Consultant',
+    description: 'A premium website for a luxury home theater design & installation company — immersive design, service showcases, and consultation booking.',
+    href: 'https://www.prideav.com/',
+    image: '/portfolio/prideav.png',
+    tags: ['WordPress', 'Web Design'],
+  },
+  {
+    name: 'InstaGPU',
+    tagline: 'GPU Cloud Platform',
+    description: 'A sleek, dark-themed website for an on-demand GPU computing platform — bold, tech-forward design for AI & gaming workloads.',
+    href: 'https://instagpu.io/',
+    image: '/portfolio/instagpu.png',
+    tags: ['WordPress', 'Elementor'],
+  },
+  {
+    name: 'DentMart Dental Lab',
+    tagline: 'Where Precision Meets Perfection',
+    description: 'A clean, professional website for a dental laboratory — product catalogues, quote requests, and a modern medical-industry aesthetic.',
+    href: 'https://dentmart.co.in/',
+    image: '/portfolio/dentmart.png',
+    tags: ['HTML/CSS/JS', 'Web Design'],
+  },
+];
+---
+
+<section class="portfolio section" id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-header__label">Portfolio</p>
+      <h2 class="section-header__title">Recent Works</h2>
+      <p class="section-header__desc">
+        A selection of recent website projects — designed and developed for clients across diverse industries.
+      </p>
+    </div>
+
+    <div class="portfolio__grid">
+      {projects.map((project, i) => (
+        <a
+          class="portfolio__card card card--accent reveal"
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-delay={String(i + 1)}
+        >
+          <div class="portfolio__card-preview">
+            <div class="portfolio__card-bar">
+              <span class="portfolio__card-dot"></span>
+              <span class="portfolio__card-dot"></span>
+              <span class="portfolio__card-dot"></span>
+            </div>
+            <div class="portfolio__card-img">
+              <img
+                src={project.image}
+                alt={`${project.name} — ${project.tagline}`}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <div class="portfolio__card-body">
+            <h3 class="portfolio__card-name">{project.name}</h3>
+            <p class="portfolio__card-tagline">{project.tagline}</p>
+            <p class="portfolio__card-desc">{project.description}</p>
+            <div class="portfolio__card-tags">
+              {project.tags.map((tag) => (
+                <span class="chip">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <span class="portfolio__card-link">
+            View Live Site
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="portfolio__cta reveal">
+      <a class="btn btn--outline" href="/portfolio">
+        View All Projects
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: var(--space-6);
+  }
+
+  .portfolio__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-decoration: none;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .portfolio__card-preview {
+    background: var(--color-bg-tertiary);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .portfolio__card-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .portfolio__card-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .portfolio__card-dot:nth-child(1) { background: #ef4444; }
+  .portfolio__card-dot:nth-child(2) { background: #eab308; }
+  .portfolio__card-dot:nth-child(3) { background: #22c55e; }
+
+  .portfolio__card-img {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .portfolio__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform var(--duration-slow) var(--ease-out);
+  }
+
+  .portfolio__card:hover .portfolio__card-img img {
+    transform: scale(1.04);
+  }
+
+  .portfolio__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-6) var(--space-6) var(--space-3);
+    flex: 1;
+  }
+
+  .portfolio__card-name {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .portfolio__card-tagline {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  .portfolio__card-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .portfolio__card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+  }
+
+  .portfolio__card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    border-top: 1px solid var(--color-border-subtle);
+    transition: gap var(--duration-fast) var(--ease-out);
+  }
+
+  .portfolio__card:hover .portfolio__card-link {
+    gap: var(--space-2);
+  }
+
+  .portfolio__cta {
+    text-align: center;
+    margin-top: var(--space-12);
+  }
+</style>

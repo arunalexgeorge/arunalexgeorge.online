@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    name: 'PrideAV',
+    tagline: 'Audio Video Consultant',
+    description: 'A premium WordPress website for a luxury home theater design & installation company. Features an immersive hero section, service showcases, and consultation booking — built to convey elegance and technical expertise.',
+    href: 'https://www.prideav.com/',
+    image: '/portfolio/prideav.png',
+    tags: ['WordPress', 'Web Design', 'AV Industry'],
+    year: '2025',
+  },
+  {
+    name: 'InstaGPU',
+    tagline: 'GPU-Accelerated Cloud Platform',
+    description: 'A sleek, dark-themed website for a GPU cloud computing platform based in Malaysia. Showcases on-demand GPU services for gaming, AI, and data intelligence with a bold, tech-forward design and Elementor-powered layouts.',
+    href: 'https://instagpu.io/',
+    image: '/portfolio/instagpu.png',
+    tags: ['WordPress', 'Elementor', 'Cloud / SaaS'],
+    year: '2025',
+  },
+  {
+    name: 'DentMart Dental Lab',
+    tagline: 'Where Precision Meets Perfection',
+    description: 'A clean, professional website for a dental laboratory specialising in premium prosthetics. Custom-built with HTML/CSS/JS featuring product catalogues, quote requests, and a modern medical-industry aesthetic.',
+    href: 'https://dentmart.co.in/',
+    image: '/portfolio/dentmart.png',
+    tags: ['HTML/CSS/JS', 'Web Design', 'Healthcare'],
+    year: '2025',
+  },
+];
+---
+
+<BaseLayout
+  title="Portfolio"
+  description="Recent website works by Arun Alex George — custom web design and development for clients across AV, cloud computing, and healthcare industries."
+>
+  <section class="portfolio-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Portfolio</p>
+        <h1 class="section-header__title">Recent Works</h1>
+        <p class="section-header__desc">
+          A selection of recent website projects — designed and developed for clients across diverse industries.
+        </p>
+      </div>
+
+      <div class="portfolio-list">
+        {projects.map((project, i) => (
+          <a
+            class="portfolio-item reveal"
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-delay={String(Math.min(i + 1, 3))}
+          >
+            <div class="portfolio-item__preview">
+              <div class="portfolio-item__browser-bar">
+                <span class="portfolio-item__dot"></span>
+                <span class="portfolio-item__dot"></span>
+                <span class="portfolio-item__dot"></span>
+                <span class="portfolio-item__url">{project.href.replace('https://', '').replace(/\/$/, '')}</span>
+              </div>
+              <div class="portfolio-item__img-wrap">
+                <img
+                  src={project.image}
+                  alt={`${project.name} — ${project.tagline}`}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <div class="portfolio-item__info">
+              <div class="portfolio-item__meta">
+                <span class="badge">{project.year}</span>
+              </div>
+              <h2 class="portfolio-item__name">{project.name}</h2>
+              <p class="portfolio-item__tagline">{project.tagline}</p>
+              <p class="portfolio-item__desc">{project.description}</p>
+              <div class="portfolio-item__tags">
+                {project.tags.map((tag) => (
+                  <span class="chip">{tag}</span>
+                ))}
+              </div>
+              <span class="portfolio-item__link">
+                Visit Live Site
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .portfolio-page { padding-top: calc(72px + var(--space-16)); }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+  }
+
+  .portfolio-item {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-10);
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .portfolio-item:nth-child(even) {
+    direction: rtl;
+  }
+
+  .portfolio-item:nth-child(even) > * {
+    direction: ltr;
+  }
+
+  .portfolio-item:hover {
+    color: inherit;
+  }
+
+  /* Browser Chrome Preview */
+  .portfolio-item__preview {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .portfolio-item:hover .portfolio-item__preview {
+    border-color: var(--color-accent-border);
+    box-shadow: var(--shadow-glow), var(--shadow-xl);
+    transform: translateY(-6px);
+  }
+
+  .portfolio-item__browser-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-tertiary);
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .portfolio-item__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-border-hover);
+  }
+
+  .portfolio-item__dot:first-child { background: #ef4444; }
+  .portfolio-item__dot:nth-child(2) { background: #eab308; }
+  .portfolio-item__dot:nth-child(3) { background: #22c55e; }
+
+  .portfolio-item__url {
+    margin-left: var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono, var(--font-body));
+  }
+
+  .portfolio-item__img-wrap {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  .portfolio-item__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform var(--duration-slow) var(--ease-out);
+  }
+
+  .portfolio-item:hover .portfolio-item__img-wrap img {
+    transform: scale(1.03);
+  }
+
+  /* Info */
+  .portfolio-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .portfolio-item__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  .portfolio-item__name {
+    font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl));
+    font-weight: 700;
+    line-height: var(--leading-tight);
+  }
+
+  .portfolio-item__tagline {
+    font-size: var(--text-lg);
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+
+  .portfolio-item__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .portfolio-item__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .portfolio-item__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-top: var(--space-2);
+    transition: gap var(--duration-fast) var(--ease-out);
+  }
+
+  .portfolio-item:hover .portfolio-item__link {
+    gap: var(--space-3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .portfolio-item {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+
+    .portfolio-item:nth-child(even) {
+      direction: ltr;
+    }
+  }
+</style>
