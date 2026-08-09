@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ErpRescue from '../components/game/ErpRescue.astro';
+---
+
+<BaseLayout
+  title="Play — ERP Rescue"
+  description="ERP Rescue: a fast, addictive browser game where you keep nine business modules online under pressure. Built by Arun Alex George — a playable demo of the reliability mindset behind real ERP, automation & cloud work."
+>
+  <section class="play-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Interactive · A little fun</p>
+        <h1 class="section-header__title">ERP Rescue</h1>
+        <p class="section-header__desc">
+          Real ERP systems fail quietly until everything's on fire. Here's a 2-minute,
+          slightly-too-honest simulation of keeping operations alive. Beat my high score —
+          then let's talk about the systems that don't get a restart button.
+        </p>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <ErpRescue />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .play-page {
+    padding-top: calc(72px + var(--space-16));
+    min-height: 90vh;
+  }
+</style>
