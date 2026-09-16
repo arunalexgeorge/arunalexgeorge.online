@@ -4,13 +4,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Every module is published for these Odoo series on the App Store.
 const ODOO_VERSIONS = ['15.0', '16.0', '17.0', '18.0', '19.0'];
 
-// Collapse a contiguous run of series into "15.0 – 19.0"; list the rest.
-function versionLabel(versions: string[]) {
-  const idx = versions.map((v) => ODOO_VERSIONS.indexOf(v));
-  const contiguous = versions.length > 1 && idx.every((n, i) => i === 0 || n === idx[i - 1] + 1);
-  return contiguous ? `${versions[0]} – ${versions[versions.length - 1]}` : versions.join(', ');
-}
-
 const products = [
   { name: 'AI Email & Reply Writer', desc: 'Draft and improve emails with AI, right inside Odoo\'s composer - tell it what to say, pick a tone, and get a polished email. Bring your own key via the free AI Gateway.', price: 'FREE', category: 'AI', versions: ODOO_VERSIONS, href: 'https://apps.odoo.com/apps/modules/19.0/ai_mail_assistant' },
   { name: 'AI Gateway', desc: 'Reusable BYO-key LLM gateway (Claude / OpenAI / Ollama) with provider routing, usage logging and cost tracking — the shared foundation for AI-powered Odoo apps.', price: 'FREE', category: 'AI', versions: ODOO_VERSIONS, href: 'https://apps.odoo.com/apps/modules/19.0/ai_gateway' },
@@ -201,11 +194,13 @@ const categories = ['All', ...new Set(products.map(p => p.category))];
             </div>
             <h3 class="products-card__name">{product.name}</h3>
             <p class="products-card__desc">{product.desc}</p>
+            <div class="products-card__versions">
+              <span class="products-card__versions-label">Odoo</span>
+              {product.versions.map((v) => (
+                <span class="products-card__version">{v}</span>
+              ))}
+            </div>
             <div class="products-card__footer">
-              <span class="products-card__versions" title={`Supported Odoo versions: ${product.versions.join(', ')}`}>
-                <span class="products-card__versions-label">Odoo</span>
-                <span class="products-card__version">{versionLabel(product.versions)}</span>
-              </span>
               <span class="products-card__link">
                 View on Store →
               </span>
@@ -236,7 +231,7 @@ const categories = ['All', ...new Set(products.map(p => p.category))];
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
     gap: var(--space-6);
   }
 
@@ -281,10 +276,7 @@ const categories = ['All', ...new Set(products.map(p => p.category))];
   .products-card__footer {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-2) var(--space-4);
     padding-top: var(--space-3);
-    border-top: 1px solid var(--color-border-subtle);
     font-size: var(--text-xs);
     color: var(--color-text-muted);
   }
@@ -301,16 +293,21 @@ const categories = ['All', ...new Set(products.map(p => p.category))];
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-1);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-subtle);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
   }
 
   .products-card__versions-label {
+    margin-right: var(--space-1);
     font-weight: 600;
   }
 
   .products-card__version {
-    padding: 1px var(--space-2);
-    border: 1px solid var(--color-border-subtle);
-    border-radius: var(--radius-full);
+    padding: 1px var(--space-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
     font-family: var(--font-mono, var(--font-body));
     line-height: 1.6;
     white-space: nowrap;
