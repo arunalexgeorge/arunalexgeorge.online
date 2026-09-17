@@ -422,6 +422,10 @@ const controls = [
   .erp__flash--on { animation: erp-flash 0.45s var(--ease-out); }
   @keyframes erp-flash { 0% { opacity: 0.9; } 100% { opacity: 0; } }
 
+  /* `hidden` must always win over the display rules below (pause overlay,
+     best badge, native-share button all rely on the attribute). */
+  .erp [hidden] { display: none !important; }
+
   .erp-pause {
     position: absolute; inset: 0; z-index: 5;
     display: flex; align-items: center; justify-content: center;
