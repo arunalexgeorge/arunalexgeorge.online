@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync:apps": "python3 scripts/sync_odoo_apps.py"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.1",

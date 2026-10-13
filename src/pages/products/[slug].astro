@@ -1,0 +1,613 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/products/ProductCard.astro';
+import { products, getProduct, relatedProducts, storeUrlForVersion } from '../../data/products';
+
+export function getStaticPaths() {
+  return products.map((product) => ({
+    params: { slug: product.slug },
+    props: { product },
+  }));
+}
+
+const { product } = Astro.props;
+const kind = product.kind === 'theme' ? 'theme' : 'app';
+const latestVersion = product.versions[product.versions.length - 1];
+const related = relatedProducts(product);
+const platforms = [
+  { label: 'Odoo Online', supported: product.availability.odooOnline },
+  { label: 'Odoo.sh', supported: product.availability.odooSh },
+  { label: 'On-Premise', supported: product.availability.onPremise },
+];
+const dependencies = product.dependencies.map((dep) => ({ ...dep, product: getProduct(dep.technicalName) }));
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: product.name,
+  description: product.summary,
+  url: new URL(product.url, Astro.site).href,
+  image: product.cover,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: `Odoo ${product.versions.join(', ')}`,
+  softwareVersion: latestVersion,
+  author: { '@type': 'Person', name: 'Arun Alex George', url: 'https://arunalexgeorge.online' },
+  offers: {
+    '@type': 'Offer',
+    price: product.price.toFixed(2),
+    priceCurrency: 'USD',
+    url: product.storeUrl,
+    availability: 'https://schema.org/InStock',
+  },
+};
+---
+
+<BaseLayout
+  title={product.name}
+  description={product.summary}
+  ogImage={product.cover ?? undefined}
+>
+  <section class="product section">
+    <div class="container">
+      <a class="product__back" href="/products">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        All Products
+      </a>
+
+      <!-- Hero -->
+      <div class="product-hero">
+        {product.cover && (
+          <div class="product-hero__media">
+            <img src={product.cover} alt={`${product.name} cover`} width="1200" height="600" fetchpriority="high" />
+          </div>
+        )}
+
+        <div class="product-hero__info">
+          <div class="product-hero__identity">
+            {product.icon && <img class="product-hero__icon" src={product.icon} alt="" width="56" height="56" />}
+            <div class="product-hero__tags">
+              <span class="badge">{product.category}</span>
+              <span class="product-hero__kind">Odoo {kind}</span>
+            </div>
+          </div>
+
+          <h1 class="product-hero__title">{product.name}</h1>
+          <p class="product-hero__summary">{product.summary}</p>
+
+          <div class="product-hero__price">
+            <span class="product-hero__price-value">{product.priceLabel}</span>
+            <span class="product-hero__price-note">
+              {product.price === 0 ? 'Free download on the Odoo App Store' : 'Listed price on the Odoo App Store'}
+            </span>
+          </div>
+
+          <div class="product-hero__actions">
+            <a class="btn btn--primary btn--lg" href={product.storeUrl} target="_blank" rel="noopener noreferrer">
+              View on Odoo App Store
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a class="btn btn--outline btn--lg" href="/contact">Ask a Question</a>
+          </div>
+        </div>
+
+        <dl class="product-facts">
+          <div class="product-facts__row">
+            <dt>Odoo versions</dt>
+            <dd class="product-facts__versions">
+              {product.versions.map((v) => (
+                <a
+                  class="product-facts__version"
+                  href={storeUrlForVersion(product, v)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`${product.name} for Odoo ${v} on the Odoo App Store`}
+                >{v}</a>
+              ))}
+            </dd>
+          </div>
+          <div class="product-facts__row">
+            <dt>License</dt>
+            <dd>{product.license}</dd>
+          </div>
+          <div class="product-facts__row">
+            <dt>Works on</dt>
+            <dd class="product-facts__platforms">
+              {platforms.map(({ label, supported }) => (
+                <span class:list={['product-facts__platform', { 'product-facts__platform--no': !supported }]}>
+                  {supported
+                    ? <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    : <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>}
+                  <span>{label}<span class="sr-only">{supported ? ' supported' : ' not supported'}</span></span>
+                </span>
+              ))}
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Description + technical details -->
+      <div class="product-body">
+        <div class="product-body__main">
+          <h2 class="product-body__label">About this {kind}</h2>
+          <div class="product-desc" set:html={product.description} />
+        </div>
+
+        <aside class="product-tech">
+          <h2 class="product-body__label">Technical details</h2>
+          <dl class="product-tech__list">
+            <div>
+              <dt>Technical name</dt>
+              <dd><code>{product.technicalName}</code></dd>
+            </div>
+            <div>
+              <dt>Latest version</dt>
+              <dd>Odoo {latestVersion}</dd>
+            </div>
+            <div>
+              <dt>License</dt>
+              <dd>{product.license}</dd>
+            </div>
+            {product.linesOfCode !== null && (
+              <div>
+                <dt>Lines of code</dt>
+                <dd>{product.linesOfCode.toLocaleString('en-US')}</dd>
+              </div>
+            )}
+            {dependencies.length > 0 && (
+              <div>
+                <dt>Requires</dt>
+                <dd class="product-tech__deps">
+                  {dependencies.map((dep) => dep.product
+                    ? <a href={dep.product.url}>{dep.name}</a>
+                    : <a href={dep.storeUrl} target="_blank" rel="noopener noreferrer">{dep.name}</a>)}
+                </dd>
+              </div>
+            )}
+          </dl>
+          <div class="product-tech__cta">
+            <span class="product-tech__price">{product.priceLabel}</span>
+            <a class="btn btn--primary product-tech__btn" href={product.storeUrl} target="_blank" rel="noopener noreferrer">
+              View on Odoo App Store
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a class="product-tech__contact" href="/contact">Need a customisation? Get in touch</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Related -->
+      {related.length > 0 && (
+        <div class="product-related">
+          <div class="product-related__header">
+            <h2 class="product-related__title">{product.category === 'Theme' ? 'More themes' : `More ${product.category} apps`}</h2>
+            <a class="product-related__all" href="/products">View all products →</a>
+          </div>
+          <div class="product-related__grid">
+            {related.map((p, i) => <ProductCard product={p} delay={i + 1} />)}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
+</BaseLayout>
+
+<style>
+  .product { padding-top: calc(72px + var(--space-12)); }
+
+  .product__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-8);
+  }
+
+  .product__back:hover { color: var(--color-accent); }
+
+  /* Hero */
+  .product-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-10);
+    align-items: start;
+  }
+
+  @media (min-width: 960px) {
+    .product-hero {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      grid-template-areas: "media info" "facts info";
+      grid-template-rows: auto 1fr;
+      gap: var(--space-8) var(--space-12);
+    }
+    .product-hero__media { grid-area: media; }
+    .product-hero__info { grid-area: info; }
+    .product-facts { grid-area: facts; }
+  }
+
+  .product-hero__media img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-secondary);
+  }
+
+  .product-hero__identity {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .product-hero__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    flex-shrink: 0;
+  }
+
+  .product-hero__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .product-hero__kind {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-text-tertiary);
+  }
+
+  .product-hero__title {
+    font-size: clamp(var(--text-3xl), 3.5vw, var(--text-4xl));
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-4);
+    overflow-wrap: anywhere;
+  }
+
+  .product-hero__summary {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+  }
+
+  .product-hero__price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .product-hero__price-value {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .product-hero__price-note {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  .product-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 480px) {
+    .product-hero__actions .btn { width: 100%; }
+  }
+
+  .product-facts {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .product-facts__row {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    gap: var(--space-4);
+    align-items: center;
+    padding-block: var(--space-3);
+    border-bottom: 1px solid var(--color-border-subtle);
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 480px) {
+    .product-facts__row { grid-template-columns: 6.5rem minmax(0, 1fr); }
+  }
+
+  .product-facts dt { color: var(--color-text-tertiary); }
+  .product-facts dd { color: var(--color-text); }
+
+  .product-facts__versions,
+  .product-facts__platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-3);
+  }
+
+  .product-facts__versions { gap: var(--space-1); }
+
+  .product-facts__version {
+    padding: 1px var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+  }
+
+  .product-facts__version:hover {
+    border-color: var(--color-accent-border);
+    color: var(--color-accent);
+  }
+
+  .product-facts__platform {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .product-facts__platform svg { color: var(--color-accent); }
+  .product-facts__platform--no { color: var(--color-text-muted); }
+  .product-facts__platform--no svg { color: var(--color-text-muted); }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* Body */
+  .product-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-12);
+    margin-top: var(--space-20);
+  }
+
+  @media (min-width: 960px) {
+    .product-body { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; }
+    .product-tech { position: sticky; top: calc(72px + var(--space-6)); }
+  }
+
+  .product-body__label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-8);
+  }
+
+  .product-tech {
+    padding: var(--space-6);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-secondary);
+  }
+
+  .product-tech .product-body__label { margin-bottom: var(--space-4); }
+
+  .product-tech__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+  }
+
+  .product-tech__list dt {
+    font-size: var(--text-xs);
+    color: var(--color-text-tertiary);
+    margin-bottom: 2px;
+  }
+
+  .product-tech__list dd { color: var(--color-text); overflow-wrap: anywhere; }
+
+  .product-tech__list code {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-tertiary);
+  }
+
+  .product-tech__deps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .product-tech__deps a { color: var(--color-accent); }
+
+  .product-tech__cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .product-tech__price {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .product-tech__btn { width: 100%; }
+
+  .product-tech__contact {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    text-align: center;
+  }
+
+  /* Description synced from the Odoo App Store (sanitised by scripts/sync_odoo_apps.py) */
+  .product-desc {
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+    overflow-wrap: break-word;
+  }
+
+  .product-desc :global(section + section) { margin-top: var(--space-12); }
+
+  .product-desc :global(h2) {
+    font-size: clamp(var(--text-xl), 2.5vw, var(--text-2xl));
+    line-height: var(--leading-snug);
+    margin: var(--space-8) 0 var(--space-3);
+  }
+
+  .product-desc :global(h3) {
+    font-size: var(--text-lg);
+    line-height: var(--leading-snug);
+    margin: var(--space-6) 0 var(--space-2);
+  }
+
+  .product-desc :global(:is(h4, h5, h6)) {
+    font-size: var(--text-base);
+    margin: var(--space-5) 0 var(--space-2);
+  }
+
+  .product-desc :global(:is(h2, h3, h4, h5, h6):first-child) { margin-top: 0; }
+  .product-desc :global(h2 + h3) { margin-top: 0; font-weight: 500; color: var(--color-text-secondary); }
+
+  .product-desc :global(p) { margin-bottom: var(--space-4); }
+  .product-desc :global(:is(p, ul, ol, img, pre):last-child) { margin-bottom: 0; }
+
+  .product-desc :global(:is(ul, ol)) {
+    margin: 0 0 var(--space-4);
+    padding-left: var(--space-6);
+  }
+
+  .product-desc :global(ul) { list-style: disc; }
+  .product-desc :global(ol) { list-style: decimal; }
+  .product-desc :global(li) { margin-bottom: var(--space-2); }
+  .product-desc :global(li::marker) { color: var(--color-accent); }
+  .product-desc :global(.d-center :is(ul, ol)) { text-align: left; display: inline-block; }
+
+  .product-desc :global(:is(b, strong)) { color: var(--color-text); font-weight: 600; }
+
+  .product-desc :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .product-desc :global(img) {
+    width: 100%;
+    margin: var(--space-4) auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+  }
+
+  .product-desc :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    padding: 0.1em 0.4em;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-tertiary);
+    color: var(--color-text);
+  }
+
+  .product-desc :global(pre) {
+    margin-bottom: var(--space-4);
+    padding: var(--space-4);
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-tertiary);
+    font-size: var(--text-sm);
+  }
+
+  .product-desc :global(pre code) { padding: 0; background: none; }
+
+  .product-desc :global(table) {
+    display: block;
+    overflow-x: auto;
+    margin-bottom: var(--space-4);
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  .product-desc :global(:is(td, th)) {
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    text-align: left;
+  }
+
+  .product-desc :global(.d-center) { text-align: center; }
+
+  .product-desc :global(.d-cols) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: var(--space-4);
+    margin-block: var(--space-6);
+  }
+
+  .product-desc :global(.d-cols > :not(div)) { grid-column: 1 / -1; margin: 0; }
+
+  .product-desc :global(.d-cols > div) {
+    min-width: 0;
+    padding: var(--space-5);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-secondary);
+  }
+
+  .product-desc :global(.d-cols > div > :last-child) { margin-bottom: 0; }
+  .product-desc :global(.d-cols > div :is(h2, h3, h4, h5, h6)) { text-align: inherit; }
+
+  .product-desc :global(.d-pill) {
+    display: inline-block;
+    margin: var(--space-1);
+    padding: 2px var(--space-3);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-accent-border);
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-size: var(--text-sm);
+  }
+
+  /* Related */
+  .product-related { margin-top: var(--space-24); }
+
+  .product-related__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+
+  .product-related__title { font-size: var(--text-2xl); }
+
+  .product-related__all {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .product-related__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--space-6);
+  }
+</style>

@@ -1,34 +1,11 @@
 ---
-const products = [
-  {
-    name: 'Auralis — Premium Backend Theme',
-    description: 'A premium, glassmorphic SaaS-grade backend theme for Odoo 19 Community — modern design system, first-class dark mode, redesigned app drawer.',
-    price: '$29.00',
-    category: 'Theme',
-    href: 'https://apps.odoo.com/apps/themes/19.0/auralis_theme',
-  },
-  {
-    name: 'AI Chat over your ERP',
-    description: 'Ask questions about your Odoo data in plain language and get grounded answers. A chat assistant with retrieval over the models you choose.',
-    price: '$89',
-    category: 'AI',
-    href: 'https://apps.odoo.com/apps/modules/19.0/ai_erp_chat',
-  },
-  {
-    name: 'Helpdesk & Ticketing',
-    description: 'A full help desk for Odoo Community: teams, SLA policies, email-to-ticket, a kanban pipeline, analytics and a customer self-service portal.',
-    price: '$89',
-    category: 'Productivity',
-    href: 'https://apps.odoo.com/apps/modules/19.0/helpdesk_ticketing_sla',
-  },
-  {
-    name: 'Subscriptions & Recurring Billing',
-    description: 'Recurring revenue for Odoo Community: subscription plans, contracts, automatic recurring invoicing, MRR/ARR analytics.',
-    price: '$99',
-    category: 'Sales',
-    href: 'https://apps.odoo.com/apps/modules/19.0/subscription_recurring',
-  },
-];
+import { getProduct, catalogueStats } from '../../data/products';
+import type { Product } from '../../data/products';
+
+// Unpublished products drop out of the catalogue, so skip any that are gone.
+const products = ['auralis_theme', 'ai_erp_chat', 'helpdesk_ticketing_sla', 'subscription_recurring']
+  .map(getProduct)
+  .filter((p): p is Product => p !== undefined);
 ---
 
 <section class="featured section" id="products">
@@ -37,22 +14,22 @@ const products = [
       <p class="section-header__label">Products</p>
       <h2 class="section-header__title">Odoo Apps & Themes</h2>
       <p class="section-header__desc">
-        148 apps and themes published on the Odoo App Store — from AI-powered tools to enterprise modules, all supporting Odoo 15.0 → 19.0.
+        {catalogueStats.total} apps and themes published on the Odoo App Store — from AI-powered tools to enterprise modules, supporting Odoo {catalogueStats.oldestVersion} → {catalogueStats.newestVersion}.
       </p>
     </div>
 
     <div class="featured__grid">
       {products.map((product, i) => (
-        <a class="featured__card card card--accent reveal" href={product.href} target="_blank" rel="noopener noreferrer" data-delay={String(i + 1)}>
+        <a class="featured__card card card--accent reveal" href={product.url} data-delay={String(i + 1)}>
           <div class="featured__card-top">
             <span class="badge">{product.category}</span>
-            <span class="featured__price">{product.price}</span>
+            <span class="featured__price">{product.priceLabel}</span>
           </div>
           <h3 class="featured__name">{product.name}</h3>
-          <p class="featured__desc">{product.description}</p>
+          <p class="featured__desc">{product.summary}</p>
           <span class="featured__link-text">
-            View on Odoo Store
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            View details
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
         </a>
       ))}
@@ -60,7 +37,7 @@ const products = [
 
     <div class="featured__cta reveal">
       <a class="btn btn--outline" href="/products">
-        View All 148 Products
+        View All {catalogueStats.total} Products
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>

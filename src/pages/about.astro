@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { catalogueStats } from '../data/products';
 
 const experience = [
   {
@@ -123,7 +124,7 @@ const education = [
           My journey began with PHP web development in 2018, and over the years I've evolved
           into a full-spectrum technology consultant — building everything from custom web
           applications to enterprise-grade ERP systems. Today, I lead a team of developers,
-          architect complex solutions, and have published 148 Odoo apps and themes on the
+          architect complex solutions, and have published {catalogueStats.total} Odoo apps and themes on the
           official Odoo App Store.
         </p>
         <p>

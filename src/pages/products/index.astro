@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProductCard from '../../components/products/ProductCard.astro';
+import { products, productCategories, catalogueStats } from '../../data/products';
+
+const categories = ['All', ...productCategories];
+const { oldestVersion, newestVersion } = catalogueStats;
+---
+
+<BaseLayout
+  title="Products"
+  description={`Browse ${products.length} Odoo apps and themes by Arun Alex George — AI tools, ERP modules, backend themes, and enterprise-grade solutions for Odoo ${oldestVersion} through ${newestVersion}.`}
+>
+  <section class="products-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Odoo App Store</p>
+        <h1 class="section-header__title">Apps & Themes</h1>
+        <p class="section-header__desc">
+          {products.length} products published on the Odoo App Store — from AI-powered tools to enterprise-grade modules and premium themes,
+          for Odoo {oldestVersion} through {newestVersion}.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="products-filters reveal" id="product-filters">
+        {categories.map((cat) => (
+          <button
+            class={`chip products-filter ${cat === 'All' ? 'products-filter--active' : ''}`}
+            data-filter={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid" id="product-grid">
+        {products.map((product, i) => (
+          <ProductCard product={product} delay={Math.min(i + 1, 4)} />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .products-page { padding-top: calc(72px + var(--space-16)); }
+
+  .products-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .products-filter--active {
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent-border);
+    color: var(--color-accent);
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+    gap: var(--space-6);
+  }
+</style>
+
+<script>
+  const filters = document.querySelectorAll('.products-filter');
+  const cards = document.querySelectorAll('.products-card') as NodeListOf<HTMLElement>;
+
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = (btn as HTMLElement).dataset.filter;
+
+      filters.forEach((f) => f.classList.remove('products-filter--active'));
+      btn.classList.add('products-filter--active');
+
+      cards.forEach((card) => {
+        if (filter === 'All' || card.dataset.category === filter) {
+          card.classList.remove('products-card--hidden');
+        } else {
+          card.classList.add('products-card--hidden');
+        }
+      });
+    });
+  });
+</script>

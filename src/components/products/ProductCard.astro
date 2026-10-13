@@ -1,0 +1,114 @@
+---
+import type { Product } from '../../data/products';
+
+interface Props {
+  product: Product;
+  delay?: number;
+}
+
+const { product, delay } = Astro.props;
+---
+
+<a
+  class="products-card card card--accent reveal"
+  href={product.url}
+  data-category={product.category}
+  data-delay={delay ? String(delay) : undefined}
+>
+  <div class="products-card__top">
+    <span class="badge">{product.category}</span>
+    <span class="products-card__price">{product.priceLabel}</span>
+  </div>
+  <h3 class="products-card__name">{product.name}</h3>
+  <p class="products-card__desc">{product.summary}</p>
+  <div class="products-card__versions">
+    <span class="products-card__versions-label">Odoo</span>
+    {product.versions.map((v) => (
+      <span class="products-card__version">{v}</span>
+    ))}
+  </div>
+  <div class="products-card__footer">
+    <span class="products-card__link">
+      View details →
+    </span>
+  </div>
+</a>
+
+<style>
+  .products-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    text-decoration: none;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .products-card--hidden {
+    display: none;
+  }
+
+  .products-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .products-card__price {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .products-card__name {
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+  }
+
+  .products-card__desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+    flex: 1;
+  }
+
+  .products-card__footer {
+    display: flex;
+    align-items: center;
+    padding-top: var(--space-3);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .products-card__link {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: gap var(--duration-fast) var(--ease-out);
+  }
+
+  .products-card__versions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border-subtle);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+
+  .products-card__versions-label {
+    font-weight: 600;
+  }
+
+  .products-card__version {
+    padding: 1px 3px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono, var(--font-body));
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+</style>
