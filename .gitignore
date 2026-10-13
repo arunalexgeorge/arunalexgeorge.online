@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # old site backup
 _old/
+
+# python bytecode
+__pycache__/
