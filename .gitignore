@@ -28,3 +28,7 @@ _old/
 
 # python bytecode
 __pycache__/
+
+# TLS keys and certificates: never commit
+ssl/
+*.key
