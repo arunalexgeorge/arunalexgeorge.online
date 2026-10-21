@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-10-13",
+  "syncedAt": "2026-10-21",
   "currency": "USD",
   "products": [
     {
@@ -231,7 +231,7 @@
       "kind": "app",
       "name": "Advanced Product Category Sequences",
       "summary": "Auto-generate structured Lot & Serial numbers from per-Product-Category sequence rules with a dynamic format builder.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -306,16 +306,16 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419701/icon_image/128x128?unique=9d5f8d8",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419701/icon_image/128x128?unique=27e3f25",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830614&unique=05bc6ec744295a959d804afbe5f1747d203da5df",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">See who owes you, instantly</h2> <h3 class=\"d-center\">Open receivables, bucketed by age</h3> <p class=\"d-center\"> A fast, always-current view of your open customer invoices grouped into aging buckets — <b>Not Due, 1-30, 31-60, 61-90 and 90+ days</b> — with list, pivot and chart views. Computed straight from posted invoices; nothing to schedule. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Aging buckets</h3> <p>Instantly see how overdue each invoice is.</p> </div> <div> <h3 class=\"d-center\">Pivot &amp; chart</h3> <p>Slice the total due by customer, bucket or company.</p> </div> <div> <h3 class=\"d-center\">Always live</h3> <p>Reads posted invoices directly — no scheduling.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Open receivables, bucketed by age</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/aged_receivable_snapshot/screenshot_1.png?69ce345\" alt=\"Aged receivable snapshot\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">See who owes you, instantly</h2> <h3 class=\"d-center\">Open receivables, bucketed by age</h3> <p class=\"d-center\"> A fast, always-current view of your open customer invoices grouped into aging buckets — <b>Not Due, 1-30, 31-60, 61-90 and 90+ days</b> — with list, pivot and chart views. Computed straight from posted invoices; nothing to schedule. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Aging buckets</h3> <p>Instantly see how overdue each invoice is.</p> </div> <div> <h3 class=\"d-center\">Pivot &amp; chart</h3> <p>Slice the total due by customer, bucket or company.</p> </div> <div> <h3 class=\"d-center\">Always live</h3> <p>Reads posted invoices directly — no scheduling.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Open receivables, bucketed by age</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/aged_receivable_snapshot/screenshot_1.png?5873c9c\" alt=\"Aged receivable snapshot\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "ai_erp_chat",
       "kind": "app",
       "name": "AI Chat over your ERP",
       "summary": "Ask questions about your Odoo data in plain language and get grounded answers. A chat assistant with retrieval over the models you choose - it only reads what the user is allowed to see.",
-      "price": 88.82,
+      "price": 89.17,
       "versions": [
         "15.0",
         "16.0",
@@ -411,7 +411,7 @@
       "kind": "app",
       "name": "AI-OCR Invoice & Bill Capture",
       "summary": "Drop a PDF or photo of a vendor bill; AI extracts the vendor, dates, amounts and line items and drafts the bill for you. Powered by the AI Gateway (bring your own key).",
-      "price": 98.8,
+      "price": 99.18,
       "versions": [
         "15.0",
         "16.0",
@@ -470,9 +470,9 @@
           "storeUrl": "https://apps.odoo.com/apps/modules/20.0/ai_gateway"
         }
       ],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419708/icon_image/128x128?unique=f4f5549",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419708/icon_image/128x128?unique=758c189",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830621&unique=c722ab73479cb763486def102d8941aa449ec543",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">AI Product Descriptions</h2> <h3 class=\"d-center\">Write great product copy in seconds — without leaving Odoo.</h3> <p class=\"d-center\"> Open any product, click <b>Generate with AI</b>, choose a <b>tone</b>, <b>length</b> and <b>language</b>, and get a ready-to-use sales description. Review or edit it, then apply — in one click. Powered by the free <b>AI Gateway</b>, so you use <b>your own key</b> (Claude / OpenAI / local) and pay no per-word fees. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Control the output</h3> <p>Pick professional, friendly, persuasive, technical or luxury tone; short, medium or long; any language; and the key features to emphasise.</p> </div> <div> <h3 class=\"d-center\">Preview &amp; apply</h3> <p>Review and edit the draft before it's written to the product's Sales Description or Internal Notes. Nothing changes until you apply.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Bring your own key</h3> <p>Runs through the free AI Gateway module — your own provider and API key, no per-word fees and no external lock-in.</p> </div> <div> <h3 class=\"d-center\">No core changes</h3> <p>Adds a single button to the product form. Uses the standard <b>product</b> model and respects your access rights.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">One click from the product form</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_1.png?6808dab\" alt=\"Generate with AI button\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Choose tone, length &amp; language</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_2.png?6808dab\" alt=\"AI options\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Generated in seconds</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_3.png?6808dab\" alt=\"Generated description\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Applied to your product</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_4.png?6808dab\" alt=\"Applied description\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Odoo 20 Community &amp; Enterprise · License LGPL-3 (free)</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">AI Product Descriptions</h2> <h3 class=\"d-center\">Write great product copy in seconds — without leaving Odoo.</h3> <p class=\"d-center\"> Open any product, click <b>Generate with AI</b>, choose a <b>tone</b>, <b>length</b> and <b>language</b>, and get a ready-to-use sales description. Review or edit it, then apply — in one click. Powered by the free <b>AI Gateway</b>, so you use <b>your own key</b> (Claude / OpenAI / local) and pay no per-word fees. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Control the output</h3> <p>Pick professional, friendly, persuasive, technical or luxury tone; short, medium or long; any language; and the key features to emphasise.</p> </div> <div> <h3 class=\"d-center\">Preview &amp; apply</h3> <p>Review and edit the draft before it's written to the product's Sales Description or Internal Notes. Nothing changes until you apply.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Bring your own key</h3> <p>Runs through the free AI Gateway module — your own provider and API key, no per-word fees and no external lock-in.</p> </div> <div> <h3 class=\"d-center\">No core changes</h3> <p>Adds a single button to the product form. Uses the standard <b>product</b> model and respects your access rights.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">One click from the product form</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_1.png?a0e5fe8\" alt=\"Generate with AI button\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Choose tone, length &amp; language</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_2.png?a0e5fe8\" alt=\"AI options\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Generated in seconds</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_3.png?a0e5fe8\" alt=\"Generated description\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Applied to your product</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/ai_product_copywriter/screenshot_4.png?a0e5fe8\" alt=\"Applied description\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Odoo 20 Community &amp; Enterprise · License LGPL-3 (free)</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "ai_thread_summary",
@@ -547,7 +547,7 @@
       "kind": "app",
       "name": "Budget Management by Analytic Account",
       "summary": "Plan budgets per project / department / cost centre and track planned vs actual in real time - the Budgets feature for Odoo Community.",
-      "price": 38.92,
+      "price": 39.07,
       "versions": [
         "15.0",
         "16.0",
@@ -575,7 +575,7 @@
       "kind": "app",
       "name": "Appointments & Online Booking",
       "summary": "Let customers book appointments online: services, staff, weekly availability and a public booking page - with a backend calendar. Odoo Community has no Appointments app.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -603,7 +603,7 @@
       "kind": "app",
       "name": "Approval Chain Hub - Multi-Level Approvals for Any Model",
       "summary": "Generic, no-code approval workflows: approval types, multi-step approvers (sequential or parallel), amount thresholds, delegation, escalation and a full audit trail.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -650,16 +650,16 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419722/icon_image/128x128?unique=5f8a11b",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419722/icon_image/128x128?unique=8d19789",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830635&unique=d56f3c3b5ec73bd2873eeda775b561439b57793d",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Import punch logs from CSV</h2> <h3 class=\"d-center\">Device or spreadsheet attendance into Odoo</h3> <p class=\"d-center\">Upload a CSV of attendance logs and the wizard creates the matching Odoo attendance records - matched by name, work email or badge.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div><h3 class=\"d-center\">Simple CSV</h3><p>Columns: employee, check_in, check_out.</p></div> <div><h3 class=\"d-center\">Flexible</h3><p>Pick the delimiter and date format.</p></div> <div><h3 class=\"d-center\">Safe</h3><p>Unmatched rows are reported; the rest import.</p></div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Import attendance / device punch logs from a CSV file into Odoo attendances.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/attendance_csv_importer/screenshot_1.png?0e5d049\" alt=\"Attendance CSV Import screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Import punch logs from CSV</h2> <h3 class=\"d-center\">Device or spreadsheet attendance into Odoo</h3> <p class=\"d-center\">Upload a CSV of attendance logs and the wizard creates the matching Odoo attendance records - matched by name, work email or badge.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div><h3 class=\"d-center\">Simple CSV</h3><p>Columns: employee, check_in, check_out.</p></div> <div><h3 class=\"d-center\">Flexible</h3><p>Pick the delimiter and date format.</p></div> <div><h3 class=\"d-center\">Safe</h3><p>Unmatched rows are reported; the rest import.</p></div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Import attendance / device punch logs from a CSV file into Odoo attendances.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/attendance_csv_importer/screenshot_1.png?a8a3015\" alt=\"Attendance CSV Import screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "audit_log_tracker",
       "kind": "app",
       "name": "Audit Log & Field Change Tracking",
       "summary": "Audit changes to any field on any model - who changed what, from what, to what and when - plus deletions, in one central log.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -687,7 +687,7 @@
       "kind": "theme",
       "name": "Auralis — Premium Backend Theme",
       "summary": "A premium, glassmorphic SaaS-grade backend theme for Odoo 20 Community — modern design system, first-class dark mode, redesigned app drawer, views, forms and components.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -715,7 +715,7 @@
       "kind": "app",
       "name": "Automotive Dealer — Vehicle Sales & Showroom",
       "summary": "New & used vehicle sales: VIN stock, test drives, bookings & advances, trade-ins, financier DO, delivery, commissions — with native accounting.",
-      "price": 448.08,
+      "price": 449.84,
       "versions": [
         "19.0",
         "20.0"
@@ -739,7 +739,7 @@
       "kind": "app",
       "name": "Automotive Service Center — Job Cards, Workshop, Parts & Warranty",
       "summary": "Workshop management: appointments, vehicle reception, job cards, inspections, estimates with approvals, parts, technicians, QC, multi-payer invoicing, warranty, history and reminders.",
-      "price": 497.98,
+      "price": 499.94,
       "versions": [
         "19.0",
         "20.0"
@@ -763,7 +763,7 @@
       "kind": "app",
       "name": "Barcode Warehouse Operations (Mobile)",
       "summary": "A fast, mobile-first barcode scanner for Odoo Community warehouses: receipts, deliveries and internal transfers - scan, adjust and validate from a phone.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -819,7 +819,7 @@
       "kind": "app",
       "name": "Cash Flow Forecast",
       "summary": "Project your cash position weeks or months ahead from open invoices and bills - see shortfalls before they happen.",
-      "price": 58.88,
+      "price": 59.11,
       "versions": [
         "15.0",
         "16.0",
@@ -903,7 +903,7 @@
       "kind": "theme",
       "name": "Compact Density - Backend Theme",
       "summary": "A Bloomberg-terminal-style dense backend theme: tighter rows, smaller paddings and more data on every screen. Pure CSS, no JavaScript.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -931,7 +931,7 @@
       "kind": "app",
       "name": "Contract Management Hub",
       "summary": "A central repository for all your contracts and agreements - lifecycle, renewal alerts, obligations tracking and a dashboard. Never miss a renewal again.",
-      "price": 38.92,
+      "price": 39.07,
       "versions": [
         "15.0",
         "16.0",
@@ -959,7 +959,7 @@
       "kind": "app",
       "name": "Credit Limit & Blocking",
       "summary": "Warn or block sales-order confirmation when a customer is over their credit limit - with a manager override.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -987,7 +987,7 @@
       "kind": "app",
       "name": "CRM AI Copilot - Lead Scoring & Sales Assistant",
       "summary": "AI lead scoring (Hot/Warm/Cold), plus one-click summaries, next-best-action and outreach email drafts - on your own AI key.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1189,7 +1189,7 @@
       "kind": "app",
       "name": "Sales Target Tracker",
       "summary": "Set monthly or quarterly sales targets per salesperson and track achievement live against confirmed orders.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1245,7 +1245,7 @@
       "kind": "app",
       "name": "Enterprise Dashboard Template",
       "summary": "A production-ready, reusable OWL dashboard framework for Odoo 20 Community: KPI cards, Chart.js widgets, sticky filters, collapsible sidebar, right panel, light/dark/RTL themes.",
-      "price": 78.84,
+      "price": 79.15,
       "versions": [
         "20.0"
       ],
@@ -1268,7 +1268,7 @@
       "kind": "app",
       "name": "Data Cleaning Suite",
       "summary": "Normalise text fields across any model (trim, casing, phone) and deduplicate contacts - keep your database clean at scale.",
-      "price": 58.88,
+      "price": 59.11,
       "versions": [
         "15.0",
         "16.0",
@@ -1315,16 +1315,16 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419693/icon_image/128x128?unique=793b0fe",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419693/icon_image/128x128?unique=a3ecc36",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830606&unique=f8e421e0ba15975c5e1aa5a6e4cc87c4ff7d3f2e",
-      "description": "<section> <div> <h2 class=\"d-center\">☁️ Database Backup — Local + Cloud</h2> <h3 class=\"d-center\">Automatic, scheduled Odoo backups — never lose your data</h3> <div> <p class=\"d-center\"> Take <strong>full backups</strong> of your Odoo database <strong>and filestore</strong> (standard Odoo <code>.zip</code>) and store them on a local folder, AWS S3, Google Drive and OneDrive — automatically on a schedule, or with one click. All configured from <strong>Settings</strong>. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h4>💾 Full backup (DB + filestore)</h4> <p>Standard Odoo <code>.zip</code> — restorable from Odoo's own database manager.</p> </div> <div> <h4>⏰ Scheduled &amp; one-click</h4> <p>Automatic daily backup via cron, plus a <strong>Backup Now</strong> button.</p> </div> </div> <div class=\"d-cols\"> <div> <h4>☁️ Multi-destination</h4> <p>Local folder, AWS S3 (or S3-compatible), Google Drive and OneDrive — together.</p> </div> <div> <h4>🧾 History &amp; retention</h4> <p>Every run logged with status, size &amp; destinations; keep the last <em>N</em> local copies.</p> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">Configure everything from Settings</h3> <div> <p class=\"d-center\"> Enable each destination independently and fill in its credentials — no code, no XML. Toggle the daily scheduled backup, or run one immediately. </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/01-settings.png?5e24abe\" alt=\"Database Backup settings\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">A clear backup history</h3> <div> <p class=\"d-center\"> Every backup is logged with its date, size, whether it was scheduled, and a status — so you always know your data is safe. One failing destination never blocks the others. </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/02-backup-history.png?5e24abe\" alt=\"Backup history\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <h3 class=\"d-center\">Know exactly where every backup went</h3> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/03-backup-detail.png?5e24abe\" alt=\"Backup record detail with destinations\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">Supported destinations</h3> <div> <ul> <li>🗂️ <strong>Local folder</strong> — server path + retention (keep last <em>N</em>)</li> <li>☁️ <strong>AWS S3</strong> — or any S3-compatible bucket (MinIO, Wasabi, Spaces…)</li> </ul> </div> <div> <ul> <li>📁 <strong>Google Drive</strong> — via a service account</li> <li>🪟 <strong>Microsoft OneDrive</strong> — via Microsoft Graph (app-only)</li> </ul> </div> <div class=\"d-center\"> <p> Optional Python packages per destination: <code>boto3</code> (S3), <code>google-api-python-client</code> + <code>google-auth</code> (Drive). OneDrive uses only <code>requests</code> (bundled with Odoo). </p> </div> </div> </section><section> <div> <h3 class=\"d-center\">Technical specifications</h3> <div class=\"d-center\"> <p><strong>Odoo Version:</strong> 20.0 | <strong>License:</strong> OPL-1 | <strong>Depends on:</strong> base</p> <p><strong>Requirement:</strong> <code>pg_dump</code> available on the Odoo server (same major version as PostgreSQL).</p> </div> </div> </section><section> <div> <h3 class=\"d-center\">Support &amp; Contact</h3> <div class=\"d-center\"> <p> <strong>Author:</strong> Arun A George<br> <strong>Website:</strong> arunalexgeorge.online<br> <strong>Email:</strong> admin@arunalexgeorge.online </p> </div> </div> </section>"
+      "description": "<section> <div> <h2 class=\"d-center\">☁️ Database Backup — Local + Cloud</h2> <h3 class=\"d-center\">Automatic, scheduled Odoo backups — never lose your data</h3> <div> <p class=\"d-center\"> Take <strong>full backups</strong> of your Odoo database <strong>and filestore</strong> (standard Odoo <code>.zip</code>) and store them on a local folder, AWS S3, Google Drive and OneDrive — automatically on a schedule, or with one click. All configured from <strong>Settings</strong>. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h4>💾 Full backup (DB + filestore)</h4> <p>Standard Odoo <code>.zip</code> — restorable from Odoo's own database manager.</p> </div> <div> <h4>⏰ Scheduled &amp; one-click</h4> <p>Automatic daily backup via cron, plus a <strong>Backup Now</strong> button.</p> </div> </div> <div class=\"d-cols\"> <div> <h4>☁️ Multi-destination</h4> <p>Local folder, AWS S3 (or S3-compatible), Google Drive and OneDrive — together.</p> </div> <div> <h4>🧾 History &amp; retention</h4> <p>Every run logged with status, size &amp; destinations; keep the last <em>N</em> local copies.</p> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">Configure everything from Settings</h3> <div> <p class=\"d-center\"> Enable each destination independently and fill in its credentials — no code, no XML. Toggle the daily scheduled backup, or run one immediately. </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/01-settings.png?b1316b9\" alt=\"Database Backup settings\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">A clear backup history</h3> <div> <p class=\"d-center\"> Every backup is logged with its date, size, whether it was scheduled, and a status — so you always know your data is safe. One failing destination never blocks the others. </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/02-backup-history.png?b1316b9\" alt=\"Backup history\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <h3 class=\"d-center\">Know exactly where every backup went</h3> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/db_backup_cloud/screenshots/03-backup-detail.png?b1316b9\" alt=\"Backup record detail with destinations\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols\"> <h3 class=\"d-center\">Supported destinations</h3> <div> <ul> <li>🗂️ <strong>Local folder</strong> — server path + retention (keep last <em>N</em>)</li> <li>☁️ <strong>AWS S3</strong> — or any S3-compatible bucket (MinIO, Wasabi, Spaces…)</li> </ul> </div> <div> <ul> <li>📁 <strong>Google Drive</strong> — via a service account</li> <li>🪟 <strong>Microsoft OneDrive</strong> — via Microsoft Graph (app-only)</li> </ul> </div> <div class=\"d-center\"> <p> Optional Python packages per destination: <code>boto3</code> (S3), <code>google-api-python-client</code> + <code>google-auth</code> (Drive). OneDrive uses only <code>requests</code> (bundled with Odoo). </p> </div> </div> </section><section> <div> <h3 class=\"d-center\">Technical specifications</h3> <div class=\"d-center\"> <p><strong>Odoo Version:</strong> 20.0 | <strong>License:</strong> OPL-1 | <strong>Depends on:</strong> base</p> <p><strong>Requirement:</strong> <code>pg_dump</code> available on the Odoo server (same major version as PostgreSQL).</p> </div> </div> </section><section> <div> <h3 class=\"d-center\">Support &amp; Contact</h3> <div class=\"d-center\"> <p> <strong>Author:</strong> Arun A George<br> <strong>Website:</strong> arunalexgeorge.online<br> <strong>Email:</strong> admin@arunalexgeorge.online </p> </div> </div> </section>"
     },
     {
       "technicalName": "db_backup_vault",
       "kind": "app",
       "name": "Backup Vault - Scheduled Database Backups to Cloud",
       "summary": "Automatic, scheduled Odoo database + filestore backups to Local, SFTP, Amazon S3, Dropbox or Google Drive, with retention and email alerts.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -1380,7 +1380,7 @@
       "kind": "app",
       "name": "Dental Lab Management System",
       "summary": "Complete dental laboratory management: cases, production, billing, portal & reports",
-      "price": 498.97,
+      "price": 500.94,
       "versions": [
         "15.0",
         "16.0",
@@ -1408,7 +1408,7 @@
       "kind": "app",
       "name": "Documents Hub - DMS & File Sharing",
       "summary": "A document management system for Odoo Community: organise files in folders with per-group access and tags, preview and download, and share documents with customers via the portal.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1436,7 +1436,7 @@
       "kind": "app",
       "name": "Drip Campaigns - Marketing Automation & Sequences",
       "summary": "Automated multi-step campaigns over any model: timed email sequences and server actions, with participants, scheduling and a full run history. Community-friendly marketing automation.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -1464,7 +1464,7 @@
       "kind": "theme",
       "name": "Emerald Pro - Backend Theme",
       "summary": "A fresh, professional emerald backend theme: green accents, clean borders and crisp cards. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -1492,7 +1492,7 @@
       "kind": "app",
       "name": "Employee Geo Attendance & Field Visit Tracking",
       "summary": "GPS-verified employee check-in/out for office attendance and customer field visits, with radius validation, admin override, dashboards and reports.",
-      "price": 149.69,
+      "price": 150.28,
       "versions": [
         "15.0",
         "16.0",
@@ -1520,7 +1520,7 @@
       "kind": "app",
       "name": "eSignature Hub - Sign Documents Online",
       "summary": "Send documents for electronic signature: signers, ordered signing, portal signing with a drawn signature, audit trail and a signature certificate. A Community alternative to Enterprise Sign.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -1548,7 +1548,7 @@
       "kind": "theme",
       "name": "Executive Mono - Backend Theme",
       "summary": "A monochrome, executive-grade backend theme: crisp black-and-white chrome, sharp typography and understated luxe. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -1604,7 +1604,7 @@
       "kind": "app",
       "name": "Financial Statement Builder",
       "summary": "Generate a Profit & Loss and a Balance Sheet for any period - the financial reports Community is missing.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1632,7 +1632,7 @@
       "kind": "app",
       "name": "Fixed Asset Management & Depreciation",
       "summary": "Track fixed assets and depreciate them automatically - straight-line or declining balance, with schedules, lifecycle and optional journal entries. The Assets app for Community.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1660,7 +1660,7 @@
       "kind": "theme",
       "name": "Focus Zen - Backend Theme",
       "summary": "A whitespace-first, distraction-free backend theme: generous spacing, a quiet teal accent and calm surfaces. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -1688,7 +1688,7 @@
       "kind": "app",
       "name": "Customer Follow-ups & Dunning",
       "summary": "Multi-level automated payment reminders for Odoo Community — follow-up levels, email reminders, promise-to-pay, dunning letters, a follow-up report and a daily auto-chase cron.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1716,7 +1716,7 @@
       "kind": "app",
       "name": "Field Service Management",
       "summary": "Schedule on-site jobs and let field workers run them from a mobile app: start, log work and complete with time tracking. Odoo Community has no Field Service app.",
-      "price": 78.84,
+      "price": 79.15,
       "versions": [
         "15.0",
         "16.0",
@@ -1744,7 +1744,7 @@
       "kind": "app",
       "name": "Helpdesk & Ticketing",
       "summary": "A full help desk for Odoo Community: teams, SLA policies, email-to-ticket, a kanban pipeline, analytics and a customer self-service portal.",
-      "price": 88.82,
+      "price": 89.17,
       "versions": [
         "15.0",
         "16.0",
@@ -1772,7 +1772,7 @@
       "kind": "app",
       "name": "Appraisal & OKR",
       "summary": "Run employee performance reviews with weighted goals/KPIs and an automatic overall score - the Appraisal app Community lacks.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -1968,7 +1968,7 @@
       "kind": "app",
       "name": "Employee Loan Management",
       "summary": "Manage staff loans and advances with an approval flow and an automatic installment repayment schedule.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -2052,7 +2052,7 @@
       "kind": "app",
       "name": "Shift Roster Planner",
       "summary": "Plan employee shifts on a calendar and publish the roster - the Planning app Community lacks.",
-      "price": 58.88,
+      "price": 59.11,
       "versions": [
         "15.0",
         "16.0",
@@ -2136,7 +2136,7 @@
       "kind": "app",
       "name": "Knowledge Base / Wiki",
       "summary": "An internal knowledge base and wiki - articles with categories, hierarchy and rich text. The Knowledge app Community lacks.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -2164,7 +2164,7 @@
       "kind": "app",
       "name": "KPI Dashboard Builder (+AI Narrative)",
       "summary": "Build no-code KPI dashboards over any Odoo model: KPI tiles, bar/line/pie charts and top lists, plus one-click AI executive summaries of your numbers.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -2198,7 +2198,7 @@
       "kind": "theme",
       "name": "Linelight - Minimal Backend Theme",
       "summary": "A clean, light, line-based backend theme for Odoo: a bright navbar, airy cards, refined buttons and subtle borders. Pure CSS, no core changes, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -2338,7 +2338,7 @@
       "kind": "theme",
       "name": "Materia - Material Backend Theme",
       "summary": "A Material-Design-3 inspired backend theme: elevated cards, tonal surfaces, rounded shapes and a violet primary. Pure CSS, no JavaScript.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -2497,9 +2497,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419739/icon_image/128x128?unique=3b42599",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419739/icon_image/128x128?unique=508da11",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830652&unique=ce0cda543b0028925f6c7ad31af6204f766b3878",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Quality control, free</h2> <h3 class=\"d-center\">A pass/fail checklist on every manufacturing order</h3> <p class=\"d-center\"> Bring basic quality control to your manufacturing orders - no heavy Quality app needed. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Per-MO checklist</h3> <p>List the checks to perform on each order.</p> </div> <div> <h3 class=\"d-center\">One-click pass/fail</h3> <p>Who checked it and when is recorded for you.</p> </div> <div> <h3 class=\"d-center\">Live progress</h3> <p>A bar shows how much of the checklist is done.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Add a simple pass/fail quality checklist to manufacturing orders - with live progress and a failed-check warning.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/mrp_quality_checklist/screenshot_1.png?0dc16be\" alt=\"Manufacturing Quality Checklist screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Quality control, free</h2> <h3 class=\"d-center\">A pass/fail checklist on every manufacturing order</h3> <p class=\"d-center\"> Bring basic quality control to your manufacturing orders - no heavy Quality app needed. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Per-MO checklist</h3> <p>List the checks to perform on each order.</p> </div> <div> <h3 class=\"d-center\">One-click pass/fail</h3> <p>Who checked it and when is recorded for you.</p> </div> <div> <h3 class=\"d-center\">Live progress</h3> <p>A bar shows how much of the checklist is done.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Add a simple pass/fail quality checklist to manufacturing orders - with live progress and a failed-check warning.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/mrp_quality_checklist/screenshot_1.png?de8bbf4\" alt=\"Manufacturing Quality Checklist screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "multi_company_quick_selector",
@@ -2534,7 +2534,7 @@
       "kind": "app",
       "name": "Studio Lite - Field & View Builder",
       "summary": "Add custom fields to any model and tweak list & form views without code. A safe, upgrade-proof Community alternative to Enterprise Studio.",
-      "price": 348.29,
+      "price": 349.66,
       "versions": [
         "15.0",
         "16.0",
@@ -2562,7 +2562,7 @@
       "kind": "theme",
       "name": "Nordic Cool - Backend Theme",
       "summary": "A calm, cool-toned Nord-inspired backend theme: frosty greys, a soft arctic-blue accent and airy cards. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -2590,7 +2590,7 @@
       "kind": "theme",
       "name": "Ocean Breeze - Backend Theme",
       "summary": "A cool ocean-blue backend theme with a breezy gradient navbar, sky accents and light, open surfaces. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -2618,23 +2618,24 @@
       "kind": "app",
       "name": "ParishCore — Church & Parish Management",
       "summary": "Families, members, sacramental registers & certificates, dues & donations, facility bookings, events, attendance and pastoral care for Odoo Community",
-      "price": 448.08,
+      "price": 450.76,
       "versions": [
-        "19.0"
+        "19.0",
+        "20.0"
       ],
-      "storeUrl": "https://apps.odoo.com/apps/modules/19.0/parishcore",
+      "storeUrl": "https://apps.odoo.com/apps/modules/20.0/parishcore",
       "storeCategory": "Industries",
       "license": "OPL-1",
-      "linesOfCode": 13591,
+      "linesOfCode": 13201,
       "availability": {
         "odooOnline": false,
         "odooSh": true,
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/424758/icon_image/128x128?unique=962e5b5",
-      "cover": "https://apps.odoocdn.com/apps/module_image?image_id=38619559&unique=cf26e967ad24d320e0019abac5df2fc9fa247c91",
-      "description": "<section> <div class=\"d-cols\"> <div class=\"d-center\"> <h2>ParishCore</h2> <h3>Church &amp; Parish Management for Odoo 19 Community</h3> <p> Families and members, sacramental registers and certificates, dues and offerings with proper accounting, facility bookings, services, events, attendance and pastoral care, in one app on your own server. </p> <p> <span class=\"d-pill\">Odoo 19 Community</span> <span class=\"d-pill\">Works on your own server, even without internet</span> <span class=\"d-pill\">Registers &amp; certificates done right</span> <span class=\"d-pill\">No third-party dependencies</span> </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/main_screenshot.png?46b6233\" alt=\"ParishCore home: tiles, quick actions and search\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols d-center\"> <div> <h4>Paper registers</h4> <p>Numbered, locked register books with notations and corrections, never edited in place. Certificates come from the register, with a verification code.</p> </div> <div> <h4>Spreadsheet dues</h4> <p>Monthly subscriptions generate themselves. The counter receives a family's dues in seconds and every payment lands in Odoo Invoicing as a journal entry.</p> </div> <div> <h4>Double-booked halls</h4> <p>The database itself refuses overlapping bookings. Prices, deposits and cancellation refunds follow the rules you set.</p> </div> </div> </section><section> <h2>Families &amp; members</h2> <ul> <li>Families and members built on Odoo contacts: family and member numbers (keep your old ones on import), relationships, head of family, address shared by the household.</li> <li>Transfers in and out, with a dues check and a printed transfer letter to the receiving parish.</li> <li>Membership history, categories, consent per channel, custom fields without programming.</li> <li>Parish structure with up to three levels (e.g. Zone, Ward, Family Unit) and presets for many traditions.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_family.png?46b6233\" alt=\"Family form\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_member.png?46b6233\" alt=\"Member form\" loading=\"lazy\" decoding=\"async\"> <h2>Sacramental registers &amp; certificates</h2> <ul> <li>Baptism, Confirmation/Chrismation, First Communion, Marriage, Death/Burial and configurable ceremonies.</li> <li>Workflow with document checklist: Draft, Verified, Approved, Scheduled, Celebrated, Registered. Registered entries are locked; corrections are notations, with approval.</li> <li>Register books with safe, gap-free numbering; old paper registers can be imported with their original numbers.</li> <li>Certificates with issue log, duplicate marking, ID verification and verification code. Printed register books and alphabetical index.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_baptism_workflow.png?46b6233\" alt=\"Baptism being prepared\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_marriage.png?46b6233\" alt=\"Registered marriage\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div><img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_certificate.png?46b6233\" alt=\"Baptism certificate\" loading=\"lazy\" decoding=\"async\"></div> <div><img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_register.png?46b6233\" alt=\"Printed register page\" loading=\"lazy\" decoding=\"async\"></div> </div> <h2>Dues, receipts, offerings &amp; accounting</h2> <ul> <li>Contribution types (monthly, quarterly, yearly, one-off) with automatic dues, arrears, defaulter status, waivers and write-offs with approval limits.</li> <li>Quick Receipt: pays the oldest dues first, months ahead, extra donations; prints an A5 receipt with the amount in words.</li> <li>Sunday collections counted by denomination with two counters and a verifier.</li> <li>Every receipt, collection, event expense, booking invoice, refund and deposit settlement becomes an Odoo Invoicing journal entry (per document or as a daily summary). Cancellations create reversal entries.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_quick_receipt.png?46b6233\" alt=\"Quick Receipt\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_dues.png?46b6233\" alt=\"Overdue dues\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_collection.png?46b6233\" alt=\"Sunday collection count\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div><img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_receipt.png?46b6233\" alt=\"Receipt\" loading=\"lazy\" decoding=\"async\"></div> <div><img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_statement.png?46b6233\" alt=\"Family statement\" loading=\"lazy\" decoding=\"async\"></div> </div> <div> <div><img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_transfer.png?46b6233\" alt=\"Transfer letter\" loading=\"lazy\" decoding=\"async\"></div> </div> <h2>Facility bookings</h2> <ul> <li>Halls, rooms and grounds with opening hours, notice periods, member and non-member prices, weekend surcharges and refundable deposits.</li> <li>Clashes are impossible, even when two people book at the same moment. Shared-use facilities, weekly recurrence, maintenance blocks.</li> <li>Invoices, cancellation refunds by policy and deposit settlement after the event.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_booking.png?46b6233\" alt=\"Booking\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_availability.png?46b6233\" alt=\"Availability calendar\" loading=\"lazy\" decoding=\"async\"> <h2>Services, events, calendar &amp; attendance</h2> <ul> <li>Weekly service schedules generate services and reserve the church automatically.</li> <li>Events with volunteers, budget and expenses; one parish calendar for services, events, bookings and ceremonies.</li> <li>Attendance as a headcount or a roster; consecutive absences are flagged.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_calendar.png?46b6233\" alt=\"Church calendar\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_event.png?46b6233\" alt=\"Event\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_attendance.png?46b6233\" alt=\"Attendance headcount\" loading=\"lazy\" decoding=\"async\"> <h2>Groups, clergy &amp; pastoral care</h2> <ul> <li>Groups, ministries, committees and classes with roles and terms; leaders see only their own people.</li> <li>Pastoral visits with follow-ups, care lists (bereaved, sick, elderly), prayer requests.</li> <li>Care notes in three confidentiality levels; sealed notes are hidden until a logged \"reveal\".</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_groups.png?46b6233\" alt=\"Groups and ministries\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_care.png?46b6233\" alt=\"Pastoral visits\" loading=\"lazy\" decoding=\"async\"> <h2>Reports</h2> <ul> <li>Membership, sacraments, collections, arrears ageing and facility use as pivot tables and charts; monthly trends.</li> <li>Printable parish statistics, family directory (only people who agreed), arrears list, cash register, birthday list.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_report_collections.png?46b6233\" alt=\"Collection analysis\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_trends.png?46b6233\" alt=\"Monthly trends\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/document_statistics.png?46b6233\" alt=\"Parish statistics\" loading=\"lazy\" decoding=\"async\"> <h2>Communication</h2> <ul> <li>Email through Odoo, WhatsApp click-to-chat (no paid API needed) and SMS through Odoo's own SMS module if you enable it.</li> <li>Templates, automatic receipt and booking messages, reminders, consent checks and quiet hours.</li> </ul> <h2>Privacy &amp; security</h2> <ul> <li>Roles for office staff, volunteers, finance, registers, facilities, events and pastoral care. Multi-church (multi-company) ready.</li> <li>Append-only audit log for register finalisation, corrections, certificates, cancellations and other sensitive actions.</li> <li>Personal data export (JSON and PDF), anonymisation for erasure requests (register entries are kept as church records), retention policies.</li> <li>ParishCore sends no data anywhere unless you configure a messaging provider.</li> </ul> <h2>Getting started</h2> <ul> <li>Church Setup applies the structure and terms of your tradition (Catholic Latin, Syro-Malabar, Syro-Malankara, Malankara Orthodox, Jacobite, Mar Thoma, CSI, Anglican, Pentecostal and others).</li> <li>Import templates (Excel/CSV) for families, members, relationships, plans, opening arrears, historical registers, groups and facilities, with a data check afterwards.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_import.png?46b6233\" alt=\"Import templates\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/parishcore/screenshot_settings.png?46b6233\" alt=\"Settings\" loading=\"lazy\" decoding=\"async\"> <h2>Requirements</h2> <ul> <li>Odoo 19.0 Community, on your own server or a VPS. PostgreSQL 13 or later (tested with PostgreSQL 16).</li> <li>Depends only on Odoo modules: Contacts, Discuss, Invoicing, Phone Validation and Hierarchy View.</li> <li>Not included: financial statements (balance sheet, profit and loss). Churches that need them can install an accounting-reports module of their choice next to ParishCore.</li> <li>Not included: a native mobile app, online payment processing of its own, worship planning.</li> </ul> <h2>Support</h2> <p>Bug fixes are included. Implementation, data migration and training packages are available from Arun A George (arunalexgeorge.online).</p> </section>"
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/426914/icon_image/128x128?unique=128aff4",
+      "cover": "https://apps.odoocdn.com/apps/module_image?image_id=38862397&unique=97e1a6b866db81401c8ef5bd03d22ab347b92eba",
+      "description": "<section> <div class=\"d-cols\"> <div class=\"d-center\"> <h2>ParishCore</h2> <h3>Church &amp; Parish Management for Odoo 20 Community</h3> <p> Families and members, sacramental registers and certificates, dues and offerings with proper accounting, facility bookings, services, events, attendance and pastoral care, in one app on your own server. </p> <p> <span class=\"d-pill\">Odoo 20 Community</span> <span class=\"d-pill\">Works on your own server, even without internet</span> <span class=\"d-pill\">Registers &amp; certificates done right</span> <span class=\"d-pill\">No third-party dependencies</span> </p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/main_screenshot.png?6951642\" alt=\"ParishCore home: tiles, quick actions and search\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div class=\"d-cols d-center\"> <div> <h4>Paper registers</h4> <p>Numbered, locked register books with notations and corrections, never edited in place. Certificates come from the register, with a verification code.</p> </div> <div> <h4>Spreadsheet dues</h4> <p>Monthly subscriptions generate themselves. The counter receives a family's dues in seconds and every payment lands in Odoo Invoicing as a journal entry.</p> </div> <div> <h4>Double-booked halls</h4> <p>The database itself refuses overlapping bookings. Prices, deposits and cancellation refunds follow the rules you set.</p> </div> </div> </section><section> <h2>Families &amp; members</h2> <ul> <li>Families and members built on Odoo contacts: family and member numbers (keep your old ones on import), relationships, head of family, address shared by the household.</li> <li>Transfers in and out, with a dues check and a printed transfer letter to the receiving parish.</li> <li>Membership history, categories, consent per channel, custom fields without programming.</li> <li>Parish structure with up to three levels (e.g. Zone, Ward, Family Unit) and presets for many traditions.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_family.png?6951642\" alt=\"Family form\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_member.png?6951642\" alt=\"Member form\" loading=\"lazy\" decoding=\"async\"> <h2>Sacramental registers &amp; certificates</h2> <ul> <li>Baptism, Confirmation/Chrismation, First Communion, Marriage, Death/Burial and configurable ceremonies.</li> <li>Workflow with document checklist: Draft, Verified, Approved, Scheduled, Celebrated, Registered. Registered entries are locked; corrections are notations, with approval.</li> <li>Register books with safe, gap-free numbering; old paper registers can be imported with their original numbers.</li> <li>Certificates with issue log, duplicate marking, ID verification and verification code. Printed register books and alphabetical index.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_baptism_workflow.png?6951642\" alt=\"Baptism being prepared\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_marriage.png?6951642\" alt=\"Registered marriage\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div><img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_certificate.png?6951642\" alt=\"Baptism certificate\" loading=\"lazy\" decoding=\"async\"></div> <div><img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_register.png?6951642\" alt=\"Printed register page\" loading=\"lazy\" decoding=\"async\"></div> </div> <h2>Dues, receipts, offerings &amp; accounting</h2> <ul> <li>Contribution types (monthly, quarterly, yearly, one-off) with automatic dues, arrears, defaulter status, waivers and write-offs with approval limits.</li> <li>Quick Receipt: pays the oldest dues first, months ahead, extra donations; prints an A5 receipt with the amount in words.</li> <li>Sunday collections counted by denomination with two counters and a verifier.</li> <li>Every receipt, collection, event expense, booking invoice, refund and deposit settlement becomes an Odoo Invoicing journal entry (per document or as a daily summary). Cancellations create reversal entries.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_quick_receipt.png?6951642\" alt=\"Quick Receipt\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_dues.png?6951642\" alt=\"Overdue dues\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_collection.png?6951642\" alt=\"Sunday collection count\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div><img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_receipt.png?6951642\" alt=\"Receipt\" loading=\"lazy\" decoding=\"async\"></div> <div><img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_statement.png?6951642\" alt=\"Family statement\" loading=\"lazy\" decoding=\"async\"></div> </div> <div> <div><img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_transfer.png?6951642\" alt=\"Transfer letter\" loading=\"lazy\" decoding=\"async\"></div> </div> <h2>Facility bookings</h2> <ul> <li>Halls, rooms and grounds with opening hours, notice periods, member and non-member prices, weekend surcharges and refundable deposits.</li> <li>Clashes are impossible, even when two people book at the same moment. Shared-use facilities, weekly recurrence, maintenance blocks.</li> <li>Invoices, cancellation refunds by policy and deposit settlement after the event.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_booking.png?6951642\" alt=\"Booking\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_availability.png?6951642\" alt=\"Availability calendar\" loading=\"lazy\" decoding=\"async\"> <h2>Services, events, calendar &amp; attendance</h2> <ul> <li>Weekly service schedules generate services and reserve the church automatically.</li> <li>Events with volunteers, budget and expenses; one parish calendar for services, events, bookings and ceremonies.</li> <li>Attendance as a headcount or a roster; consecutive absences are flagged.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_calendar.png?6951642\" alt=\"Church calendar\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_event.png?6951642\" alt=\"Event\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_attendance.png?6951642\" alt=\"Attendance headcount\" loading=\"lazy\" decoding=\"async\"> <h2>Groups, clergy &amp; pastoral care</h2> <ul> <li>Groups, ministries, committees and classes with roles and terms; leaders see only their own people.</li> <li>Pastoral visits with follow-ups, care lists (bereaved, sick, elderly), prayer requests.</li> <li>Care notes in three confidentiality levels; sealed notes are hidden until a logged \"reveal\".</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_groups.png?6951642\" alt=\"Groups and ministries\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_care.png?6951642\" alt=\"Pastoral visits\" loading=\"lazy\" decoding=\"async\"> <h2>Reports</h2> <ul> <li>Membership, sacraments, collections, arrears ageing and facility use as pivot tables and charts; monthly trends.</li> <li>Printable parish statistics, family directory (only people who agreed), arrears list, cash register, birthday list.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_report_collections.png?6951642\" alt=\"Collection analysis\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_trends.png?6951642\" alt=\"Monthly trends\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/document_statistics.png?6951642\" alt=\"Parish statistics\" loading=\"lazy\" decoding=\"async\"> <h2>Communication</h2> <ul> <li>Email through Odoo, WhatsApp click-to-chat (no paid API needed) and SMS through Odoo's own SMS module if you enable it.</li> <li>Templates, automatic receipt and booking messages, reminders, consent checks and quiet hours.</li> </ul> <h2>Privacy &amp; security</h2> <ul> <li>Roles for office staff, volunteers, finance, registers, facilities, events and pastoral care. Multi-church (multi-company) ready.</li> <li>Append-only audit log for register finalisation, corrections, certificates, cancellations and other sensitive actions.</li> <li>Personal data export (JSON and PDF), anonymisation for erasure requests (register entries are kept as church records), retention policies.</li> <li>ParishCore sends no data anywhere unless you configure a messaging provider.</li> </ul> <h2>Getting started</h2> <ul> <li>Church Setup applies the structure and terms of your tradition (Catholic Latin, Syro-Malabar, Syro-Malankara, Malankara Orthodox, Jacobite, Mar Thoma, CSI, Anglican, Pentecostal and others).</li> <li>Import templates (Excel/CSV) for families, members, relationships, plans, opening arrears, historical registers, groups and facilities, with a data check afterwards.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_import.png?6951642\" alt=\"Import templates\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/parishcore/screenshot_settings.png?6951642\" alt=\"Settings\" loading=\"lazy\" decoding=\"async\"> <h2>Requirements</h2> <ul> <li>Odoo 20.0 Community, on your own server or a VPS. PostgreSQL 16 or later (tested with PostgreSQL 17).</li> <li>Depends only on Odoo modules: Contacts, Discuss, Invoicing, Phone Validation and Hierarchy View.</li> <li>Not included: financial statements (balance sheet, profit and loss). Churches that need them can install an accounting-reports module of their choice next to ParishCore.</li> <li>Not included: a native mobile app, online payment processing of its own, worship planning.</li> </ul> <h2>Support</h2> <p>Bug fixes are included. Implementation, data migration and training packages are available from Arun A George (arunalexgeorge.online).</p> </section>"
     },
     {
       "technicalName": "partner_credit_status_badge",
@@ -2725,7 +2726,7 @@
       "kind": "app",
       "name": "Payroll India - Statutory Salary, PF, ESI, PT & TDS",
       "summary": "Run Indian payroll on Odoo 20 Community: salary structures, payslips, Provident Fund (EPF), ESI, Professional Tax, TDS (new regime) and gratuity - no Enterprise needed.",
-      "price": 78.84,
+      "price": 79.15,
       "versions": [
         "15.0",
         "16.0",
@@ -2772,9 +2773,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419764/icon_image/128x128?unique=bbfd420",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419764/icon_image/128x128?unique=a1d933b",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830677&unique=896f071b2dec0bf028de5d2f4623a1c3941c3f5b",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Free petty-cash tracker</h2> <h3 class=\"d-center\">Track cash in and out — always know the balance on hand</h3> <p class=\"d-center\"> A simple, complete petty-cash book for the front desk, a project or a branch. Record every movement and print a clean statement whenever you need one. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Cash in / out</h3> <p>Log the date, description, payee and reference for every movement.</p> </div> <div> <h3 class=\"d-center\">Live balance</h3> <p>Opening balance plus ins minus outs — always up to date.</p> </div> <div> <h3 class=\"d-center\">PDF statement</h3> <p>Print a professional statement with a running balance.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Track a physical cash box - record cash in / cash out and always know the balance on hand, with a printable statement.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/petty_cash_book/screenshot_1.png?73a42cc\" alt=\"Petty Cash Book screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Petty Cash Book</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/petty_cash_book/screenshot_2.png?73a42cc\" alt=\"Petty Cash Book screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Free petty-cash tracker</h2> <h3 class=\"d-center\">Track cash in and out — always know the balance on hand</h3> <p class=\"d-center\"> A simple, complete petty-cash book for the front desk, a project or a branch. Record every movement and print a clean statement whenever you need one. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Cash in / out</h3> <p>Log the date, description, payee and reference for every movement.</p> </div> <div> <h3 class=\"d-center\">Live balance</h3> <p>Opening balance plus ins minus outs — always up to date.</p> </div> <div> <h3 class=\"d-center\">PDF statement</h3> <p>Print a professional statement with a running balance.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Track a physical cash box - record cash in / cash out and always know the balance on hand, with a printable statement.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/petty_cash_book/screenshot_1.png?66417e7\" alt=\"Petty Cash Book screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Petty Cash Book</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/petty_cash_book/screenshot_2.png?66417e7\" alt=\"Petty Cash Book screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "product_catalog_gap_finder",
@@ -2828,9 +2829,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419758/icon_image/128x128?unique=e2d1f74",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419758/icon_image/128x128?unique=dbe6d9c",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830671&unique=226210d3468b9bd9f831c0ba9b3d97e44095415a",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Barcode-ready in minutes</h2> <h3 class=\"d-center\">Valid, unique EAN-13 in one click</h3> <p class=\"d-center\"> Give every product a proper barcode without hunting for numbers. A Generate button next to the barcode field creates a valid, unique <b>EAN-13</b> (with the correct check digit) — or do a whole selection at once from the list. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One click</h3> <p>Generate a barcode right on the product, next to the field.</p> </div> <div> <h3 class=\"d-center\">Bulk</h3> <p>Select products in the list and fill in every missing barcode.</p> </div> <div> <h3 class=\"d-center\">Safe range</h3> <p>Uses the 200-299 internal-use prefix — no GTIN clashes.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Valid EAN-13 barcodes on your products</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/product_ean13_autogen/screenshot_1.png?d62c612\" alt=\"Product barcode\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Barcode-ready in minutes</h2> <h3 class=\"d-center\">Valid, unique EAN-13 in one click</h3> <p class=\"d-center\"> Give every product a proper barcode without hunting for numbers. A Generate button next to the barcode field creates a valid, unique <b>EAN-13</b> (with the correct check digit) — or do a whole selection at once from the list. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One click</h3> <p>Generate a barcode right on the product, next to the field.</p> </div> <div> <h3 class=\"d-center\">Bulk</h3> <p>Select products in the list and fill in every missing barcode.</p> </div> <div> <h3 class=\"d-center\">Safe range</h3> <p>Uses the 200-299 internal-use prefix — no GTIN clashes.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Valid EAN-13 barcodes on your products</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/product_ean13_autogen/screenshot_1.png?257f92b\" alt=\"Product barcode\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "product_label_a4_lite",
@@ -2912,7 +2913,7 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419745/icon_image/128x128?unique=1ec3246",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419745/icon_image/128x128?unique=ff16bef",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830658&unique=0c3c82aee0e719208a0b7fc488cc8f33535a5c9c",
       "description": "<section> <div> <div> <h2 class=\"d-center\">Project health at a glance</h2> <h3 class=\"d-center\">Open, overdue and done task counts, right on every project.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Live KPIs</h3> <p>Open, overdue and done task counts computed on each project as smart buttons.</p> </div> <div> <h3 class=\"d-center\">Overdue at a glance</h3> <p>Click straight through to the overdue tasks that need attention today.</p> </div> <div> <h3 class=\"d-center\">Zero setup</h3> <p>It reads your existing tasks, deadlines and stages. Need Gantt and workload? See our Gantt &amp; Resource planner.</p> </div> </div> </section><section> <div class=\"d-center\"> <div> <h3 class=\"d-center\">More apps by Arun A George</h3> <p>admin@arunalexgeorge.online | https://arunalexgeorge.online</p> </div> </div> </section>"
     },
@@ -3089,7 +3090,7 @@
       "kind": "app",
       "name": "Purchase Requisition & Approvals",
       "summary": "Internal purchase requests with a submit → approve → PO workflow, so buying stays controlled and auditable.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3136,9 +3137,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419732/icon_image/128x128?unique=4ad9050",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419732/icon_image/128x128?unique=91ded79",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830645&unique=69e02fe202dc629348d98ed127e02b3b00841886",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Buy at the best price</h2> <h3 class=\"d-center\">Compare every vendor's price for a product, cheapest first</h3> <p class=\"d-center\"> Before you raise a PO, see who gives you the best deal - pricelists and the last price actually paid, side by side. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One product, all vendors</h3> <p>Pull every vendor's price in one click.</p> </div> <div> <h3 class=\"d-center\">Two sources</h3> <p>Vendor pricelists and last confirmed purchase prices.</p> </div> <div> <h3 class=\"d-center\">Cheapest first</h3> <p>Offers sorted by unit price, best deal on top.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Compare what every vendor charges for a product - pricelists and recent purchase prices side by side, cheapest first.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/purchase_rfq_compare/screenshot_1.png?fe9769c\" alt=\"Compare Vendor Prices screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Buy at the best price</h2> <h3 class=\"d-center\">Compare every vendor's price for a product, cheapest first</h3> <p class=\"d-center\"> Before you raise a PO, see who gives you the best deal - pricelists and the last price actually paid, side by side. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One product, all vendors</h3> <p>Pull every vendor's price in one click.</p> </div> <div> <h3 class=\"d-center\">Two sources</h3> <p>Vendor pricelists and last confirmed purchase prices.</p> </div> <div> <h3 class=\"d-center\">Cheapest first</h3> <p>Offers sorted by unit price, best deal on top.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Compare what every vendor charges for a product - pricelists and recent purchase prices side by side, cheapest first.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/purchase_rfq_compare/screenshot_1.png?c712413\" alt=\"Compare Vendor Prices screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "purchase_vendor_price_history",
@@ -3173,7 +3174,7 @@
       "kind": "app",
       "name": "Vendor Scorecard",
       "summary": "Rank your suppliers: order volume, total spend, average order value and on-time delivery % - in one report.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3201,7 +3202,7 @@
       "kind": "app",
       "name": "Quality Control Pro",
       "summary": "Quality control points, pass/fail/measure checks and non-conformance alerts on your transfers - the Quality app Community lacks.",
-      "price": 78.84,
+      "price": 79.15,
       "versions": [
         "15.0",
         "16.0",
@@ -3248,7 +3249,7 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419697/icon_image/128x128?unique=5b72e3f",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419697/icon_image/128x128?unique=6d3206b",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830610&unique=eaeed2327b53f56744aedd1a719cad9f136a95a8",
       "description": "<section> <div> <div> <h2 class=\"d-center\">Push Odoo events anywhere</h2> <h3 class=\"d-center\">Fire a JSON webhook to any URL when you act on a record.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Simple endpoints</h3> <p>A name, a URL and an optional bearer token - point it at Zapier, Make, n8n or your own service.</p> </div> <div> <h3 class=\"d-center\">One-click send</h3> <p>Fire the matching webhooks for selected records from the Actions menu, with a clean JSON payload.</p> </div> <div> <h3 class=\"d-center\">Safe</h3> <p>Delivery failures are logged, never blocking your work. Need retries and a full REST API? See our REST API Framework.</p> </div> </div> </section><section> <div class=\"d-center\"> <div> <h3 class=\"d-center\">More apps by Arun A George</h3> <p>admin@arunalexgeorge.online | https://arunalexgeorge.online</p> </div> </div> </section>"
     },
@@ -3257,7 +3258,7 @@
       "kind": "app",
       "name": "Reorder / Min-Max Planner",
       "summary": "Review everything below its reorder point and raise draft purchase orders - grouped by vendor - in one click.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3313,7 +3314,7 @@
       "kind": "theme",
       "name": "Rose Quartz - Backend Theme",
       "summary": "A soft, elegant rose backend theme: warm blush surfaces, a refined crimson accent and gentle rounding. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -3453,7 +3454,7 @@
       "kind": "app",
       "name": "RMA & Returns Management",
       "summary": "Handle customer returns properly: a return authorisation (RMA) with its own workflow and a one-click return receipt.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3481,7 +3482,7 @@
       "kind": "app",
       "name": "Sales Commission Management",
       "summary": "Pay your sales team accurately: commission plans with rates by product category, per-salesperson statements computed from orders, and a clear approval flow.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3509,7 +3510,7 @@
       "kind": "app",
       "name": "Scheduled Report Emailer",
       "summary": "Automatically email any Odoo PDF report to the right people on a schedule - daily, weekly or monthly.",
-      "price": 38.92,
+      "price": 39.07,
       "versions": [
         "15.0",
         "16.0",
@@ -3565,7 +3566,7 @@
       "kind": "theme",
       "name": "Slate Soft - Backend Theme",
       "summary": "A shadcn/ui-inspired backend theme: muted slate palette, soft radii, subtle borders and gentle shadows. Pure CSS, no JavaScript.",
-      "price": 28.94,
+      "price": 29.05,
       "versions": [
         "15.0",
         "16.0",
@@ -3649,7 +3650,7 @@
       "kind": "app",
       "name": "Batch & Expiry Manager Pro",
       "summary": "An expiry cockpit for lot/batch tracking: days-to-expiry, expired & expiring-soon views and automatic email alerts.",
-      "price": 68.86,
+      "price": 69.13,
       "versions": [
         "15.0",
         "16.0",
@@ -3696,9 +3697,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419655/icon_image/128x128?unique=b7c6eb8",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419655/icon_image/128x128?unique=09e7728",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830568&unique=82fb8802019dd7828bf9ea54a0ddf9e016e64542",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Stock by Location Report</h2> <h3 class=\"d-center\">See on-hand, reserved and available quantity for every product split by location - in a list, pivot or graph.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Every location</h3> <p>On-hand, reserved and available quantity for each product, split across all internal and transit locations.</p> </div> <div> <h3 class=\"d-center\">List, pivot &amp; graph</h3> <p>Group by location or product and drill in - reads live from stock quants with zero setup.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">See on-hand, reserved and available quantity for every product split by location - in a list, pivot or graph.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_by_location_report/screenshot_1.png?b8b1277\" alt=\"Stock by Location Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Stock by Location Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_by_location_report/screenshot_2.png?b8b1277\" alt=\"Stock by Location Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Stock by Location Report</h2> <h3 class=\"d-center\">See on-hand, reserved and available quantity for every product split by location - in a list, pivot or graph.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Every location</h3> <p>On-hand, reserved and available quantity for each product, split across all internal and transit locations.</p> </div> <div> <h3 class=\"d-center\">List, pivot &amp; graph</h3> <p>Group by location or product and drill in - reads live from stock quants with zero setup.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">See on-hand, reserved and available quantity for every product split by location - in a list, pivot or graph.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_by_location_report/screenshot_1.png?b76a21f\" alt=\"Stock by Location Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Stock by Location Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_by_location_report/screenshot_2.png?b76a21f\" alt=\"Stock by Location Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "stock_dead_stock_report",
@@ -3724,9 +3725,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419647/icon_image/128x128?unique=6609a98",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419647/icon_image/128x128?unique=4a3a0c0",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830560&unique=130fcadc45c1368ebc920fc632ac72b950fcea40",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Spot slow movers</h2> <h3 class=\"d-center\">How long your on-hand stock has been sitting - aged, with value</h3> <p class=\"d-center\"> Cash tied up in stock that never moves is money lost. See every on-hand item bucketed by age, with its value, so you can act on dead stock. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Aged by in-date</h3> <p>Buckets 0-30, 31-60, 61-90, 91-180 and 180+ days.</p> </div> <div> <h3 class=\"d-center\">With value</h3> <p>Quantity and stock value per bucket, product or location.</p> </div> <div> <h3 class=\"d-center\">Dead-stock filters</h3> <p>One click for stock older than 90 or 180 days.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">See how long on-hand stock has been sitting - aged into buckets with value - so you can spot slow movers and dead stock.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_dead_stock_report/screenshot_1.png?befb8c6\" alt=\"Dead Stock Aging Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Dead Stock Aging Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_dead_stock_report/screenshot_2.png?befb8c6\" alt=\"Dead Stock Aging Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Spot slow movers</h2> <h3 class=\"d-center\">How long your on-hand stock has been sitting - aged, with value</h3> <p class=\"d-center\"> Cash tied up in stock that never moves is money lost. See every on-hand item bucketed by age, with its value, so you can act on dead stock. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Aged by in-date</h3> <p>Buckets 0-30, 31-60, 61-90, 91-180 and 180+ days.</p> </div> <div> <h3 class=\"d-center\">With value</h3> <p>Quantity and stock value per bucket, product or location.</p> </div> <div> <h3 class=\"d-center\">Dead-stock filters</h3> <p>One click for stock older than 90 or 180 days.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">See how long on-hand stock has been sitting - aged into buckets with value - so you can spot slow movers and dead stock.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_dead_stock_report/screenshot_1.png?de1b850\" alt=\"Dead Stock Aging Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Dead Stock Aging Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_dead_stock_report/screenshot_2.png?de1b850\" alt=\"Dead Stock Aging Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "stock_expiry_date_badge",
@@ -3780,9 +3781,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419696/icon_image/128x128?unique=9f0269d",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419696/icon_image/128x128?unique=1c4c39e",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830609&unique=484dbf56ca683fec1ba2e2ef067ee121cf613e9b",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Internal Transfer Slip Print</h2> <h3 class=\"d-center\">A clean, branded PDF slip for internal transfers - product, source and destination location, demand and done quantities.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Hand it over</h3> <p>Product, source and destination location, demand and done quantities - plus signature lines for issuer and receiver.</p> </div> <div> <h3 class=\"d-center\">One click</h3> <p>Print it straight from the Print menu on any transfer, with your company header and footer.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A clean, branded PDF slip for internal transfers - product, source and destination location, demand and done quantities.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_internal_transfer_slip/screenshot_1.png?373c5bc\" alt=\"Internal Transfer Slip Print screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Internal Transfer Slip Print</h2> <h3 class=\"d-center\">A clean, branded PDF slip for internal transfers - product, source and destination location, demand and done quantities.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Hand it over</h3> <p>Product, source and destination location, demand and done quantities - plus signature lines for issuer and receiver.</p> </div> <div> <h3 class=\"d-center\">One click</h3> <p>Print it straight from the Print menu on any transfer, with your company header and footer.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A clean, branded PDF slip for internal transfers - product, source and destination location, demand and done quantities.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_internal_transfer_slip/screenshot_1.png?63a926e\" alt=\"Internal Transfer Slip Print screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "stock_low_stock_alert",
@@ -3836,9 +3837,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419687/icon_image/128x128?unique=13b474a",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419687/icon_image/128x128?unique=be1f20b",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830600&unique=5bd9d0a49ec1396e7b1505c9ef4317d31af246a9",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Negative stock is a red flag</h2> <h3 class=\"d-center\">Instantly find products with a negative on-hand quantity</h3> <p class=\"d-center\"> Negative stock almost always means a data or process problem. This report surfaces it so you can fix it. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One list</h3> <p>Every internal quant with a negative quantity.</p> </div> <div> <h3 class=\"d-center\">By location &amp; product</h3> <p>Group and pivot to find the source.</p> </div> <div> <h3 class=\"d-center\">Always live</h3> <p>Reads your on-hand quants directly.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Instantly find products with a negative on-hand quantity - usually a sign of a data or process problem to fix.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_negative_stock_report/screenshot_1.png?e1513c3\" alt=\"Negative Stock Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Negative Stock Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_negative_stock_report/screenshot_2.png?e1513c3\" alt=\"Negative Stock Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Negative stock is a red flag</h2> <h3 class=\"d-center\">Instantly find products with a negative on-hand quantity</h3> <p class=\"d-center\"> Negative stock almost always means a data or process problem. This report surfaces it so you can fix it. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One list</h3> <p>Every internal quant with a negative quantity.</p> </div> <div> <h3 class=\"d-center\">By location &amp; product</h3> <p>Group and pivot to find the source.</p> </div> <div> <h3 class=\"d-center\">Always live</h3> <p>Reads your on-hand quants directly.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Instantly find products with a negative on-hand quantity - usually a sign of a data or process problem to fix.</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_negative_stock_report/screenshot_1.png?25db8bc\" alt=\"Negative Stock Report screenshot 1\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">A closer look inside Negative Stock Report</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_negative_stock_report/screenshot_2.png?25db8bc\" alt=\"Negative Stock Report screenshot 2\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "stock_orderpoint_overview",
@@ -3892,16 +3893,16 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419724/icon_image/128x128?unique=a3558da",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419724/icon_image/128x128?unique=c257a64",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830637&unique=4b2e833db568b629621f0c5fe88d37633050762a",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">See where waste comes from</h2> <h3 class=\"d-center\">Scrap analysis by reason, product &amp; period</h3> <p class=\"d-center\"> A ready-made <b>Scrap Analysis</b> report built on Odoo’s own scrap reasons. Slice scrapped quantity and value by reason, product, location and month in pivot, chart and list views — nothing duplicated, nothing to schedule. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Pivot &amp; chart</h3> <p>Group scrapped quantity and value any way you like.</p> </div> <div> <h3 class=\"d-center\">By reason</h3> <p>Uses Odoo’s native Scrap Reason tags — no duplication.</p> </div> <div> <h3 class=\"d-center\">With value</h3> <p>Quantity x product cost, in your company currency.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Scrap analysed by reason, product &amp; period</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_scrap_analysis/screenshot_1.png?f28a6e0\" alt=\"Scrap analysis pivot\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Chart the value of what you scrap</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_scrap_analysis/screenshot_2.png?f28a6e0\" alt=\"Scrap analysis chart\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">See where waste comes from</h2> <h3 class=\"d-center\">Scrap analysis by reason, product &amp; period</h3> <p class=\"d-center\"> A ready-made <b>Scrap Analysis</b> report built on Odoo’s own scrap reasons. Slice scrapped quantity and value by reason, product, location and month in pivot, chart and list views — nothing duplicated, nothing to schedule. </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Pivot &amp; chart</h3> <p>Group scrapped quantity and value any way you like.</p> </div> <div> <h3 class=\"d-center\">By reason</h3> <p>Uses Odoo’s native Scrap Reason tags — no duplication.</p> </div> <div> <h3 class=\"d-center\">With value</h3> <p>Quantity x product cost, in your company currency.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Scrap analysed by reason, product &amp; period</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_scrap_analysis/screenshot_1.png?7eb0391\" alt=\"Scrap analysis pivot\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Chart the value of what you scrap</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/stock_scrap_analysis/screenshot_2.png?7eb0391\" alt=\"Scrap analysis chart\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Built on Odoo 20 Community &amp; Enterprise — License LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "stock_valuation_dashboard",
       "kind": "app",
       "name": "Stock Valuation Dashboard",
       "summary": "Live inventory valuation by product and category - quantity, unit cost and total value in list, pivot and graph.",
-      "price": 48.89,
+      "price": 49.09,
       "versions": [
         "15.0",
         "16.0",
@@ -3929,7 +3930,7 @@
       "kind": "app",
       "name": "Subscriptions & Recurring Billing",
       "summary": "Recurring revenue for Odoo Community: subscription plans, contracts, automatic recurring invoicing, MRR/ARR analytics and a customer self-service portal.",
-      "price": 98.8,
+      "price": 99.18,
       "versions": [
         "15.0",
         "16.0",
@@ -3957,7 +3958,7 @@
       "kind": "theme",
       "name": "Sunset Warm - Backend Theme",
       "summary": "A warm, welcoming backend theme with a sunset-gradient navbar, amber accents and soft rounded cards. Pure CSS, no JavaScript.",
-      "price": 18.96,
+      "price": 19.04,
       "versions": [
         "15.0",
         "16.0",
@@ -3985,7 +3986,7 @@
       "kind": "app",
       "name": "Survey NPS & CSAT",
       "summary": "Flag a 0-10 question as your NPS question and get an automatic Net Promoter Score - promoters, passives, detractors.",
-      "price": 38.92,
+      "price": 39.07,
       "versions": [
         "15.0",
         "16.0",
@@ -4032,7 +4033,7 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419706/icon_image/128x128?unique=e13fa18",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419706/icon_image/128x128?unique=6c6918e",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830619&unique=1e10471629745dce10891c67bb97d2952d399b35",
       "description": "<section> <div> <div> <h2 class=\"d-center\">A friendly clock in your top bar</h2> <h3 class=\"d-center\">The live date and time, on every Odoo screen - zero setup.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Live clock</h3> <p>The current date and time, updated every second, right in the systray.</p> </div> <div> <h3 class=\"d-center\">Zero config</h3> <p>Install and it's on. Nothing to set up, nothing to maintain.</p> </div> <div> <h3 class=\"d-center\">Lightweight</h3> <p>A single small OWL component, no server load. Want real KPI dashboards? See our Dashboard Builder.</p> </div> </div> </section><section> <div class=\"d-center\"> <div> <h3 class=\"d-center\">More apps by Arun A George</h3> <p>admin@arunalexgeorge.online | https://arunalexgeorge.online</p> </div> </div> </section>"
     },
@@ -4069,23 +4070,24 @@
       "kind": "app",
       "name": "Temple Management System",
       "summary": "Hindu temple ERP: poojas, sevas, vazhipadu, donations, hundi, halls, festivals and audit-grade fund accounting, with or without Odoo Accounting",
-      "price": 448.08,
+      "price": 450.76,
       "versions": [
-        "19.0"
+        "19.0",
+        "20.0"
       ],
-      "storeUrl": "https://apps.odoo.com/apps/modules/19.0/temple_management",
+      "storeUrl": "https://apps.odoo.com/apps/modules/20.0/temple_management",
       "storeCategory": "Temple",
       "license": "OPL-1",
-      "linesOfCode": 13215,
+      "linesOfCode": 12959,
       "availability": {
         "odooOnline": false,
         "odooSh": true,
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/424759/icon_image/128x128?unique=962e5b5",
-      "cover": "https://apps.odoocdn.com/apps/module_image?image_id=38619562&unique=b414a80ab5e8e9cd0de2b459d30538cada549625",
-      "description": "<section> <div class=\"d-center\"> <h2 class=\"d-center\">Temple Management System</h2> <h3 class=\"d-center\">Poojas, sevas, vazhipadu, donations, hundi, halls and festivals with audit-grade fund accounting, for Odoo 19 Community</h3> <p> Run the whole temple office in Odoo: a fast counter that prints receipts in seconds, a pooja register for the priests, devotees and families with their nakshatra, donations into the right funds, hundi opening and double counting with witnesses, hall bookings, festivals with sponsorships, memberships and dues. Every rupee received or spent becomes a balanced posting in the temple ledger, and a real journal entry when Odoo Accounting is installed. </p> <p> <span class=\"d-pill\">Odoo 19 Community</span> <span class=\"d-pill\">Works with or without Odoo Accounting</span> <span class=\"d-pill\">Depends only on Base and Discuss</span> <span class=\"d-pill\">95 automated tests</span> </p> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/01_dashboard.png?46b6233\" alt=\"Temple dashboard: collections today, poojas, donations, dues, festivals and fund balances\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <div class=\"d-cols\"> <div> <h4>A counter built for queues</h4> <p>Find the devotee by phone, type <b>AR*2</b> or tap a tile, take cash, UPI, card or cheque and print. Family members and their stars are one click away. One call creates the booking, the gapless receipt number, the payment and the posting.</p> </div> <div> <h4>Money handled in the open</h4> <p>Cash sessions with denomination counts and verified variances. Hundi boxes opened before witnesses, counted by two teams, verified by a third person and posted by a fourth. Every sensitive action lands in a tamper-evident audit log.</p> </div> <div> <h4>Accounts your auditor accepts</h4> <p>Restricted, designated and corpus funds kept apart. Advance bookings held as liabilities until the pooja is performed. Income &amp; Expenditure with fund columns, Receipts &amp; Payments, trial balance and donor-deduction receipts.</p> </div> </div> </div> </section><section> <div> <h2 class=\"d-center\">Counter &amp; receipts</h2> <ul> <li>Keyboard-first counter screen: search by phone, devotee ID or name, short codes with quantities (<b>AR*3</b>), Ctrl+Enter to confirm and print, walk-in devotees without a record.</li> <li>Several poojas, beneficiaries, stars, dates and a donation on one receipt; split payments across cash, UPI, card, cheque/DD and bank transfer with references.</li> <li>Gapless receipt numbering per counter and financial year; duplicate-click protection; reprints counted. Cashiers can cancel their own receipt only within a short window in an open session; after that only an accountant can, always with a reason, and the posting is reversed.</li> <li>A5 or thermal receipts with amount in words, trust registration, donor-deduction text and a QR verification code. Paper receipt books can be entered later with their own numbers.</li> <li>Counter sessions: cash counted by denomination at close, variance above your limit needs a manager, sessions verified by someone other than the cashier.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/02_counter_screen.png?46b6233\" alt=\"Counter screen with a family&#x27;s poojas, a donation and UPI payment\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/04_receipt.png?46b6233\" alt=\"Posted receipt with pooja lines and a fund donation\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/12_counter_session.png?46b6233\" alt=\"Closed and verified counter session with denomination count\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/receipt.png?46b6233\" alt=\"Printed receipt with QR verification\" loading=\"lazy\" decoding=\"async\"> <p>Printed receipt</p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/counter_session.png?46b6233\" alt=\"Counter session report\" loading=\"lazy\" decoding=\"async\"> <p>Counter session report</p> </div> </div> </div> </section><section> <div> <h2 class=\"d-center\">Poojas, sevas &amp; vazhipadu</h2> <ul> <li>Offerings per deity and shrine with fixed, minimum or open prices, short codes, slots, capacity per day, lead time, how far ahead they can be booked and on which days they are performed.</li> <li>Ask for nakshatra, gotra or the beneficiary's name only where the offering needs it.</li> <li>Pooja Register for the day: who it is offered for, star, deity, priest and status. Priests mark poojas performed; the coordinator can auto-assign qualified priests, balancing the load.</li> <li>Advance bookings are held as an advance and recognised as income on the day of the pooja. Cancellation policies refund by notice period; recurring bookings for regular devotees.</li> <li>Share splits: part of a seva's price can go to a supplier or priest share instead of temple income.</li> <li>One calendar for poojas, festivals and hall bookings, filterable by deity.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/03_pooja_register.png?46b6233\" alt=\"Today&#x27;s pooja register\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/07_poojas_sevas.png?46b6233\" alt=\"Poojas and sevas with codes, deities and prices\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/08_service_setup.png?46b6233\" alt=\"Seva setup: price, scheduling, capacity and cancellation policy\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/09_calendar.png?46b6233\" alt=\"Temple calendar with Navaratri, poojas and hall bookings\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Devotees &amp; families</h2> <ul> <li>Devotee ID, name in local script, nakshatra (rashi and gotra if you use them), preferred deity, family and relation to the head.</li> <li>Bookings, donations and receipts of each devotee one click away; book a pooja or receive a donation straight from the record.</li> <li>Consent per channel (email, SMS, WhatsApp); PAN and other sensitive data visible only to authorised staff and shown masked elsewhere.</li> <li>Devotee import with duplicate detection, personal data export and anonymisation on request.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/05_devotee.png?46b6233\" alt=\"Devotee record\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/06_family.png?46b6233\" alt=\"Family with members and their stars\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Donations &amp; funds</h2> <ul> <li>Donation types mapped to funds: general, deity, annadanam, building, festival, charity and corpus.</li> <li>Restricted funds are released to income only when they are spent; corpus donations need the donor's written direction and are never treated as income.</li> <li>Receipts state eligibility for deduction under s.354 of the Income-tax Act, 2025 (formerly s.80G) with your approval number. Cash donations above the deduction limit are not marked eligible, and cash receipts above the maximum you set are refused.</li> <li>Donor statement data for Form 113 (formerly Form 10BD).</li> <li>Fund balances on the dashboard and fund-to-fund transfers that need a manager and a board resolution reference.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/10_donations.png?46b6233\" alt=\"Donations with type, fund and deduction eligibility\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/22_funds.png?46b6233\" alt=\"Funds with received, utilised and balance\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Hundi collections</h2> <ul> <li>Each hundi box with its current seal number; a collection cannot be opened without seal numbers and the minimum number of witnesses.</li> <li>Two counting teams count independently by denomination. Counts are frozen once submitted; a difference needs a note and an administrator.</li> <li>A counting-team member cannot verify, and the verifier cannot post. Purpose hundis (for example annadanam) credit their fund.</li> <li>Foreign currency in custody and a valuables register for gold, silver and other offerings found in the box.</li> <li>Deposit slip to the bank, new seal numbers, and printed counting proceedings for the witnesses to sign.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/11_hundi_collection.png?46b6233\" alt=\"Hundi collection with seals, witnesses and status\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/hundi_proceedings.png?46b6233\" alt=\"Hundi counting proceedings\" loading=\"lazy\" decoding=\"async\"> <p>Counting proceedings with both teams' counts</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">Halls &amp; facilities</h2> <ul> <li>Kalyana mandapam, dining hall, meeting rooms: hourly, half-day or daily rates, weekday and weekend prices, refundable deposits, minimum advance and a cleaning buffer between bookings.</li> <li>Double bookings are refused, including the buffer; expired quotations free the slot; maintenance blocks.</li> <li>Quotation, approval, advance, deposit, check-in, completion and billing. GST on hall rent above the exemption threshold.</li> <li>Cancellation keeps the fee you set and refunds the rest; deposits are refunded after the event, less any damage.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/13_facility_availability.png?46b6233\" alt=\"Hall availability calendar\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/14_facility_booking.png?46b6233\" alt=\"Confirmed wedding booking with advance and deposit\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/hall_booking_confirmation.png?46b6233\" alt=\"Hall booking confirmation\" loading=\"lazy\" decoding=\"async\"> <p>Booking confirmation with GST, deposit and advance</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">Festivals &amp; sponsorships</h2> <ul> <li>Festivals with a day-by-day programme; collections during the festival are tagged to it automatically.</li> <li>Budget, income, expenses and net result per festival.</li> <li>Sponsorship packages (ubayam, annadanam, nadaswaram, deepalankaram) with a limit on sponsors and payment at the counter.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/15_festival.png?46b6233\" alt=\"Navaratri festival with days, budget and result\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/16_sponsorships.png?46b6233\" alt=\"Festival sponsorships\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Memberships, dues &amp; expenses</h2> <ul> <li>Annual and life memberships; life membership fees can go to the corpus. Renewal dues are generated automatically.</li> <li>Recurring monthly contributions; overdue dues are flagged and can be collected at the counter in one receipt. Waivers need a manager.</li> <li>Expenses with approval limits per category: submitted, approved by a manager, paid from cash or bank, or booked to a payee. Paying from a restricted fund releases it.</li> <li>Bank deposits of counter cash and cheques, cheque bounce handling, and UPI/card settlements with gateway charges.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/17_memberships.png?46b6233\" alt=\"Memberships\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/18_dues.png?46b6233\" alt=\"Open and overdue dues\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/19_expenses.png?46b6233\" alt=\"Expenses with approval status\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Fund accounting &amp; reports</h2> <ul> <li>A ready chart of ledger heads for temples: income by offering, funds, advances, deposits, clearing accounts for each payment method.</li> <li>Every financial event goes through configurable posting rules and becomes one balanced, idempotent posting: it can never be posted twice, and corrections are reversals, not edits.</li> <li>Period lock and backdating only for authorised users.</li> <li>Temple Ledger pivot, Daily Collection Report per counter and payment method, Trial Balance, Income &amp; Expenditure with unrestricted and restricted fund columns, Receipts &amp; Payments.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/20_posting.png?46b6233\" alt=\"Balanced posting with advance, supplier share and fund donation\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/21_temple_ledger.png?46b6233\" alt=\"Temple ledger pivot by ledger head\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/income_expenditure.png?46b6233\" alt=\"Income and Expenditure with fund columns\" loading=\"lazy\" decoding=\"async\"> <p>Income &amp; Expenditure (fund columns)</p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/receipts_payments.png?46b6233\" alt=\"Receipts and Payments account\" loading=\"lazy\" decoding=\"async\"> <p>Receipts &amp; Payments</p> </div> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/documents/daily_collection.png?46b6233\" alt=\"Daily collection report\" loading=\"lazy\" decoding=\"async\"> <p>Daily Collection Report</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">With or without Odoo Accounting</h2> <p> Small temples run on the built-in temple ledger alone. When the Invoicing/Accounting app is installed, an accountant activates the integration with a cut-over date: missing accounts and four journals (collections, hundi, expenses, adjustments) are created, and from then on every temple posting becomes a posted Odoo journal entry, with an analytic account per restricted fund. Reversals follow automatically, sync errors never block the counter and are retried, and Odoo lock dates are respected. </p> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/25_posting_synced.png?46b6233\" alt=\"Temple posting linked to its Odoo journal entry\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/26_odoo_journal_entry.png?46b6233\" alt=\"The same receipt as a posted Odoo journal entry\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Roles, audit &amp; settings</h2> <ul> <li>Roles: Front Office, Counter Staff, Coordinator, Accountant, Manager, Administrator, Priest, Auditor (read-only) and Trustee, plus separate rights for sensitive personal data and backdating.</li> <li>Append-only audit log of receipts, postings, approvals, cancellations and session closures, with an optional SHA-256 hash chain that is extended every few minutes and verified weekly.</li> <li>Notifications by email through Odoo, or SMS and WhatsApp through any HTTP gateway you configure; consent is checked before sending. Reminders for advance poojas and dues.</li> <li>Multi-company ready, with several shrines, deities and counters per temple.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/23_audit_log.png?46b6233\" alt=\"Audit log\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/19.0/temple_management/screenshots/24_settings.png?46b6233\" alt=\"Temple settings: trust identity, devotee fields and cash control\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Technical notes</h2> <ul> <li>Odoo 19.0 Community. Depends only on Base and Discuss (mail); Invoicing/Accounting is optional. No Enterprise or paid third-party modules.</li> <li>Built for Indian temples (rupee denominations, GST on hall rent, Income-tax Act 2025 references), and configurable for temples elsewhere: nakshatra, rashi and gotra fields can be switched off.</li> <li>Demo data with a sample temple, deities, offerings, devotees and users. Fully translatable.</li> <li>95 automated tests cover the counter, accounting, funds, hundi, halls, festivals, memberships, notifications, reports and security.</li> </ul> <p>Screenshots show fictional demonstration data.</p> </div> </section><section> <div class=\"d-center\"> <h2 class=\"d-center\">Support</h2> <p>Bug fixes are included. Implementation, data migration and training are available from Arun A George (arunalexgeorge.online).</p> </div> </section>"
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/426913/icon_image/128x128?unique=128aff4",
+      "cover": "https://apps.odoocdn.com/apps/module_image?image_id=38862391&unique=001106623343ea791a13a40d4fe1939da2ac9317",
+      "description": "<section> <div class=\"d-center\"> <h2 class=\"d-center\">Temple Management System</h2> <h3 class=\"d-center\">Poojas, sevas, vazhipadu, donations, hundi, halls and festivals with audit-grade fund accounting, for Odoo 20 Community</h3> <p> Run the whole temple office in Odoo: a fast counter that prints receipts in seconds, a pooja register for the priests, devotees and families with their nakshatra, donations into the right funds, hundi opening and double counting with witnesses, hall bookings, festivals with sponsorships, memberships and dues. Every rupee received or spent becomes a balanced posting in the temple ledger, and a real journal entry when Odoo Accounting is installed. </p> <p> <span class=\"d-pill\">Odoo 20 Community</span> <span class=\"d-pill\">Works with or without Odoo Accounting</span> <span class=\"d-pill\">Depends only on Base and Discuss</span> <span class=\"d-pill\">97 automated tests</span> </p> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/01_dashboard.png?6951642\" alt=\"Temple dashboard: collections today, poojas, donations, dues, festivals and fund balances\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <div class=\"d-cols\"> <div> <h4>A counter built for queues</h4> <p>Find the devotee by phone, type <b>AR*2</b> or tap a tile, take cash, UPI, card or cheque and print. Family members and their stars are one click away. One call creates the booking, the gapless receipt number, the payment and the posting.</p> </div> <div> <h4>Money handled in the open</h4> <p>Cash sessions with denomination counts and verified variances. Hundi boxes opened before witnesses, counted by two teams, verified by a third person and posted by a fourth. Every sensitive action lands in a tamper-evident audit log.</p> </div> <div> <h4>Accounts your auditor accepts</h4> <p>Restricted, designated and corpus funds kept apart. Advance bookings held as liabilities until the pooja is performed. Income &amp; Expenditure with fund columns, Receipts &amp; Payments, trial balance and donor-deduction receipts.</p> </div> </div> </div> </section><section> <div> <h2 class=\"d-center\">Counter &amp; receipts</h2> <ul> <li>Keyboard-first counter screen: search by phone, devotee ID or name, short codes with quantities (<b>AR*3</b>), Ctrl+Enter to confirm and print, walk-in devotees without a record.</li> <li>Several poojas, beneficiaries, stars, dates and a donation on one receipt; split payments across cash, UPI, card, cheque/DD and bank transfer with references.</li> <li>Gapless receipt numbering per counter and financial year; duplicate-click protection; reprints counted. Cashiers can cancel their own receipt only within a short window in an open session; after that only an accountant can, always with a reason, and the posting is reversed.</li> <li>A5 or thermal receipts with amount in words, trust registration, donor-deduction text and a QR verification code. Paper receipt books can be entered later with their own numbers.</li> <li>Counter sessions: cash counted by denomination at close, variance above your limit needs a manager, sessions verified by someone other than the cashier.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/02_counter_screen.png?6951642\" alt=\"Counter screen with a family&#x27;s poojas, a donation and UPI payment\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/04_receipt.png?6951642\" alt=\"Posted receipt with pooja lines and a fund donation\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/12_counter_session.png?6951642\" alt=\"Closed and verified counter session with denomination count\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/receipt.png?6951642\" alt=\"Printed receipt with QR verification\" loading=\"lazy\" decoding=\"async\"> <p>Printed receipt</p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/counter_session.png?6951642\" alt=\"Counter session report\" loading=\"lazy\" decoding=\"async\"> <p>Counter session report</p> </div> </div> </div> </section><section> <div> <h2 class=\"d-center\">Poojas, sevas &amp; vazhipadu</h2> <ul> <li>Offerings per deity and shrine with fixed, minimum or open prices, short codes, slots, capacity per day, lead time, how far ahead they can be booked and on which days they are performed.</li> <li>Ask for nakshatra, gotra or the beneficiary's name only where the offering needs it.</li> <li>Pooja Register for the day: who it is offered for, star, deity, priest and status. Priests mark poojas performed; the coordinator can auto-assign qualified priests, balancing the load.</li> <li>Advance bookings are held as an advance and recognised as income on the day of the pooja. Cancellation policies refund by notice period; recurring bookings for regular devotees.</li> <li>Share splits: part of a seva's price can go to a supplier or priest share instead of temple income.</li> <li>One calendar for poojas, festivals and hall bookings, filterable by deity.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/03_pooja_register.png?6951642\" alt=\"Today&#x27;s pooja register\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/07_poojas_sevas.png?6951642\" alt=\"Poojas and sevas with codes, deities and prices\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/08_service_setup.png?6951642\" alt=\"Seva setup: price, scheduling, capacity and cancellation policy\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/09_calendar.png?6951642\" alt=\"Temple calendar with Navaratri, poojas and hall bookings\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Devotees &amp; families</h2> <ul> <li>Devotee ID, name in local script, nakshatra (rashi and gotra if you use them), preferred deity, family and relation to the head.</li> <li>Bookings, donations and receipts of each devotee one click away; book a pooja or receive a donation straight from the record.</li> <li>Consent per channel (email, SMS, WhatsApp); PAN and other sensitive data visible only to authorised staff and shown masked elsewhere.</li> <li>Devotee import with duplicate detection, personal data export and anonymisation on request.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/05_devotee.png?6951642\" alt=\"Devotee record\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/06_family.png?6951642\" alt=\"Family with members and their stars\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Donations &amp; funds</h2> <ul> <li>Donation types mapped to funds: general, deity, annadanam, building, festival, charity and corpus.</li> <li>Restricted funds are released to income only when they are spent; corpus donations need the donor's written direction and are never treated as income.</li> <li>Receipts state eligibility for deduction under s.354 of the Income-tax Act, 2025 (formerly s.80G) with your approval number. Cash donations above the deduction limit are not marked eligible, and cash receipts above the maximum you set are refused.</li> <li>Donor statement data for Form 113 (formerly Form 10BD).</li> <li>Fund balances on the dashboard and fund-to-fund transfers that need a manager and a board resolution reference.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/10_donations.png?6951642\" alt=\"Donations with type, fund and deduction eligibility\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/22_funds.png?6951642\" alt=\"Funds with received, utilised and balance\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Hundi collections</h2> <ul> <li>Each hundi box with its current seal number; a collection cannot be opened without seal numbers and the minimum number of witnesses.</li> <li>Two counting teams count independently by denomination. Counts are frozen once submitted; a difference needs a note and an administrator.</li> <li>A counting-team member cannot verify, and the verifier cannot post. Purpose hundis (for example annadanam) credit their fund.</li> <li>Foreign currency in custody and a valuables register for gold, silver and other offerings found in the box.</li> <li>Deposit slip to the bank, new seal numbers, and printed counting proceedings for the witnesses to sign.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/11_hundi_collection.png?6951642\" alt=\"Hundi collection with seals, witnesses and status\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/hundi_proceedings.png?6951642\" alt=\"Hundi counting proceedings\" loading=\"lazy\" decoding=\"async\"> <p>Counting proceedings with both teams' counts</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">Halls &amp; facilities</h2> <ul> <li>Kalyana mandapam, dining hall, meeting rooms: hourly, half-day or daily rates, weekday and weekend prices, refundable deposits, minimum advance and a cleaning buffer between bookings.</li> <li>Double bookings are refused, including the buffer; expired quotations free the slot; maintenance blocks.</li> <li>Quotation, approval, advance, deposit, check-in, completion and billing. GST on hall rent above the exemption threshold.</li> <li>Cancellation keeps the fee you set and refunds the rest; deposits are refunded after the event, less any damage.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/13_facility_availability.png?6951642\" alt=\"Hall availability calendar\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/14_facility_booking.png?6951642\" alt=\"Confirmed wedding booking with advance and deposit\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/hall_booking_confirmation.png?6951642\" alt=\"Hall booking confirmation\" loading=\"lazy\" decoding=\"async\"> <p>Booking confirmation with GST, deposit and advance</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">Festivals &amp; sponsorships</h2> <ul> <li>Festivals with a day-by-day programme; collections during the festival are tagged to it automatically.</li> <li>Budget, income, expenses and net result per festival.</li> <li>Sponsorship packages (ubayam, annadanam, nadaswaram, deepalankaram) with a limit on sponsors and payment at the counter.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/15_festival.png?6951642\" alt=\"Navaratri festival with days, budget and result\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/16_sponsorships.png?6951642\" alt=\"Festival sponsorships\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Memberships, dues &amp; expenses</h2> <ul> <li>Annual and life memberships; life membership fees can go to the corpus. Renewal dues are generated automatically.</li> <li>Recurring monthly contributions; overdue dues are flagged and can be collected at the counter in one receipt. Waivers need a manager.</li> <li>Expenses with approval limits per category: submitted, approved by a manager, paid from cash or bank, or booked to a payee. Paying from a restricted fund releases it.</li> <li>Bank deposits of counter cash and cheques, cheque bounce handling, and UPI/card settlements with gateway charges.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/17_memberships.png?6951642\" alt=\"Memberships\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/18_dues.png?6951642\" alt=\"Open and overdue dues\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/19_expenses.png?6951642\" alt=\"Expenses with approval status\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Fund accounting &amp; reports</h2> <ul> <li>A ready chart of ledger heads for temples: income by offering, funds, advances, deposits, clearing accounts for each payment method.</li> <li>Every financial event goes through configurable posting rules and becomes one balanced, idempotent posting: it can never be posted twice, and corrections are reversals, not edits.</li> <li>Period lock and backdating only for authorised users.</li> <li>Temple Ledger pivot, Daily Collection Report per counter and payment method, Trial Balance, Income &amp; Expenditure with unrestricted and restricted fund columns, Receipts &amp; Payments.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/20_posting.png?6951642\" alt=\"Balanced posting with advance, supplier share and fund donation\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/21_temple_ledger.png?6951642\" alt=\"Temple ledger pivot by ledger head\" loading=\"lazy\" decoding=\"async\"> <div class=\"d-cols\"> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/income_expenditure.png?6951642\" alt=\"Income and Expenditure with fund columns\" loading=\"lazy\" decoding=\"async\"> <p>Income &amp; Expenditure (fund columns)</p> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/receipts_payments.png?6951642\" alt=\"Receipts and Payments account\" loading=\"lazy\" decoding=\"async\"> <p>Receipts &amp; Payments</p> </div> </div> <div class=\"d-center\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/documents/daily_collection.png?6951642\" alt=\"Daily collection report\" loading=\"lazy\" decoding=\"async\"> <p>Daily Collection Report</p> </div> </div> </section><section> <div> <h2 class=\"d-center\">With or without Odoo Accounting</h2> <p> Small temples run on the built-in temple ledger alone. When the Invoicing/Accounting app is installed, an accountant activates the integration with a cut-over date: missing accounts and four journals (collections, hundi, expenses, adjustments) are created, and from then on every temple posting becomes a posted Odoo journal entry, with an analytic account per restricted fund. Reversals follow automatically, sync errors never block the counter and are retried, and Odoo lock dates are respected. </p> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/25_posting_synced.png?6951642\" alt=\"Temple posting linked to its Odoo journal entry\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/26_odoo_journal_entry.png?6951642\" alt=\"The same receipt as a posted Odoo journal entry\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Roles, audit &amp; settings</h2> <ul> <li>Roles: Front Office, Counter Staff, Coordinator, Accountant, Manager, Administrator, Priest, Auditor (read-only) and Trustee, plus separate rights for sensitive personal data and backdating.</li> <li>Append-only audit log of receipts, postings, approvals, cancellations and session closures, with an optional SHA-256 hash chain that is extended every few minutes and verified weekly.</li> <li>Notifications by email through Odoo, or SMS and WhatsApp through any HTTP gateway you configure; consent is checked before sending. Reminders for advance poojas and dues.</li> <li>Multi-company ready, with several shrines, deities and counters per temple.</li> </ul> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/23_audit_log.png?6951642\" alt=\"Audit log\" loading=\"lazy\" decoding=\"async\"> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/temple_management/screenshots/24_settings.png?6951642\" alt=\"Temple settings: trust identity, devotee fields and cash control\" loading=\"lazy\" decoding=\"async\"> </div> </section><section> <div> <h2 class=\"d-center\">Technical notes</h2> <ul> <li>Odoo 20.0 Community (PostgreSQL 16 or later). Depends only on Base and Discuss (mail); Invoicing/Accounting is optional. No Enterprise or paid third-party modules.</li> <li>Built for Indian temples (rupee denominations, GST on hall rent, Income-tax Act 2025 references), and configurable for temples elsewhere: nakshatra, rashi and gotra fields can be switched off.</li> <li>Demo data with a sample temple, deities, offerings, devotees and users. Fully translatable.</li> <li>97 automated tests cover the counter, accounting, funds, hundi, halls, festivals, memberships, notifications, reports and security.</li> </ul> <p>Screenshots show fictional demonstration data.</p> </div> </section><section> <div class=\"d-center\"> <h2 class=\"d-center\">Support</h2> <p>Bug fixes are included. Implementation, data migration and training are available from Arun A George (arunalexgeorge.online).</p> </div> </section>"
     },
     {
       "technicalName": "timesheet_task_stopwatch",
@@ -4139,7 +4141,7 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419704/icon_image/128x128?unique=7f23278",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419704/icon_image/128x128?unique=66a7779",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830617&unique=aaa8d71f7c91f4cb1d02adb2b81345d2c39f30cd",
       "description": "<section> <div> <div> <h2 class=\"d-center\">Translations without developer mode</h2> <h3 class=\"d-center\">Export, import and install languages from one friendly admin console.</h3> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">One console</h3> <p>See your active languages and jump to Export, Import or Install from a single screen.</p> </div> <div> <h3 class=\"d-center\">No dev mode</h3> <p>Odoo hides these wizards behind developer mode. This surfaces them for every administrator.</p> </div> <div> <h3 class=\"d-center\">Standard &amp; safe</h3> <p>It opens Odoo's own translation wizards. Need managed multi-language content? See our Multi-language Helper.</p> </div> </div> </section><section> <div class=\"d-center\"> <div> <h3 class=\"d-center\">More apps by Arun A George</h3> <p>admin@arunalexgeorge.online | https://arunalexgeorge.online</p> </div> </div> </section>"
     },
@@ -4176,7 +4178,7 @@
       "kind": "app",
       "name": "Warranty & AMC Management",
       "summary": "Track product warranties and annual maintenance contracts - expiry reminders, renewals, claims and a printable certificate.",
-      "price": 58.88,
+      "price": 59.11,
       "versions": [
         "15.0",
         "16.0",
@@ -4223,9 +4225,9 @@
         "onPremise": true
       },
       "dependencies": [],
-      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419661/icon_image/128x128?unique=3f925a1",
+      "icon": "https://apps.odoocdn.com/web/image/loempia.module/419661/icon_image/128x128?unique=e1b2370",
       "cover": "https://apps.odoocdn.com/apps/module_image?image_id=37830574&unique=2fd48c185af837fe1fcd41cdacad4223d230005b",
-      "description": "<section> <div> <div> <h2 class=\"d-center\">Web Responsive Enterprise</h2> <h3 class=\"d-center\">The Odoo 20 Enterprise look &amp; app drawer — for Community Edition.</h3> <p class=\"d-center\"> An upgrade-safe backend theme that brings the Enterprise purple brand, a full-screen app drawer (home menu), and modern responsive + accessible refinements to Odoo 19 Community — without touching Odoo core. <b>Free &amp; open source (LGPL-3).</b> </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Enterprise look</h3> <p>Purple brand navbar, accents and buttons, rounded cards &amp; dialogs, soft shadows, a sticky control panel and refined notebook tabs — the polished Enterprise feel, in Community.</p> </div> <div> <h3 class=\"d-center\">App drawer</h3> <p>A full-screen home menu: the apps grid button opens a search box and a grid of large app icons, with fuzzy search across every menu item. The navbar stays visible above it.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Fully responsive</h3> <p>Touch-friendly controls, no horizontal scrolling, edge-to-edge form sheets and full-width kanban cards on phones — works cleanly from 320px upwards.</p> </div> <div> <h3 class=\"d-center\">Accessible &amp; safe</h3> <p>Keyboard focus rings, reduced-motion support and WCAG-AA contrast. Built only on stable, public Odoo extension points, so it stays compatible across 20.0 point releases.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">App Drawer (Home Menu)</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_app_drawer.png?ec11242\" alt=\"App drawer\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Enterprise-styled List Views</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_list.png?ec11242\" alt=\"List view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Polished Form Views</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_form.png?ec11242\" alt=\"Form view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Modern Kanban Boards</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_kanban.png?ec11242\" alt=\"Kanban view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div> <h2 class=\"d-center\">Installation</h2> <p> Install like any module: copy <code>web_responsive_enterprise</code> into your addons path, update the Apps list, and install. No configuration needed — hard-refresh your browser and the Enterprise look is applied. To uninstall, simply remove the app; Odoo core is untouched. </p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Free &amp; open source — licensed under LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
+      "description": "<section> <div> <div> <h2 class=\"d-center\">Web Responsive Enterprise</h2> <h3 class=\"d-center\">The Odoo 20 Enterprise look &amp; app drawer — for Community Edition.</h3> <p class=\"d-center\"> An upgrade-safe backend theme that brings the Enterprise purple brand, a full-screen app drawer (home menu), and modern responsive + accessible refinements to Odoo 19 Community — without touching Odoo core. <b>Free &amp; open source (LGPL-3).</b> </p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Enterprise look</h3> <p>Purple brand navbar, accents and buttons, rounded cards &amp; dialogs, soft shadows, a sticky control panel and refined notebook tabs — the polished Enterprise feel, in Community.</p> </div> <div> <h3 class=\"d-center\">App drawer</h3> <p>A full-screen home menu: the apps grid button opens a search box and a grid of large app icons, with fuzzy search across every menu item. The navbar stays visible above it.</p> </div> </div> </section><section> <div class=\"d-cols\"> <div> <h3 class=\"d-center\">Fully responsive</h3> <p>Touch-friendly controls, no horizontal scrolling, edge-to-edge form sheets and full-width kanban cards on phones — works cleanly from 320px upwards.</p> </div> <div> <h3 class=\"d-center\">Accessible &amp; safe</h3> <p>Keyboard focus rings, reduced-motion support and WCAG-AA contrast. Built only on stable, public Odoo extension points, so it stays compatible across 20.0 point releases.</p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">App Drawer (Home Menu)</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_app_drawer.png?983358d\" alt=\"App drawer\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Enterprise-styled List Views</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_list.png?983358d\" alt=\"List view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Polished Form Views</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_form.png?983358d\" alt=\"Form view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div class=\"d-center\"> <h2 class=\"d-center\">Modern Kanban Boards</h2> <img src=\"https://apps.odoocdn.com/apps/assets/20.0/web_responsive_enterprise/screenshot_kanban.png?983358d\" alt=\"Kanban view\" loading=\"lazy\" decoding=\"async\"> </div> </div> </section><section> <div> <div> <h2 class=\"d-center\">Installation</h2> <p> Install like any module: copy <code>web_responsive_enterprise</code> into your addons path, update the Apps list, and install. No configuration needed — hard-refresh your browser and the Enterprise look is applied. To uninstall, simply remove the app; Odoo core is untouched. </p> </div> </div> </section><section> <div> <div class=\"d-center\"> <h3 class=\"d-center\">Free &amp; open source — licensed under LGPL-3</h3> <p> By <b>Arun A George</b><br> Website: arunalexgeorge.online<br> Support: <a href=\"mailto:admin@arunalexgeorge.online\">admin@arunalexgeorge.online</a> </p> </div> </div> </section>"
     },
     {
       "technicalName": "website_whatsapp_chat",
@@ -4260,7 +4262,7 @@
       "kind": "app",
       "name": "WhatsApp Cloud API Connector",
       "summary": "Send and receive WhatsApp messages from Odoo using the official Meta WhatsApp Cloud API: message templates, chatter integration, inbound webhook, delivery/read receipts. Community alternative to Enterprise WhatsApp.",
-      "price": 198.6,
+      "price": 199.38,
       "versions": [
         "15.0",
         "16.0",
