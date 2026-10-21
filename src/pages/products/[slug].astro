@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/products/ProductCard.astro';
 import { products, getProduct, relatedProducts, storeUrlForVersion } from '../../data/products';
+import { productSeo } from '../../data/product-seo';
+import { PERSON_ID } from '../../data/site';
 
 export function getStaticPaths() {
   return products.map((product) => ({
@@ -21,17 +23,23 @@ const platforms = [
 ];
 const dependencies = product.dependencies.map((dep) => ({ ...dep, product: getProduct(dep.technicalName) }));
 
-const structuredData = {
-  '@context': 'https://schema.org',
+const seo = productSeo(product);
+const pageUrl = new URL(product.url, Astro.site).href;
+const softwareApplication = {
   '@type': 'SoftwareApplication',
+  '@id': `${pageUrl}#software`,
   name: product.name,
   description: product.summary,
-  url: new URL(product.url, Astro.site).href,
-  image: product.cover,
+  url: pageUrl,
+  mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
+  image: product.cover ?? undefined,
   applicationCategory: 'BusinessApplication',
+  applicationSubCategory: product.category,
   operatingSystem: `Odoo ${product.versions.join(', ')}`,
   softwareVersion: latestVersion,
-  author: { '@type': 'Person', name: 'Arun Alex George', url: 'https://arunalexgeorge.online' },
+  softwareRequirements: dependencies.length ? dependencies.map((dep) => dep.name).join(', ') : undefined,
+  license: product.license,
+  author: { '@id': PERSON_ID },
   offers: {
     '@type': 'Offer',
     price: product.price.toFixed(2),
@@ -44,12 +52,18 @@ const structuredData = {
 
 <BaseLayout
   title={product.name}
-  description={product.summary}
+  seoTitle={seo.title}
+  description={seo.description}
   ogImage={product.cover ?? undefined}
+  breadcrumbs={[{ name: 'Products', path: '/products/' }, { name: product.name, path: product.url }]}
+  structuredData={[softwareApplication]}
 >
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://apps.odoocdn.com" />
+  </Fragment>
   <section class="product section">
     <div class="container">
-      <a class="product__back" href="/products">
+      <a class="product__back" href="/products/">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         All Products
       </a>
@@ -86,7 +100,7 @@ const structuredData = {
               View on Odoo App Store
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
-            <a class="btn btn--outline btn--lg" href="/contact">Ask a Question</a>
+            <a class="btn btn--outline btn--lg" href="/contact/">Ask a Question</a>
           </div>
         </div>
 
@@ -170,7 +184,7 @@ const structuredData = {
               View on Odoo App Store
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
-            <a class="product-tech__contact" href="/contact">Need a customisation? Get in touch</a>
+            <a class="product-tech__contact" href="/services/odoo-customization/">Need it adapted to your workflow? Odoo customization</a>
           </div>
         </aside>
       </div>
@@ -180,7 +194,7 @@ const structuredData = {
         <div class="product-related">
           <div class="product-related__header">
             <h2 class="product-related__title">{product.category === 'Theme' ? 'More themes' : `More ${product.category} apps`}</h2>
-            <a class="product-related__all" href="/products">View all products →</a>
+            <a class="product-related__all" href="/products/">View all products →</a>
           </div>
           <div class="product-related__grid">
             {related.map((p, i) => <ProductCard product={p} delay={i + 1} />)}
@@ -190,7 +204,6 @@ const structuredData = {
     </div>
   </section>
 
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
 </BaseLayout>
 
 <style>

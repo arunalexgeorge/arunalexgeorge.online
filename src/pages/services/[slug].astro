@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { servicesData } from '../../data/services';
+import { getProduct, type Product } from '../../data/products';
+import { PERSON_ID, pageTitle } from '../../data/site';
 
 export function getStaticPaths() {
   const entries = Object.entries(servicesData);
@@ -11,17 +13,32 @@ export function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+const path = `/services/${service.slug}/`;
+const related = service.related.map((slug: string) => servicesData[slug]).filter(Boolean);
+const showcase = service.showcase.map(getProduct).filter((p: Product | undefined): p is Product => p !== undefined);
+const serviceSchema = {
+  '@type': 'Service',
+  '@id': `${new URL(path, Astro.site).href}#service`,
+  name: service.title,
+  serviceType: service.title,
+  description: service.metaDescription ?? service.description,
+  url: new URL(path, Astro.site).href,
+  provider: { '@id': PERSON_ID },
+};
 ---
 
 <BaseLayout
   title={service.title}
-  description={service.description}
+  seoTitle={pageTitle(service.seoTitle)}
+  description={service.metaDescription ?? service.description}
+  breadcrumbs={[{ name: 'Services', path: '/services/' }, { name: service.title, path }]}
+  structuredData={[serviceSchema]}
 >
   <section class="service-detail section">
     <div class="container container--md">
       <!-- Header -->
       <div class="service-detail__header reveal">
-        <a class="service-detail__back" href="/services">
+        <a class="service-detail__back" href="/services/">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
           All Services
         </a>
@@ -78,6 +95,24 @@ const { service } = Astro.props;
         </div>
       )}
 
+      <!-- Published apps that show this kind of work -->
+      {showcase.length > 0 && (
+        <div class="service-detail__section reveal">
+          <h2>Related Odoo Apps</h2>
+          <ul class="service-detail__links">
+            {showcase.map((product) => (
+              <li>
+                <a href={product.url}>{product.name}</a>
+                <span>{product.summary}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="service-detail__note">
+            Built and published on the Odoo App Store — <a href="/products/">browse all apps and themes</a>.
+          </p>
+        </div>
+      )}
+
       <!-- FAQ -->
       <div class="service-detail__section reveal">
         <h2>Frequently Asked Questions</h2>
@@ -91,6 +126,21 @@ const { service } = Astro.props;
         </div>
       </div>
 
+      <!-- Related services -->
+      {related.length > 0 && (
+        <div class="service-detail__section reveal">
+          <h2>Related Services</h2>
+          <ul class="service-detail__links">
+            {related.map((item) => (
+              <li>
+                <a href={`/services/${item.slug}/`}>{item.title}</a>
+                <span>{item.description}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <!-- CTA -->
       <div class="service-detail__cta reveal">
         <div class="card" style="text-align:center; padding: var(--space-10); background: var(--color-accent-soft); border-color: var(--color-accent-border);">
@@ -98,7 +148,7 @@ const { service } = Astro.props;
           <p style="color: var(--color-text-tertiary); margin-bottom: var(--space-6); max-width: 440px; margin-inline: auto;">
             Every project is custom-quoted based on your specific requirements. Let's discuss yours.
           </p>
-          <a class="btn btn--primary btn--lg" href="/contact">Contact for Quote</a>
+          <a class="btn btn--primary btn--lg" href="/contact/">Contact for Quote</a>
         </div>
       </div>
     </div>
@@ -252,6 +302,41 @@ const { service } = Astro.props;
     line-height: var(--leading-relaxed);
     color: var(--color-text-secondary);
   }
+
+  .service-detail__links {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .service-detail__links li {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .service-detail__links a {
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .service-detail__links a:hover { color: var(--color-accent); }
+
+  .service-detail__links span {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .service-detail__note {
+    margin-top: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  .service-detail__note a { color: var(--color-accent); }
 
   .service-detail__cta { margin-top: var(--space-16); }
 </style>

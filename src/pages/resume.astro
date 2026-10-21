@@ -22,7 +22,7 @@ const experience = [
 ];
 
 const skills = {
-  'ERP & Frameworks': ['Odoo ERP (v10–v19)', 'CodeIgniter', 'WordPress'],
+  'ERP & Frameworks': [`Odoo ERP (v10–v${parseInt(catalogueStats.newestVersion)})`, 'CodeIgniter', 'WordPress'],
   'Languages': ['Python', 'PHP', 'JavaScript', 'HTML/CSS', 'SQL'],
   'Databases': ['PostgreSQL', 'MySQL'],
   'Cloud & DevOps': ['AWS', 'DigitalOcean', 'Docker', 'Nginx', 'Linux'],
@@ -32,7 +32,9 @@ const skills = {
 
 <BaseLayout
   title="Resume"
-  description="Interactive resume of Arun Alex George — ERP Consultant, Solution Architect & Technical Lead with 8+ years of experience."
+  seoTitle="Resume — Arun Alex George, Senior Odoo Developer & ERP Consultant"
+  description="Resume of Arun Alex George: senior Odoo developer and team lead in Kochi, India — experience, Odoo and Python skills, ERP implementations and published Odoo apps."
+  breadcrumbs={[{ name: 'Resume', path: '/resume/' }]}
 >
   <section class="resume-page section">
     <div class="container container--md">
@@ -130,17 +132,35 @@ const skills = {
 
       <!-- Download -->
       <div class="resume-download reveal">
-        <a class="btn btn--primary btn--lg" href="/resume.pdf" target="_blank">
-          Download PDF Resume
+        <!-- Prints this page; browsers offer "Save as PDF" in the print dialog. -->
+        <button class="btn btn--primary btn--lg" type="button" id="resume-print">
+          Save Resume as PDF
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </a>
+        </button>
       </div>
     </div>
   </section>
 </BaseLayout>
 
+<script>
+  document.getElementById('resume-print')?.addEventListener('click', () => window.print());
+</script>
+
 <style>
   .resume-page { padding-top: calc(72px + var(--space-16)); }
+
+  @media print {
+    :global(.header),
+    :global(.footer),
+    :global(.cookie-banner),
+    :global(.progress-bar),
+    :global(.skip-link),
+    .resume-download { display: none !important; }
+
+    .resume-page { padding-top: 0; }
+
+    :global(.reveal) { opacity: 1 !important; transform: none !important; }
+  }
 
   .resume-title {
     text-align: center;

@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { products, CATEGORY_ORDER, catalogueStats } from '../data/products';
+import { servicesData } from '../data/services';
+
+// Human-readable index of every page. Search engines use the XML sitemap
+// (/sitemap-index.xml), which @astrojs/sitemap generates at build time.
+const pages = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Products', href: '/products/' },
+  { label: 'Portfolio', href: '/portfolio/' },
+  { label: 'Resume', href: '/resume/' },
+  { label: 'Play: ERP Rescue', href: '/play/' },
+  { label: 'Contact', href: '/contact/' },
+];
+
+const legal = [
+  { label: 'Privacy Policy', href: '/privacy/' },
+  { label: 'Terms of Service', href: '/terms/' },
+];
+
+const services = Object.values(servicesData).map((s) => ({ label: s.title, href: `/services/${s.slug}/` }));
+
+const productGroups = CATEGORY_ORDER
+  .map((category) => ({ category, items: products.filter((p) => p.category === category) }))
+  .filter((group) => group.items.length > 0);
+---
+
+<BaseLayout
+  title="Sitemap"
+  description={`Every page on arunalexgeorge.online: Odoo services, all ${catalogueStats.total} Odoo apps and themes by category, portfolio, resume and contact.`}
+  breadcrumbs={[{ name: 'Sitemap', path: '/sitemap/' }]}
+>
+  <section class="sitemap-page section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-header__label">Sitemap</p>
+        <h1 class="section-header__title">Every Page on This Site</h1>
+        <p class="section-header__desc">
+          Services, all {catalogueStats.total} Odoo apps and themes, and everything else in one place.
+        </p>
+      </div>
+
+      <div class="sitemap-page__groups">
+        <nav class="sitemap-group" aria-labelledby="sitemap-pages">
+          <h2 class="sitemap-group__title" id="sitemap-pages">Pages</h2>
+          <ul class="sitemap-group__list">
+            {pages.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </nav>
+
+        <nav class="sitemap-group" aria-labelledby="sitemap-services">
+          <h2 class="sitemap-group__title" id="sitemap-services">Services</h2>
+          <ul class="sitemap-group__list">
+            {services.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </nav>
+
+        <nav class="sitemap-group" aria-labelledby="sitemap-legal">
+          <h2 class="sitemap-group__title" id="sitemap-legal">Legal</h2>
+          <ul class="sitemap-group__list">
+            {legal.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+          <p class="sitemap-group__note">
+            For search engines: <a href="/sitemap-index.xml">XML sitemap</a>
+          </p>
+        </nav>
+      </div>
+
+      <nav class="sitemap-products" aria-labelledby="sitemap-products">
+        <h2 class="sitemap-group__title" id="sitemap-products">Odoo Apps &amp; Themes ({catalogueStats.total})</h2>
+        <div class="sitemap-products__grid">
+          {productGroups.map((group) => (
+            <div class="sitemap-products__group">
+              <h3 class="sitemap-products__category">{group.category} <span>({group.items.length})</span></h3>
+              <ul class="sitemap-group__list">
+                {group.items.map((p) => <li><a href={p.url}>{p.name}</a></li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </nav>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sitemap-page { padding-top: calc(72px + var(--space-16)); }
+
+  .sitemap-page__groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+  }
+
+  .sitemap-group__title {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .sitemap-group__list {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .sitemap-group__list a {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .sitemap-group__list a:hover { color: var(--color-accent); }
+
+  .sitemap-group__note {
+    margin-top: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+  }
+
+  .sitemap-group__note a { color: var(--color-accent); }
+
+  .sitemap-products__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+    gap: var(--space-8) var(--space-10);
+  }
+
+  .sitemap-products__category {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+  }
+
+  .sitemap-products__category span {
+    font-weight: 400;
+    color: var(--color-text-tertiary);
+  }
+</style>

@@ -5,29 +5,37 @@ const services = [
     title: 'ERP Consulting',
     description: 'End-to-end Odoo ERP implementation, customization, and strategic business process optimization for enterprises.',
     tags: ['Odoo', 'ERP', 'Business Process'],
-    href: '/services/erp-consulting',
+    href: '/services/erp-consulting/',
   },
   {
     icon: 'code',
-    title: 'Custom Software',
-    description: 'Bespoke web applications and backend systems built with Python, PHP, and modern frameworks tailored to your workflow.',
-    tags: ['Python', 'PHP', 'Full Stack'],
-    href: '/services/custom-software',
+    title: 'Odoo Development',
+    description: 'Custom Odoo modules, customizations and integrations, built upgrade-safe to the same standard as my published Odoo App Store apps.',
+    tags: ['Python', 'OWL', 'Custom Modules'],
+    href: '/services/odoo-development/',
   },
   {
     icon: 'globe',
     title: 'Website Development',
     description: 'Professional websites and e-commerce platforms built with WordPress, custom CMS, and modern web technologies.',
     tags: ['WordPress', 'eCommerce', 'Web'],
-    href: '/services/website-development',
+    href: '/services/website-development/',
   },
   {
     icon: 'cloud',
     title: 'Cloud & DevOps',
     description: 'Cloud infrastructure setup, server administration, CI/CD pipelines, and scalable deployment solutions.',
     tags: ['AWS', 'Docker', 'Linux'],
-    href: '/services/cloud-devops',
+    href: '/services/cloud-devops/',
   },
+];
+
+const odooServices = [
+  { label: 'Implementation', href: '/services/odoo-implementation/' },
+  { label: 'Customization', href: '/services/odoo-customization/' },
+  { label: 'Migration & upgrades', href: '/services/odoo-migration/' },
+  { label: 'AI for Odoo', href: '/services/ai-solutions/' },
+  { label: 'Custom software', href: '/services/custom-software/' },
 ];
 ---
 
@@ -73,7 +81,15 @@ const services = [
     </div>
 
     <div class="services__cta reveal">
-      <a class="btn btn--outline" href="/services">
+      <p class="services__more">
+        Also:{' '}
+        {odooServices.map((item, i) => (
+          <>
+            <a href={item.href}>{item.label}</a>{i < odooServices.length - 1 && <span aria-hidden="true"> · </span>}
+          </>
+        ))}
+      </p>
+      <a class="btn btn--outline" href="/services/">
         View All Services
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -148,4 +164,19 @@ const services = [
     text-align: center;
     margin-top: var(--space-12);
   }
+
+  .services__more {
+    font-size: var(--text-sm);
+    color: var(--color-text-tertiary);
+    margin-bottom: var(--space-6);
+  }
+
+  .services__more a {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-border);
+    text-underline-offset: 3px;
+  }
+
+  .services__more a:hover { color: var(--color-accent); }
 </style>

@@ -9,8 +9,14 @@ const { oldestVersion, newestVersion } = catalogueStats;
 
 <BaseLayout
   title="Products"
-  description={`Browse ${products.length} Odoo apps and themes by Arun Alex George — AI tools, ERP modules, backend themes, and enterprise-grade solutions for Odoo ${oldestVersion} through ${newestVersion}.`}
+  seoTitle={`Odoo Apps & Themes — ${products.length} Modules for Odoo ${parseInt(oldestVersion)}–${parseInt(newestVersion)}`}
+  description={`Browse ${products.length} Odoo apps and themes by Arun Alex George: Community alternatives to Enterprise apps, AI tools, industry solutions and backend themes for Odoo ${oldestVersion} to ${newestVersion}.`}
+  pageType="CollectionPage"
+  breadcrumbs={[{ name: 'Products', path: '/products/' }]}
 >
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://apps.odoocdn.com" />
+  </Fragment>
   <section class="products-page section">
     <div class="container">
       <div class="section-header reveal">

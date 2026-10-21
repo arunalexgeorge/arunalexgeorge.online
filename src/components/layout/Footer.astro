@@ -9,22 +9,22 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
-  { label: 'Products', href: '/products' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Resume', href: '/resume' },
-  { label: 'Play a game', href: '/play' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'About', href: '/about/' },
+  { label: 'Services', href: '/services/' },
+  { label: 'Products', href: '/products/' },
+  { label: 'Portfolio', href: '/portfolio/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Resume', href: '/resume/' },
+  { label: 'Play a game', href: '/play/' },
+  { label: 'Contact', href: '/contact/' },
 ];
 
 const services = [
-  { label: 'ERP Consulting', href: '/services/erp-consulting' },
-  { label: 'Odoo Development', href: '/services/odoo-development' },
-  { label: 'Website Development', href: '/services/website-development' },
-  { label: 'Custom Software', href: '/services/custom-software' },
-  { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+  { label: 'ERP Consulting', href: '/services/erp-consulting/' },
+  { label: 'Odoo Development', href: '/services/odoo-development/' },
+  { label: 'Website Development', href: '/services/website-development/' },
+  { label: 'Custom Software', href: '/services/custom-software/' },
+  { label: 'Cloud & DevOps', href: '/services/cloud-devops/' },
 ];
 ---
 
@@ -106,8 +106,9 @@ const services = [
         © {currentYear} Arun Alex George. All rights reserved.
       </p>
       <div class="footer__bottom-links">
-        <a class="footer__link" href="/privacy">Privacy Policy</a>
-        <a class="footer__link" href="/terms">Terms of Service</a>
+        <a class="footer__link" href="/privacy/">Privacy Policy</a>
+        <a class="footer__link" href="/terms/">Terms of Service</a>
+        <a class="footer__link" href="/sitemap/">Sitemap</a>
       </div>
     </div>
   </div>
@@ -227,7 +228,8 @@ const services = [
 
   .footer__bottom-links {
     display: flex;
-    gap: var(--space-6);
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
   }
 
   /* Responsive */
@@ -245,6 +247,10 @@ const services = [
       flex-direction: column;
       gap: var(--space-4);
       text-align: center;
+    }
+
+    .footer__bottom-links {
+      justify-content: center;
     }
   }
 

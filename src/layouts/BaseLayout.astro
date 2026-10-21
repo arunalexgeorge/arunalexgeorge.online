@@ -1,26 +1,102 @@
 ---
+import { Font, getImage } from 'astro:assets';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import heroAvatar from '../assets/images/hero-avatar.png';
+import { PERSON_ID, SITE_NAME, SITE_URL, WEBSITE_ID, pageTitle, person, type Crumb } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
   title: string;
+  /** Full <title>, used as is instead of "<title> — Arun Alex George". */
+  seoTitle?: string;
   description?: string;
   ogImage?: string;
+  ogType?: 'website' | 'profile' | 'product';
   noIndex?: boolean;
+  /** schema.org type of this page. */
+  pageType?: 'WebPage' | 'AboutPage' | 'ProfilePage' | 'ContactPage' | 'CollectionPage';
+  /** Trail below Home, e.g. [{ name: 'Services', path: '/services/' }, ...]. */
+  breadcrumbs?: Crumb[];
+  /** Extra JSON-LD nodes for this page, merged into the site graph. */
+  structuredData?: Record<string, unknown>[];
 }
 
 const {
   title,
-  description = 'Arun Alex George — ERP Consultant, Solution Architect & Technical Lead. Specializing in Odoo ERP development, enterprise business automation, and full-stack software engineering.',
+  seoTitle,
+  description = 'Senior Odoo developer and ERP consultant in Kochi, India — custom Odoo modules, implementation, customization, migration and integrations.',
   ogImage = '/og-image.png',
+  ogType = 'website',
   noIndex = false,
+  pageType = 'WebPage',
+  breadcrumbs = [],
+  structuredData = [],
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const fullTitle = title === 'Home'
-  ? 'Arun Alex George — ERP Consultant & Solution Architect'
-  : `${title} — Arun Alex George`;
+const fullTitle = seoTitle ?? pageTitle(title);
+const ogImageURL = new URL(ogImage, Astro.site);
+const avatar = await getImage({ src: heroAvatar, width: 400, height: 400, format: 'jpg' });
+
+const pageId = `${canonicalURL.href}#webpage`;
+const trail = breadcrumbs.length ? [{ name: 'Home', path: '/' }, ...breadcrumbs] : [];
+const graph = [
+  {
+    '@type': 'WebSite',
+    '@id': WEBSITE_ID,
+    url: `${SITE_URL}/`,
+    name: SITE_NAME,
+    inLanguage: 'en',
+    publisher: { '@id': PERSON_ID },
+  },
+  {
+    '@type': 'Person',
+    '@id': PERSON_ID,
+    name: person.name,
+    url: `${SITE_URL}/`,
+    image: new URL(avatar.src, Astro.site).href,
+    email: `mailto:${person.email}`,
+    jobTitle: person.jobTitle,
+    worksFor: { '@type': 'Organization', name: person.employer },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: person.locality,
+      addressRegion: person.region,
+      addressCountry: person.country,
+    },
+    sameAs: person.sameAs,
+    knowsAbout: person.knowsAbout,
+  },
+  {
+    '@type': pageType,
+    '@id': pageId,
+    url: canonicalURL.href,
+    name: fullTitle,
+    description,
+    inLanguage: 'en',
+    isPartOf: { '@id': WEBSITE_ID },
+    ...(pageType === 'ProfilePage' || canonicalURL.pathname === '/'
+      ? { mainEntity: { '@id': PERSON_ID } }
+      : { author: { '@id': PERSON_ID } }),
+    primaryImageOfPage: { '@type': 'ImageObject', url: ogImageURL.href },
+    ...(trail.length ? { breadcrumb: { '@id': `${canonicalURL.href}#breadcrumb` } } : {}),
+  },
+  ...(trail.length
+    ? [{
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalURL.href}#breadcrumb`,
+        itemListElement: trail.map((crumb, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: crumb.name,
+          item: new URL(crumb.path, Astro.site).href,
+        })),
+      }]
+    : []),
+  ...structuredData,
+];
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
 ---
 
 <!DOCTYPE html>
@@ -28,38 +104,56 @@ const fullTitle = title === 'Home'
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Behind Cloudflare, plain http:// is served without a redirect. Until
+         "Always Use HTTPS" is on there, upgrade visitors here. -->
+    <script is:inline>
+      if (location.protocol === 'http:' && location.hostname === 'arunalexgeorge.online') {
+        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+      }
+    </script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
-    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+    {noIndex
+      ? <meta name="robots" content="noindex, follow" />
+      : <link rel="canonical" href={canonicalURL} />}
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
-    <meta property="og:site_name" content="Arun Alex George" />
+    <meta property="og:image" content={ogImageURL} />
+    {ogImage === '/og-image.png' && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Arun Alex George — Senior Odoo Developer & ERP Consultant" />
+      </>
+    )}
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+    <meta name="twitter:image" content={ogImageURL} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
 
-    <!-- Font Preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Self-hosted fonts (see astro.config.mjs) -->
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-space-grotesk" preload />
+
+    <!-- Content stays visible when scripts are off -->
+    <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
+
+    <slot name="head" />
 
     <!-- Google tag (gtag.js) -->
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-LKG8YLNEEK"></script>
@@ -99,50 +193,30 @@ const fullTitle = title === 'Home'
       </div>
     </div>
 
-    <!-- JSON-LD Structured Data -->
-    <script is:inline type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Arun Alex George",
-      "url": "https://arunalexgeorge.online",
-      "email": "hello@arunalexgeorge.online",
-      "jobTitle": "ERP Consultant & Solution Architect",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Ideenkreise Tech Pvt Ltd"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kochi",
-        "addressRegion": "Kerala",
-        "addressCountry": "IN"
-      },
-      "sameAs": [
-        "https://linkedin.com/in/arunageorge",
-        "https://github.com/arunalexgeorge",
-        "https://medium.com/@arunalexgeorge"
-      ],
-      "knowsAbout": ["Odoo ERP", "ERP Consulting", "Solution Architecture", "Python", "Full Stack Development"]
-    }
-    </script>
+    {!noIndex && <script is:inline type="application/ld+json" set:html={jsonLd} />}
 
-    <!-- Scroll Reveal Observer -->
-    <script>
-      // Scroll Reveal
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
+    <!-- Scroll reveal runs inline, so content in the first viewport appears as
+         soon as the page is parsed instead of after the bundled scripts load. -->
+    <script is:inline>
+      (function () {
+        var items = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          items.forEach(function (el) { el.classList.add('reveal--visible'); });
+          return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add('reveal--visible');
               observer.unobserve(entry.target);
             }
           });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-      );
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        items.forEach(function (el) { observer.observe(el); });
+      })();
+    </script>
 
+    <script>
       // Reading Progress Bar
       const progressBar = document.getElementById('reading-progress');
       if (progressBar) {
