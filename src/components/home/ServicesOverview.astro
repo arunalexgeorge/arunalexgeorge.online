@@ -82,7 +82,7 @@ const odooServices = [
 
     <div class="services__cta reveal">
       <p class="services__more">
-        Also:
+        Also:{' '}
         {odooServices.map((item, i) => (
           <>
             <a href={item.href}>{item.label}</a>{i < odooServices.length - 1 && <span aria-hidden="true"> · </span>}
