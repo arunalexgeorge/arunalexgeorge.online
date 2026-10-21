@@ -104,13 +104,6 @@ const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': grap
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Behind Cloudflare, plain http:// is served without a redirect. Until
-         "Always Use HTTPS" is on there, upgrade visitors here. -->
-    <script is:inline>
-      if (location.protocol === 'http:' && location.hostname === 'arunalexgeorge.online') {
-        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-      }
-    </script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     {noIndex

@@ -52,10 +52,11 @@ hypothetical; where something could not be checked, that is stated.
 - **Impact:** two copies of every page (HTTP and HTTPS); www links land on HTTP.
 - **Fix:** Cloudflare → SSL/TLS → set mode to **Full**, and Edge Certificates →
   **Always Use HTTPS** on. Optionally a redirect rule `www` → `https://apex`.
-- **Status:** needs Cloudflare access (not done). Interim mitigation on the
-  branch: an inline script in `<head>` upgrades `http:` visitors to `https:`.
-- **Verification:** after the Cloudflare change, `curl -I http://arunalexgeorge.online/`
-  must return `301` to `https://`.
+- **Status:** fixed on 21 October 2026 in Cloudflare (mode Full, Always Use
+  HTTPS, `www` redirect). The interim inline HTTPS script was then removed.
+- **Verification:** `curl -I http://arunalexgeorge.online/` → `301
+  https://arunalexgeorge.online/`; `https://www.…/` → `301` to the HTTPS
+  apex; `https://…/about` → `301 https://…/about/`.
 
 ### P1 — High
 

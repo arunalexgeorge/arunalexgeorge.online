@@ -21,9 +21,9 @@ been pushed or deployed.
 - **All internal links** (55 hard-coded hrefs in 12 files, plus
   `product.url` in `src/data/products.ts`) now end in `/`.
 - **`src/layouts/BaseLayout.astro`**
-  - Inline `<head>` script redirects `http:` to `https:` on
-    `arunalexgeorge.online` only (localhost is unaffected). Remove it once
-    Cloudflare "Always Use HTTPS" is on.
+  - An interim inline `<head>` script redirected `http:` visitors to
+    `https:`. It was removed once Cloudflare's "Always Use HTTPS" was on;
+    Cloudflare now answers every HTTP request with a 301.
   - `noIndex` pages get `noindex, follow` (was `noindex, nofollow`) and no
     canonical. Indexable pages keep a self-referencing canonical.
   - New props: `seoTitle`, `ogType`, `pageType`, `breadcrumbs`,
@@ -173,5 +173,5 @@ ERP Rescue game and product sync are unchanged.
   portfolio image move, revert the `src/pages/portfolio.astro` and
   `src/components/home/Portfolio.astro` hunks and `git mv` the PNGs back to
   `public/portfolio/`.
-- **HTTPS script:** delete the first `<script is:inline>` in `BaseLayout.astro`
-  once Cloudflare redirects HTTP itself.
+- **HTTPS:** handled by Cloudflare (SSL/TLS mode Full, Always Use HTTPS,
+  `www` redirect rule). Undo there, not in code.

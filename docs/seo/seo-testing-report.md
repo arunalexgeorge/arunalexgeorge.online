@@ -90,6 +90,20 @@ Screenshots of the new home links row and the service-page "Related Odoo Apps"
 section were reviewed at 390 px. A missing space after "Also:" was found and
 fixed.
 
+## Live-site checks after deploy and the Cloudflare change (21 October 2026)
+
+| Request | Result |
+|---|---|
+| `http://arunalexgeorge.online/` and any `http://` page | 301 → `https://` |
+| `http://www…/`, `https://www…/` | 301 → `https://arunalexgeorge.online/` (two hops from `http://www`) |
+| `https://…/about` (no slash) | 301 → `https://…/about/` (was `http://`) |
+| `/`, `/sitemap/`, `/sitemap-index.xml`, `/og-image.png`, favicons | 200 |
+| XML sitemap | 171 URLs; no noindex pages |
+| Unknown URL | 404 |
+| Edge certificate | `CN=arunalexgeorge.online`, Google Trust Services, auto-renewed by Cloudflare |
+| HSTS | Not enabled (optional) |
+| Deploy of the merge (`70ffcff`) | GitHub Actions run 39638802088 succeeded |
+
 ## Live-site checks (before deploy)
 
 | Check | Result |
@@ -106,8 +120,4 @@ fixed.
 - **Google Rich Results Test**: no API. The Schema.org Validator was used instead.
 - **PageSpeed Insights / CrUX field data**: anonymous API quota exhausted (HTTP 429).
 - **Search Console**: indexing, coverage, queries, sitemap status. No access.
-- **Post-deploy behaviour**: the branch is not deployed, so HTTPS upgrade and
-  redirects were only tested locally. After merging, re-run:
-  `curl -sI https://arunalexgeorge.online/about/` (expect 200) and open
-  `http://arunalexgeorge.online/` in a browser (expect a switch to https).
 - **Real devices**: mobile checks used Chrome device emulation, not phones.

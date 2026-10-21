@@ -7,10 +7,10 @@ and cannot be guaranteed; the goals below are actions, not ranking promises.
 
 | # | Task | Where | Why |
 |---|---|---|---|
-| 1 | SSL/TLS mode **Full**; **Always Use HTTPS** on | Cloudflare → SSL/TLS | Stops plain-HTTP duplicates (audit P0-2). Then delete the HTTPS script at the top of `BaseLayout.astro`. |
-| 2 | Redirect `www` → `https://arunalexgeorge.online` | Cloudflare → Rules → Redirect Rules | `www` currently redirects to HTTP. |
+| 1 | ~~SSL/TLS mode **Full**; **Always Use HTTPS** on~~ | Cloudflare → SSL/TLS | **Done 21 Oct 2026.** HTTP now 301s to HTTPS; the interim script is removed. |
+| 2 | ~~Redirect `www` → `https://arunalexgeorge.online`~~ | Cloudflare → Rules → Redirect Rules | **Done 21 Oct 2026.** |
 | 3 | Verify the domain property | [Google Search Console](https://search.google.com/search-console) → Add property → Domain → DNS TXT record in Cloudflare | Indexing, queries, CTR and positions. Nothing in these reports used Search Console data. |
-| 4 | Submit `https://arunalexgeorge.online/sitemap-index.xml` | Search Console → Sitemaps | After the branch is deployed. |
+| 4 | Submit `https://arunalexgeorge.online/sitemap-index.xml` | Search Console → Sitemaps | The SEO work is deployed, so this can be done now. |
 | 5 | Same for Bing | [Bing Webmaster Tools](https://www.bing.com/webmasters) → import from Search Console | Bing also feeds DuckDuckGo and several AI assistants. |
 | 6 | Decide on analytics consent | Code change, your decision | gtag loads before consent and "Decline" does not stop it (audit P3-4). Google Consent Mode v2, or load gtag only after "Accept". |
 
@@ -19,8 +19,8 @@ What to send back for the next round of analysis: a Search Console export
 
 ## Days 0–30: ship and measure
 
-1. **Merge and deploy** `seo/audit-and-implementation`. After the deploy:
-   - `curl -sI https://arunalexgeorge.online/about/` → `200`
+1. ~~**Merge and deploy** `seo/audit-and-implementation`~~ (deployed 21 Oct
+   2026, verified live). Still to do:
    - share a page on LinkedIn or WhatsApp: the preview shows the new image
    - Search Console URL Inspection on `/`, `/services/odoo-development/`,
      `/products/parishcore/`
