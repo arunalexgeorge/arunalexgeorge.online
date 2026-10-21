@@ -36,7 +36,7 @@ export const products: Product[] = catalogue.products
     return {
       ...p,
       slug,
-      url: `/products/${slug}`,
+      url: `/products/${slug}/`,
       category: categories[p.technicalName] ?? (p.kind === 'theme' ? 'Theme' : 'Productivity'),
       priceLabel: formatPrice(p.price),
     };

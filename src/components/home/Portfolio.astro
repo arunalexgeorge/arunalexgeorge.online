@@ -1,11 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+import aquaxShot from '../../assets/portfolio/aquax.png';
+import trivexShot from '../../assets/portfolio/trivex.png';
+import prideavShot from '../../assets/portfolio/prideav.png';
+
 const projects = [
   {
     name: 'AQUAX',
     tagline: 'Water Treatment Solutions',
     description: 'A bold, engineering-led website for a water & wastewater treatment company across the UAE and India — aerial hero carousel, mega-menu catalogue, and a striking violet-on-dark identity.',
     href: 'https://aquaxuae.com/',
-    image: '/portfolio/aquax.png',
+    image: aquaxShot,
     tags: ['HTML/CSS/JS', 'Web Design'],
   },
   {
@@ -13,7 +18,7 @@ const projects = [
     tagline: 'Complete Industrial Solutions',
     description: 'A bold, industrial-grade website for an engineering, manufacturing and supply company in Sharjah, UAE — mega-menu catalogue, animated hero, and sleek green-on-dark design.',
     href: 'https://trivexindustrialsolutions.com/',
-    image: '/portfolio/trivex.png',
+    image: trivexShot,
     tags: ['HTML/CSS/JS', 'Web Design'],
   },
   {
@@ -21,7 +26,7 @@ const projects = [
     tagline: 'Audio Video Consultant',
     description: 'A premium website for a luxury home theater design & installation company — immersive design, service showcases, and consultation booking.',
     href: 'https://www.prideav.com/',
-    image: '/portfolio/prideav.png',
+    image: prideavShot,
     tags: ['WordPress', 'Web Design'],
   },
 ];
@@ -53,9 +58,13 @@ const projects = [
               <span class="portfolio__card-dot"></span>
             </div>
             <div class="portfolio__card-img">
-              <img
+              <Image
                 src={project.image}
-                alt={`${project.name} — ${project.tagline}`}
+                alt={`Screenshot of the ${project.name} website — ${project.tagline}`}
+                widths={[400, 640, 960]}
+                sizes="(max-width: 720px) calc(100vw - 32px), 400px"
+                width={960}
+                format="webp"
                 loading="lazy"
                 decoding="async"
               />
@@ -80,7 +89,7 @@ const projects = [
     </div>
 
     <div class="portfolio__cta reveal">
-      <a class="btn btn--outline" href="/portfolio">
+      <a class="btn btn--outline" href="/portfolio/">
         View All Projects
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>

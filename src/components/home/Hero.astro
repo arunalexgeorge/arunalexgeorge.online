@@ -1,27 +1,28 @@
 ---
+import { Picture } from 'astro:assets';
 import heroAvatar from '../../assets/images/hero-avatar.png';
 
 const roles = [
+  'Senior Odoo Developer',
   'ERP Consultant',
   'Solution Architect',
   'Technical Lead',
-  'Full Stack Engineer',
 ];
 ---
 
 <section class="hero" id="hero">
   <div class="hero__inner container">
     <div class="hero__content">
-      <div class="hero__badge reveal">
+      <div class="hero__badge hero__enter">
         <span class="hero__badge-dot"></span>
         Available for Projects
       </div>
 
-      <h1 class="hero__title reveal" data-delay="1">
+      <h1 class="hero__title hero__enter" data-delay="1">
         I'm <span class="hero__name">Arun Alex George</span>
       </h1>
 
-      <div class="hero__roles reveal" data-delay="2">
+      <div class="hero__roles hero__enter" data-delay="2">
         {roles.map((role, i) => (
           <span class="hero__role">
             {role}
@@ -30,31 +31,34 @@ const roles = [
         ))}
       </div>
 
-      <p class="hero__desc reveal" data-delay="3">
+      <p class="hero__desc hero__enter" data-delay="3">
         I help businesses eliminate operational chaos by designing and delivering
-        intelligent ERP systems that automate workflows, unify data, and drive
+        Odoo ERP systems that automate workflows, unify data, and drive
         measurable growth — with the precision of an engineer and the empathy
         of a partner.
       </p>
 
-      <div class="hero__actions reveal" data-delay="4">
-        <a class="btn btn--primary btn--lg" href="/contact">
+      <div class="hero__actions hero__enter" data-delay="4">
+        <a class="btn btn--primary btn--lg" href="/contact/">
           Book a Discovery Call
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a class="btn btn--outline btn--lg" href="/services">
-          View Services
+        <a class="btn btn--outline btn--lg" href="/services/">
+          View Odoo Services
         </a>
       </div>
     </div>
 
-    <div class="hero__visual reveal" data-delay="2">
+    <div class="hero__visual hero__enter" data-delay="2">
       <div class="hero__image-wrapper">
-        <img
-          src={heroAvatar.src}
-          alt="Arun Alex George — ERP Consultant & Solution Architect"
-          width="420"
-          height="420"
+        <Picture
+          src={heroAvatar}
+          formats={['avif', 'webp']}
+          widths={[220, 280, 380, 560, 760]}
+          sizes="(max-width: 480px) 220px, (max-width: 968px) 280px, 380px"
+          alt="Illustrated avatar of Arun Alex George, Senior Odoo Developer and ERP Consultant"
+          width={380}
+          height={380}
           loading="eager"
           fetchpriority="high"
           class="hero__image"
@@ -114,6 +118,21 @@ const roles = [
   @keyframes pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.2); }
+  }
+
+  /* Entrance: transform only, so the text paints (and counts as LCP) at once */
+  .hero__enter {
+    animation: hero-enter var(--duration-reveal) var(--ease-out) both;
+  }
+
+  .hero__enter[data-delay="1"] { animation-delay: 60ms; }
+  .hero__enter[data-delay="2"] { animation-delay: 120ms; }
+  .hero__enter[data-delay="3"] { animation-delay: 180ms; }
+  .hero__enter[data-delay="4"] { animation-delay: 240ms; }
+
+  @keyframes hero-enter {
+    from { transform: translateY(16px); }
+    to { transform: none; }
   }
 
   /* Title */
@@ -181,6 +200,10 @@ const roles = [
     position: relative;
     width: 380px;
     height: 380px;
+  }
+
+  .hero__image-wrapper picture {
+    display: contents;
   }
 
   .hero__image {

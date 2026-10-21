@@ -8,9 +8,14 @@ import Portfolio from '../components/home/Portfolio.astro';
 import Industries from '../components/home/Industries.astro';
 import Methodology from '../components/home/Methodology.astro';
 import CTASection from '../components/home/CTASection.astro';
+import { catalogueStats } from '../data/products';
 ---
 
-<BaseLayout title="Home">
+<BaseLayout
+  title="Home"
+  seoTitle="Arun Alex George — Senior Odoo Developer & ERP Consultant in India"
+  description={`Senior Odoo developer and ERP consultant in Kochi, Kerala. Custom Odoo modules, implementation, customization and migration — and ${catalogueStats.total} published Odoo apps and themes.`}
+>
   <Hero />
   <TrustBar />
   <ServicesOverview />

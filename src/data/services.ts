@@ -3,8 +3,16 @@ import { catalogueStats } from './products';
 export interface ServiceData {
   slug: string;
   title: string;
+  /** Search result title; the page H1 stays `headline`. */
+  seoTitle: string;
   headline: string;
   description: string;
+  /** Meta description, when it should say more than `description`. */
+  metaDescription?: string;
+  /** Slugs of the services this one links to. */
+  related: string[];
+  /** Technical names of published Odoo apps that show this work. */
+  showcase: string[];
   overview: string;
   benefits: string[];
   process: string[];
@@ -17,12 +25,16 @@ export const servicesData: Record<string, ServiceData> = {
   'erp-consulting': {
     slug: 'erp-consulting',
     title: 'ERP Consulting',
+    seoTitle: 'Odoo ERP Consulting — Process Analysis & Solution Design',
     headline: 'Strategic ERP Advisory & Implementation',
     description: 'End-to-end ERP consulting services — from business analysis and system selection to implementation, training, and ongoing support.',
+    metaDescription: 'Odoo ERP consulting from Kochi, India: business process analysis, gap analysis, solution design, implementation planning, data migration and user training.',
+    related: ['odoo-implementation', 'odoo-customization', 'odoo-migration'],
+    showcase: ['approval_chain_hub', 'financial_statement_builder', 'kpi_dashboard_builder'],
     overview: 'I help businesses choose, implement, and optimize ERP systems that align with their strategic goals. With 20+ successful ERP implementations across diverse industries, I bring deep expertise in Odoo ERP along with a thorough understanding of business processes in manufacturing, retail, healthcare, finance, and more.',
     benefits: ['Streamlined business processes and reduced manual effort', 'Single source of truth across all departments', 'Real-time analytics and reporting for data-driven decisions', 'Scalable systems that grow with your business', 'Reduced operational costs by 30-50%', 'Improved compliance and audit trails'],
     process: ['Discovery & Business Analysis', 'Gap Analysis & Solution Design', 'ERP System Selection & Architecture', 'Implementation Planning & Timeline', 'Configuration & Customization', 'Data Migration & Integration', 'User Training & Change Management', 'Go-Live Support & Optimization'],
-    technologies: ['Odoo ERP (v10–v19)', 'Python', 'PostgreSQL', 'REST APIs', 'Docker', 'AWS/DigitalOcean'],
+    technologies: [`Odoo ERP (v10–v${parseInt(catalogueStats.newestVersion)})`, 'Python', 'PostgreSQL', 'REST APIs', 'Docker', 'AWS/DigitalOcean'],
     industries: ['Manufacturing', 'Retail & eCommerce', 'Healthcare & Dental', 'Automobile', 'Real Estate', 'Hospitality', 'Finance & Procurement'],
     faqs: [
       { q: 'How long does a typical ERP implementation take?', a: 'Depending on scope, most implementations take 3-6 months from discovery through go-live. Complex multi-module projects may take longer.' },
@@ -33,8 +45,11 @@ export const servicesData: Record<string, ServiceData> = {
   'odoo-development': {
     slug: 'odoo-development',
     title: 'Odoo Development',
+    seoTitle: 'Custom Odoo Module Development & Integrations',
     headline: 'Custom Odoo Modules & Integrations',
     description: 'Custom Odoo module development, advanced customizations, and seamless third-party integrations tailored to your unique business logic.',
+    related: ['odoo-customization', 'odoo-migration', 'ai-solutions'],
+    showcase: ['helpdesk_ticketing_sla', 'whatsapp_cloud_connector', 'subscription_recurring'],
     overview: 'When off-the-shelf Odoo modules don\'t fit your exact workflow, I build custom solutions. From specialized business logic and automated workflows to complex third-party integrations and custom reports, I develop modules that extend Odoo to match your precise requirements.',
     benefits: ['Perfectly tailored to your business workflows', 'Seamless integration with existing Odoo modules', 'Clean, maintainable, upgrade-safe code', 'Comprehensive testing and documentation', 'Ongoing maintenance and version upgrades', `Published ${catalogueStats.total} modules — proven track record`],
     process: ['Requirements Analysis', 'Technical Specification', 'Module Architecture Design', 'Development & Unit Testing', 'Code Review & QA', 'Staging Deployment & UAT', 'Production Deployment', 'Documentation & Handover'],
@@ -49,8 +64,11 @@ export const servicesData: Record<string, ServiceData> = {
   'odoo-implementation': {
     slug: 'odoo-implementation',
     title: 'Odoo Implementation',
+    seoTitle: 'Odoo Implementation Services — Full-Cycle ERP Rollout',
     headline: 'Full-Cycle Odoo ERP Deployment',
     description: 'Complete Odoo ERP deployment from requirements gathering and configuration through data migration, training, go-live, and post-launch support.',
+    related: ['erp-consulting', 'odoo-customization', 'odoo-migration'],
+    showcase: ['parishcore', 'auto_service_management', 'dental_lab_management'],
     overview: 'I provide end-to-end Odoo ERP implementation services, managing every phase from initial discovery through go-live and beyond. My proven 7-step methodology — refined across 20+ implementations — ensures predictable timelines, minimal disruption, and successful adoption.',
     benefits: ['Proven methodology with 20+ successful implementations', 'Minimal business disruption during transition', 'Complete data migration with zero data loss', 'Comprehensive user training for smooth adoption', 'Post-launch monitoring and optimization', 'AMC (Annual Maintenance Contract) for ongoing support'],
     process: ['Discovery & Business Process Mapping', 'Requirements Documentation', 'Solution Design & Configuration', 'Custom Development (if needed)', 'Data Migration & Validation', 'User Acceptance Testing', 'Training & Change Management', 'Go-Live & Post-Launch Support'],
@@ -65,8 +83,12 @@ export const servicesData: Record<string, ServiceData> = {
   'odoo-customization': {
     slug: 'odoo-customization',
     title: 'Odoo Customization',
+    seoTitle: 'Odoo Customization Services — Workflows, Reports & Views',
     headline: 'Tailored Odoo Workflows & Reports',
     description: 'Adapting Odoo to fit your exact workflows — custom reports, views, business rules, automation, and UX enhancements.',
+    metaDescription: 'Odoo customization that fits your real workflows: custom reports and dashboards, approval chains, automated actions, view changes and UX improvements, built upgrade-safe.',
+    related: ['odoo-development', 'odoo-implementation', 'odoo-migration'],
+    showcase: ['approval_chain_hub', 'nocode_field_view_builder', 'scheduled_report_emailer'],
     overview: 'Every business is unique. I customize Odoo\'s existing modules to align with your specific processes — from modified approval workflows and custom PDF reports to tailored dashboards and automated email notifications. No unnecessary complexity, just the right changes to make Odoo work exactly the way you need it.',
     benefits: ['Workflows that match your actual business processes', 'Custom reports and dashboards for better insights', 'Automated notifications and approval chains', 'Improved user experience and productivity', 'Minimal disruption to standard Odoo features', 'Upgrade-safe customizations'],
     process: ['Workflow Analysis', 'Customization Specification', 'Development & Testing', 'User Review & Feedback', 'Deployment & Documentation'],
@@ -80,8 +102,12 @@ export const servicesData: Record<string, ServiceData> = {
   'odoo-migration': {
     slug: 'odoo-migration',
     title: 'Odoo Migration',
+    seoTitle: 'Odoo Migration & Upgrade Services — Version Upgrades',
     headline: 'Seamless Odoo Version Upgrades',
     description: 'Version upgrades and data migration between Odoo versions with zero data loss and minimal downtime.',
+    metaDescription: 'Odoo version upgrades and data migration: version gap analysis, custom module porting, database migration, regression testing and production cutover with minimal downtime.',
+    related: ['odoo-development', 'odoo-customization', 'cloud-devops'],
+    showcase: [],
     overview: 'Staying on an outdated Odoo version means missing out on security patches, performance improvements, and new features. I handle the complete migration process — from code analysis and module compatibility checks to data migration, testing, and production cutover — ensuring a smooth transition with minimal downtime.',
     benefits: ['Access to latest Odoo features and security patches', 'Zero data loss with comprehensive validation', 'Custom module migration and compatibility updates', 'Minimal business downtime during cutover', 'Performance optimization post-migration', 'Complete regression testing'],
     process: ['Version Gap Analysis', 'Module Compatibility Audit', 'Migration Planning', 'Database Migration', 'Custom Module Updates', 'Comprehensive Testing', 'Production Cutover', 'Post-Migration Support'],
@@ -95,8 +121,12 @@ export const servicesData: Record<string, ServiceData> = {
   'website-development': {
     slug: 'website-development',
     title: 'Website Development',
+    seoTitle: 'Website Development — WordPress & Custom Websites',
     headline: 'Professional Websites & eCommerce',
     description: 'Professional websites and e-commerce platforms using WordPress, WooCommerce, and custom solutions.',
+    metaDescription: 'Professional websites and e-commerce stores built with WordPress, WooCommerce and custom HTML/CSS/JS: responsive, fast and SEO-ready, with training and handover.',
+    related: ['custom-software', 'cloud-devops'],
+    showcase: [],
     overview: 'From corporate websites and landing pages to full e-commerce platforms, I build professional web solutions that drive business results. Whether you need a WordPress site with a custom theme or a bespoke web application, I deliver fast, responsive, and SEO-optimized websites.',
     benefits: ['Mobile-responsive designs that work on all devices', 'SEO-optimized from the ground up', 'Fast loading speeds and Core Web Vitals compliance', 'E-commerce capabilities with WooCommerce', 'Content management system for easy updates', 'Ongoing maintenance and support'],
     process: ['Requirements & Wireframing', 'Design Mockup & Approval', 'Development & Content Integration', 'SEO Optimization', 'Testing & Launch', 'Training & Handover'],
@@ -110,8 +140,11 @@ export const servicesData: Record<string, ServiceData> = {
   'custom-software': {
     slug: 'custom-software',
     title: 'Custom Software',
+    seoTitle: 'Custom Software Development — Python & PHP Web Apps',
     headline: 'Bespoke Web Applications & Systems',
     description: 'Custom web applications and backend systems built with Python, PHP, and modern frameworks tailored to your specific workflow.',
+    related: ['odoo-development', 'cloud-devops', 'website-development'],
+    showcase: [],
     overview: 'When off-the-shelf solutions don\'t fit, I build custom web applications from scratch. From CRM systems and booking platforms to inventory management tools and customer portals, I develop scalable, secure software tailored to your exact requirements.',
     benefits: ['Built exactly to your specifications', 'Scalable architecture for future growth', 'Secure by design with industry best practices', 'RESTful APIs for integration capabilities', 'Comprehensive documentation and training', 'Full source code ownership'],
     process: ['Discovery & Requirements', 'Architecture & Technical Design', 'Agile Development Sprints', 'Testing & QA', 'Deployment & DevOps Setup', 'Training & Documentation'],
@@ -125,8 +158,11 @@ export const servicesData: Record<string, ServiceData> = {
   'cloud-devops': {
     slug: 'cloud-devops',
     title: 'Cloud & DevOps',
+    seoTitle: 'Cloud & DevOps — Servers, Docker & CI/CD Pipelines',
     headline: 'Cloud Infrastructure & Automation',
     description: 'Cloud infrastructure setup, server administration, Docker deployments, CI/CD pipelines, and scalable hosting solutions.',
+    related: ['odoo-implementation', 'odoo-migration', 'custom-software'],
+    showcase: ['db_backup_vault', 'db_backup_cloud'],
     overview: 'I set up and manage cloud infrastructure that keeps your applications running smoothly. From initial server provisioning and security hardening to Docker containerization, CI/CD pipelines, and automated backups, I ensure your systems are fast, secure, and reliable.',
     benefits: ['Optimized server performance and uptime', 'Automated deployments with CI/CD', 'Docker containerization for consistency', 'Security hardening and SSL setup', 'Automated backups and disaster recovery', 'Cost-optimized cloud architecture'],
     process: ['Infrastructure Assessment', 'Architecture Design', 'Server Provisioning & Setup', 'Security Hardening', 'CI/CD Pipeline Setup', 'Monitoring & Alerting', 'Documentation'],
@@ -140,8 +176,11 @@ export const servicesData: Record<string, ServiceData> = {
   'ai-solutions': {
     slug: 'ai-solutions',
     title: 'AI Solutions',
+    seoTitle: 'AI Integration for Odoo — LLM, OCR & Automation Modules',
     headline: 'AI-Powered Odoo Integrations',
     description: 'AI-powered Odoo integrations — email automation, OCR invoice capture, natural language ERP queries, KPI dashboards, and more.',
+    related: ['odoo-development', 'odoo-customization'],
+    showcase: ['ai_erp_chat', 'ai_ocr_invoice', 'crm_ai_copilot'],
     overview: 'I integrate AI capabilities directly into Odoo ERP to automate repetitive tasks and unlock new insights. From AI-powered email writing and OCR invoice capture to natural language data queries and KPI dashboard narratives, these solutions are built as production-ready Odoo modules — not experiments.',
     benefits: ['Automate repetitive data entry tasks', 'Extract data from invoices and documents with OCR', 'Query your ERP data in natural language', 'AI-generated executive summaries and reports', 'Bring your own API key — no vendor lock-in', 'Production-ready Odoo modules, not prototypes'],
     process: ['Use Case Assessment', 'AI Model Selection', 'Module Development', 'Integration Testing', 'Deployment & Training'],

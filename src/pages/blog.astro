@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// No articles yet, so the page stays out of search results (and the sitemap)
+// until the first one is published.
 ---
 
 <BaseLayout
   title="Blog"
+  noIndex={true}
   description="Insights on Odoo ERP, business automation, AI in enterprise, cloud architecture, and best practices by Arun Alex George."
 >
   <section class="blog-page section">
