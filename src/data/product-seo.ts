@@ -31,7 +31,7 @@ const curated: Record<string, ProductSeoEntry> = {
     description: 'Vehicle dealership software on Odoo Community: VIN-tracked stock, test drives, bookings with accounted advances, trade-ins, financier delivery orders, commissions and sales reports.',
   },
   auto_service_management: {
-    title: 'Automotive Service Center Software for Odoo — Job Cards & Workshop',
+    title: 'Automotive Service Center Software for Odoo — Job Cards',
     description: 'Workshop management on Odoo Community: appointments, vehicle check-in, job cards, inspections, estimates with approval, parts from stock, technician timers, QC, warranty and reminders.',
   },
 

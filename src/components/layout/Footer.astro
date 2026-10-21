@@ -108,6 +108,7 @@ const services = [
       <div class="footer__bottom-links">
         <a class="footer__link" href="/privacy/">Privacy Policy</a>
         <a class="footer__link" href="/terms/">Terms of Service</a>
+        <a class="footer__link" href="/sitemap/">Sitemap</a>
       </div>
     </div>
   </div>
@@ -227,7 +228,8 @@ const services = [
 
   .footer__bottom-links {
     display: flex;
-    gap: var(--space-6);
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
   }
 
   /* Responsive */
@@ -245,6 +247,10 @@ const services = [
       flex-direction: column;
       gap: var(--space-4);
       text-align: center;
+    }
+
+    .footer__bottom-links {
+      justify-content: center;
     }
   }
 
