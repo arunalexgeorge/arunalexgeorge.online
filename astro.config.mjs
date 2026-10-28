@@ -40,6 +40,11 @@ export default defineConfig({
       fallbacks: ['system-ui', 'sans-serif'],
     },
   ],
+  // Product covers are downloaded from the Odoo App Store CDN and resized at
+  // build time; see src/pages/products/[slug].astro.
+  image: {
+    remotePatterns: [{ protocol: 'https', hostname: 'apps.odoocdn.com' }],
+  },
   output: 'static',
   build: {
     assets: '_assets',

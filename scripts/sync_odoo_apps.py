@@ -16,11 +16,14 @@ Run with `npm run sync:apps`. Standard library only.
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
 import json
 import re
+import struct
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -28,6 +31,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 STORE = "https://apps.odoo.com"
+CDN = "https://apps.odoocdn.com"
 AUTHOR = "Arun A George"
 KINDS = {"modules": "app", "themes": "theme"}
 ROOT = Path(__file__).resolve().parent.parent
@@ -59,17 +63,39 @@ CARD_RE = re.compile(
 )
 
 
-def fetch(url: str, tries: int = 4) -> str:
+def fetch_bytes(url: str, tries: int = 4) -> bytes:
     for attempt in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
             with urllib.request.urlopen(req, timeout=60) as res:
-                return res.read().decode("utf-8", "replace")
-        except Exception:
-            if attempt == tries - 1:
+                return res.read()
+        except Exception as error:
+            if attempt == tries - 1 or (isinstance(error, urllib.error.HTTPError) and error.code == 404):
                 raise
             time.sleep(2 * (attempt + 1))
     raise AssertionError("unreachable")
+
+
+def fetch(url: str) -> str:
+    return fetch_bytes(url).decode("utf-8", "replace")
+
+
+def image_size(data: bytes) -> tuple[int, int] | None:
+    """Width and height of a PNG or JPEG."""
+    if data[:8] == b"\x89PNG\r\n\x1a\n":
+        return struct.unpack(">II", data[16:24])
+    if data[:2] == b"\xff\xd8":
+        i = 2
+        while i + 9 < len(data):
+            if data[i] != 0xFF:
+                i += 1
+                continue
+            marker = data[i + 1]
+            if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+                height, width = struct.unpack(">HH", data[i + 5:i + 9])
+                return width, height
+            i += 2 + struct.unpack(">H", data[i + 2:i + 4])[0]
+    return None
 
 
 def clean_text(value: str) -> str:
@@ -191,8 +217,11 @@ def is_banner_section(node: Node) -> bool:
 def is_column_row(node: Node) -> bool:
     """A row of side-by-side columns, laid out with Odoo/Bootstrap column classes or inline flex/grid."""
     kids = [c for c in node.children if c.tag]
-    if sum(1 for c in kids if COLUMN_RE.search(c.attrs.get("class", ""))) >= 2:
+    spans = [[m.group(0) for m in COLUMN_RE.finditer(c.attrs.get("class", ""))] for c in kids]
+    if sum(1 for s in spans if any(not span.endswith("12") for span in s)) >= 2:
         return True
+    if any(s and all(span.endswith("12") for span in s) for s in spans):
+        return False  # oe_span12 / col-md-12 columns stack, whatever the inline style says
     style = node.attrs.get("style", "")
     return (sum(1 for c in kids if c.tag == "div") >= 2
             and bool(re.search(r"display\s*:\s*(flex|grid)", style))
@@ -240,6 +269,17 @@ def render(node: Node, in_pre: bool = False) -> str:
     if classes:
         out["class"] = " ".join(classes)
 
+    lead = ""
+    if "d-cols" in classes:
+        # A heading above the columns goes before the grid: spanning every
+        # track, it would stop the unused ones collapsing and leave a gap.
+        first = next((i for i, c in enumerate(node.children) if c.tag == "div"), 0)
+        lead = "".join(render(c) for c in node.children[:first]).strip()
+        if lead:
+            inner = "".join(render(c) for c in node.children[first:])
+            if "d-center" in classes:
+                lead = f'<div class="d-center">{lead}</div>'
+
     if tag in ("span", "div") and not out:
         if tag == "span" or not inner.strip():
             return inner
@@ -247,8 +287,8 @@ def render(node: Node, in_pre: bool = False) -> str:
     if tag in VOID:
         return f"<{tag}{attrs}>"
     if not inner.strip() and tag not in ("td", "th"):
-        return ""
-    return f"<{tag}{attrs}>{inner}</{tag}>"
+        return lead
+    return f"{lead}<{tag}{attrs}>{inner}</{tag}>"
 
 
 def sanitise_description(fragment: str) -> str:
@@ -302,6 +342,35 @@ def parse_product_page(page: str) -> dict:
     }
 
 
+def stable_cover(cover_url: str, series: str, tech: str) -> dict | None:
+    """A cover URL that keeps working, with the image's size.
+
+    The store hands out cover URLs (module_image?image_id=...) that stop working
+    within the hour. The cover is the module's static/description/banner.png,
+    which the store also serves at a fixed path, so use that when it is the same
+    picture: byte for byte (the URL's `unique` is the cover's SHA-1), or a larger
+    original of the same shape that the store scaled down.
+    """
+    unique = re.search(r"unique=([0-9a-f]{40})", cover_url)
+    banner_url = f"{CDN}/apps/assets/{series}/{tech}/banner.png"
+    try:
+        banner = fetch_bytes(banner_url)
+    except urllib.error.HTTPError as error:
+        if error.code == 404:
+            return None
+        raise
+    size = image_size(banner)
+    digest = hashlib.sha1(banner).hexdigest()
+    if not size or not unique:
+        return None
+    if digest != unique.group(1):
+        shown = image_size(fetch_bytes(cover_url))
+        if not shown or size[0] <= shown[0] or abs(size[0] / size[1] - shown[0] / shown[1]) > 0.01:
+            return None
+    # The query changes with the picture, so build caches never serve an old banner.
+    return {"src": f"{banner_url}?{digest[:7]}", "width": size[0], "height": size[1]}
+
+
 # --- Main ------------------------------------------------------------------
 
 def guess_category(product: dict) -> str:
@@ -335,9 +404,20 @@ def main() -> int:
                 versions.setdefault(card["tech"], set()).add(series)
 
     # 3. Each product's store page, at its newest published series.
+    coverless = []
+
     def product(card):
         series = sorted(versions.get(card["tech"]) or {card["series"]}, key=float)
         store_url = f"{STORE}/apps/{card['kind']}/{series[-1]}/{card['tech']}"
+        page = parse_product_page(fetch(store_url))
+        if page["cover"]:
+            page["cover"] = stable_cover(page["cover"], series[-1], card["tech"])
+            if page["cover"]:
+                # The page shows the banner as its cover, so don't repeat it in the description.
+                banner = re.escape(page["cover"]["src"].split("?")[0])
+                page["description"] = re.sub(rf'\s*<img src="{banner}[?"][^>]*>', "", page["description"])
+            else:
+                coverless.append(card["name"])
         return {
             "technicalName": card["tech"],
             "kind": KINDS[card["kind"]],
@@ -346,7 +426,7 @@ def main() -> int:
             "price": parse_price(card["price"]),
             "versions": series,
             "storeUrl": store_url,
-            **parse_product_page(fetch(store_url)),
+            **page,
         }
 
     products = sorted(pool.map(product, published.values()), key=lambda p: p["technicalName"])
@@ -385,6 +465,8 @@ def main() -> int:
     for p in guessed:
         print(f"  Review category: {p['name']} ({p['technicalName']}) -> {categories[p['technicalName']]}"
               f" [store: {p['storeCategory']}] in {CATEGORIES_PATH.relative_to(ROOT)}")
+    for name in sorted(coverless):
+        print(f"  No cover: {name}'s cover is not its static/description/banner.png, so its page shows none")
     return 0
 
 

@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductCard from '../../components/products/ProductCard.astro';
 import { products, getProduct, relatedProducts, storeUrlForVersion } from '../../data/products';
@@ -23,6 +24,20 @@ const platforms = [
 ];
 const dependencies = product.dependencies.map((dep) => ({ ...dep, product: getProduct(dep.technicalName) }));
 
+// Covers are downloaded and resized at build time rather than hotlinked, so
+// the page never depends on the store's CDN. Wide banners are scaled to 1200px.
+async function coverImages({ src, width, height }: NonNullable<typeof product.cover>) {
+  const scale = Math.min(1, 1200 / width);
+  const size = { width: Math.round(width * scale), height: Math.round(height * scale) };
+  const widths = [480, 800].filter((w) => w < size.width).concat(size.width);
+  const [hero, social] = await Promise.all([
+    getImage({ src, ...size, widths, format: 'webp' }),
+    getImage({ src, ...size, format: 'jpg' }),
+  ]);
+  return { hero, social };
+}
+const cover = product.cover ? await coverImages(product.cover) : undefined;
+
 const seo = productSeo(product);
 const pageUrl = new URL(product.url, Astro.site).href;
 const softwareApplication = {
@@ -32,7 +47,7 @@ const softwareApplication = {
   description: product.summary,
   url: pageUrl,
   mainEntityOfPage: { '@id': `${pageUrl}#webpage` },
-  image: product.cover ?? undefined,
+  image: cover ? new URL(cover.social.src, Astro.site).href : undefined,
   applicationCategory: 'BusinessApplication',
   applicationSubCategory: product.category,
   operatingSystem: `Odoo ${product.versions.join(', ')}`,
@@ -54,7 +69,7 @@ const softwareApplication = {
   title={product.name}
   seoTitle={seo.title}
   description={seo.description}
-  ogImage={product.cover ?? undefined}
+  ogImage={cover?.social.src}
   breadcrumbs={[{ name: 'Products', path: '/products/' }, { name: product.name, path: product.url }]}
   structuredData={[softwareApplication]}
 >
@@ -70,9 +85,17 @@ const softwareApplication = {
 
       <!-- Hero -->
       <div class="product-hero">
-        {product.cover && (
+        {cover && (
           <div class="product-hero__media">
-            <img src={product.cover} alt={`${product.name} cover`} width="1200" height="600" fetchpriority="high" />
+            <img
+              src={cover.hero.src}
+              srcset={cover.hero.srcSet.attribute}
+              sizes="(min-width: 960px) min(560px, 50vw), calc(100vw - 3rem)"
+              alt={`${product.name} cover`}
+              width={cover.hero.attributes.width}
+              height={cover.hero.attributes.height}
+              fetchpriority="high"
+            />
           </div>
         )}
 
@@ -523,8 +546,8 @@ const softwareApplication = {
     text-underline-offset: 2px;
   }
 
+  /* Natural size up to the column width: stretching a narrow phone screenshot blurs it. */
   .product-desc :global(img) {
-    width: 100%;
     margin: var(--space-4) auto;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
@@ -574,6 +597,7 @@ const softwareApplication = {
     margin-block: var(--space-6);
   }
 
+  .product-desc :global(:is(h2, h3, h4, h5, h6, .d-center) + .d-cols) { margin-top: var(--space-4); }
   .product-desc :global(.d-cols > :not(div)) { grid-column: 1 / -1; margin: 0; }
 
   .product-desc :global(.d-cols > div) {
