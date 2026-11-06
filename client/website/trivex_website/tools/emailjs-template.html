@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+  Trivex Industrial Solutions — EmailJS notification template.
+
+  Paste the markup below into EmailJS → Email Templates → your template → Content →
+  "Code Editor" (the <> icon). This file is the version-controlled master; the dashboard
+  copy is the only other one, so edit here first and paste across.
+
+  Dashboard settings that go with it:
+    Subject    {{subject}}
+    To Email   sales@trivexindustrialsolutions.com
+    From Name  {{name}} via Trivex website
+    Reply To   {{reply_to}}
+
+  Variables are supplied by the submit handler in assets/js/main.js. EmailJS has no
+  conditional syntax, so that handler substitutes "—" / "Not specified" for blank
+  optional fields — never add {{#if}} here, it renders literally.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>New enquiry from {{name}}</title>
+<!--[if mso]>
+<style>body,table,td,a,h1,h2,p,div{font-family:Arial,Helvetica,sans-serif !important}</style>
+<![endif]-->
+<style>
+  /* Progressive enhancement only — every rule that matters is also inlined below. */
+  @media only screen and (max-width:620px) {
+    .sm-px { padding-left:22px !important; padding-right:22px !important; }
+    .sm-stack { display:block !important; width:100% !important; padding-right:0 !important; }
+    .sm-stack + .sm-stack { padding-top:18px !important; }
+    .sm-h1 { font-size:24px !important; line-height:31px !important; }
+    .sm-btn { display:block !important; }
+  }
+  @media (prefers-color-scheme: dark) {
+    .d-bg   { background:#12140f !important; }
+    .d-card { background:#1b1e18 !important; border-color:#2c3129 !important; }
+    .d-panel{ background:#1f2a18 !important; }
+    .d-ink  { color:#f0f2ed !important; }
+    .d-soft { color:#b3b9ac !important; }
+    .d-rule { border-color:#2c3129 !important; }
+  }
+</style>
+</head>
+<body class="d-bg" style="margin:0;padding:0;width:100%;background:#f5f7f2;-webkit-font-smoothing:antialiased;">
+
+<!-- Preheader: the grey preview line in the inbox. -->
+<div style="display:none;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;font-size:1px;line-height:1px;color:#f5f7f2;">
+  {{interest}} — {{company}}. Reply to {{reply_to}}.
+  &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="d-bg" style="background:#f5f7f2;">
+<tr>
+<td align="center" style="padding:28px 12px 40px 12px;">
+
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
+
+    <!-- ── Header ─────────────────────────────────────────────── -->
+    <tr>
+      <td class="sm-px" style="background:#2c8206;border-radius:14px 14px 0 0;padding:26px 36px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td align="left" style="vertical-align:middle;">
+              <img src="https://trivexindustrialsolutions.com/assets/img/brand/trivex-logo-white.png"
+                   width="176" height="39" alt="Trivex Industrial Solutions"
+                   style="display:block;width:176px;height:39px;border:0;outline:none;text-decoration:none;">
+            </td>
+            <td align="right" style="vertical-align:middle;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#bce5a6;white-space:nowrap;">
+              Website enquiry
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- ── Card ───────────────────────────────────────────────── -->
+    <tr>
+      <td class="d-card" style="background:#ffffff;border-left:1px solid #e6e9e1;border-right:1px solid #e6e9e1;">
+
+        <!-- Name + interest -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="sm-px" style="padding:34px 36px 24px 36px;">
+              <p style="margin:0 0 8px 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#37a109;">
+                New enquiry
+              </p>
+              <h1 class="sm-h1 d-ink" style="margin:0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:29px;line-height:36px;font-weight:800;letter-spacing:-0.5px;color:#171a15;">
+                {{name}}
+              </h1>
+              <p class="d-soft" style="margin:9px 0 0 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:23px;color:#6d746a;">
+                {{company}} &nbsp;·&nbsp; {{interest}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- Contact details -->
+          <tr>
+            <td class="sm-px" style="padding:0 36px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="d-rule" style="border-top:1px solid #e6e9e1;border-bottom:1px solid #e6e9e1;">
+                <tr>
+                  <td class="sm-stack" width="50%" style="width:50%;padding:20px 16px 20px 0;vertical-align:top;">
+                    <p style="margin:0 0 5px 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:#949a8f;">Email</p>
+                    <a href="mailto:{{reply_to}}" style="font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;font-weight:600;color:#2c8206;text-decoration:none;word-break:break-all;">{{email}}</a>
+                  </td>
+                  <td class="sm-stack" width="50%" style="width:50%;padding:20px 0 20px 0;vertical-align:top;">
+                    <p style="margin:0 0 5px 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:#949a8f;">Phone</p>
+                    <p class="d-ink" style="margin:0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:22px;font-weight:600;color:#171a15;">{{phone}}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Message -->
+          <tr>
+            <td class="sm-px" style="padding:26px 36px 0 36px;">
+              <p style="margin:0 0 11px 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:#949a8f;">Message</p>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="d-panel" style="background:#eef7e8;border-radius:10px;">
+                <tr>
+                  <td style="padding:20px 22px;border-left:3px solid #37a109;border-radius:10px;">
+                    <div class="d-ink" style="font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:25px;color:#171a15;white-space:pre-wrap;">{{message}}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Reply button -->
+          <tr>
+            <td class="sm-px" align="left" style="padding:28px 36px 36px 36px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td bgcolor="#2c8206" style="border-radius:8px;">
+                    <a href="mailto:{{reply_to}}" class="sm-btn"
+                       style="display:inline-block;padding:14px 30px;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:8px;">
+                      Reply to {{name}} &nbsp;&rarr;
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <p class="d-soft" style="margin:14px 0 0 0;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:20px;color:#6d746a;">
+                Hitting Reply works too — this message is set to reply straight to the sender.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+    <tr>
+      <td class="d-card sm-px" style="background:#ffffff;border:1px solid #e6e9e1;border-top:0;border-radius:0 0 14px 14px;padding:22px 36px 26px 36px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="d-rule" style="border-top:1px solid #eef0ea;">
+          <tr>
+            <td style="padding-top:20px;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:12px;line-height:20px;color:#949a8f;">
+              <strong class="d-soft" style="color:#6d746a;">Trivex Industrial Solutions FZC</strong><br>
+              Warehouse Q3-65, SAIF Zone, Sharjah, United Arab Emirates<br>
+              <a href="tel:+97165346311" style="color:#949a8f;text-decoration:none;">+971 6 534 6311</a> &nbsp;·&nbsp;
+              <a href="https://trivexindustrialsolutions.com" style="color:#949a8f;text-decoration:none;">trivexindustrialsolutions.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-top:14px;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;line-height:17px;color:#b6bbb1;">
+              Sent automatically from the quote form at trivexindustrialsolutions.com/contact/
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+  </table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Lets phones open .vcf files as contacts instead of showing them as text.
+<IfModule mod_mime.c>
+  AddType text/vcard .vcf
+</IfModule>
