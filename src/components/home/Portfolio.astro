@@ -2,9 +2,17 @@
 import { Image } from 'astro:assets';
 import aquaxShot from '../../assets/portfolio/aquax.png';
 import trivexShot from '../../assets/portfolio/trivex.png';
-import prideavShot from '../../assets/portfolio/prideav.png';
+import ushasShot from '../../assets/portfolio/ushas.png';
 
 const projects = [
+  {
+    name: 'Ushas Products',
+    tagline: 'Odoo ERP & eCommerce',
+    description: 'A full Odoo 19 Community ERP with an eCommerce storefront for a Kerala food brand — Shiprocket shipping, Razorpay payments, and an Amazon connector syncing marketplace orders.',
+    href: 'https://ushasproducts.com/',
+    image: ushasShot,
+    tags: ['Odoo 19', 'ERP', 'eCommerce'],
+  },
   {
     name: 'AQUAX',
     tagline: 'Water Treatment Solutions',
@@ -20,14 +28,6 @@ const projects = [
     href: 'https://trivexindustrialsolutions.com/',
     image: trivexShot,
     tags: ['HTML/CSS/JS', 'Web Design'],
-  },
-  {
-    name: 'PrideAV',
-    tagline: 'Audio Video Consultant',
-    description: 'A premium website for a luxury home theater design & installation company — immersive design, service showcases, and consultation booking.',
-    href: 'https://www.prideav.com/',
-    image: prideavShot,
-    tags: ['WordPress', 'Web Design'],
   },
 ];
 ---

@@ -8,8 +8,18 @@ import weddingShot from '../assets/portfolio/wedding.png';
 import prideavShot from '../assets/portfolio/prideav.png';
 import instagpuShot from '../assets/portfolio/instagpu.png';
 import dentmartShot from '../assets/portfolio/dentmart.png';
+import ushasShot from '../assets/portfolio/ushas.png';
 
 const projects = [
+  {
+    name: 'Ushas Products',
+    tagline: 'Kerala Pickles, Spice Powders & Snacks — Palakkad, India',
+    description: 'A complete Odoo 19 Community Edition implementation for a homemade Kerala food brand: full ERP covering inventory, sales, purchase and accounting, plus an integrated eCommerce storefront. Orders ship through a Shiprocket integration, payments run on the Razorpay gateway, and an Amazon connector keeps marketplace listings and orders in sync with the ERP.',
+    href: 'https://ushasproducts.com/',
+    image: ushasShot,
+    tags: ['Odoo 19', 'ERP', 'eCommerce', 'Shiprocket', 'Razorpay', 'Amazon Connector'],
+    year: '2026',
+  },
   {
     name: 'AQUAX',
     tagline: 'Complete Water Treatment Solutions — Dubai, UAE',
@@ -79,7 +89,7 @@ const projects = [
 <BaseLayout
   title="Portfolio"
   seoTitle="Website Portfolio — Web Design & Development by Arun Alex George"
-  description="Recent website projects by Arun Alex George: industrial and water-treatment companies in the UAE, an AV consultant, a GPU cloud platform, a dental lab and event websites."
+  description="Recent website projects by Arun Alex George: an Odoo 19 ERP and eCommerce store for a Kerala food brand, industrial and water-treatment companies in the UAE, an AV consultant, a GPU cloud platform, a dental lab and event websites."
   pageType="CollectionPage"
   breadcrumbs={[{ name: 'Portfolio', path: '/portfolio/' }]}
 >
