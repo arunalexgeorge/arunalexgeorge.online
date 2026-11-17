@@ -1,5 +1,7 @@
 {
   "aag_education_management": "Industry",
+  "aag_enterprise_hrms": "HR",
+  "aag_fuel_station_management": "Industry",
   "aag_it_company_management": "Industry",
   "account_invoice_due_date_rules": "Productivity",
   "account_invoice_qr_paylink": "Accounting",

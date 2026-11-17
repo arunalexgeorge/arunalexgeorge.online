@@ -32,7 +32,7 @@ from pathlib import Path
 
 STORE = "https://apps.odoo.com"
 CDN = "https://apps.odoocdn.com"
-AUTHOR = "Arun A George"
+AUTHOR = "Arun Alex George"
 KINDS = {"modules": "app", "themes": "theme"}
 ROOT = Path(__file__).resolve().parent.parent
 CATALOGUE_PATH = ROOT / "src/data/odoo-apps.json"

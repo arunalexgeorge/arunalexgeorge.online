@@ -18,7 +18,7 @@ export const person = {
     'https://linkedin.com/in/arunageorge',
     'https://github.com/arunalexgeorge',
     'https://medium.com/@arunalexgeorge',
-    'https://apps.odoo.com/apps/modules/browse?author=Arun%20A%20George',
+    'https://apps.odoo.com/apps/modules/browse?author=Arun%20Alex%20George',
   ],
   knowsAbout: [
     'Odoo', 'Odoo development', 'Odoo implementation', 'Odoo migration', 'ERP consulting',
