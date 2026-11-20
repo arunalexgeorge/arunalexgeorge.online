@@ -378,7 +378,9 @@ def guess_category(product: dict) -> str:
         return "Theme"
     if re.search(r"(^|\W)AI(\W|$)", product["name"]):
         return "AI"
-    return STORE_TO_SITE_CATEGORY.get(product["storeCategory"], "Productivity")
+    # The store's capitalisation varies ("Point Of Sale"), so match case-insensitively.
+    store = product["storeCategory"].casefold()
+    return next((site for name, site in STORE_TO_SITE_CATEGORY.items() if name.casefold() == store), "Productivity")
 
 
 def main() -> int:
